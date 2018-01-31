@@ -1,0 +1,5848 @@
+[
+	{
+		"name": "Ash Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith S3 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso C1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso S3 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso N2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso V4 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo N3 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo V4 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi N2 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi B1 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 65,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo N5 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi N1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Ember Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi E1 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S5 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso F2 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith G1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Frost Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso F2 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi E1 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith G1 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo S5 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Loki Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 45,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 100,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Mag Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith M1 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V2 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso B1 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo D1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Nova Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo N2 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith C1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso C1 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith N1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo V1 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith C1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso S1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Nyx Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo V1 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso N1 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo N1 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo S2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Rhino Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 100,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 45,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Saryn Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Lith S4 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Meso S4 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo S1 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith A1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso S5 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo V4 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Meso S2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo S2 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso C1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso F1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso N4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi G1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi T1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Trinity Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith K1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso S4 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo N6 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi S1 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 25,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo D1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo N7 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo S6 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi C1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V3 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith S4 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo S1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi H1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi H2 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo B1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi A1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi C2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V4 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Vauban Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith F2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Neo V2 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso N2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo V3 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Neo V5 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Lith V4 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso V4 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi V1 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Lith V2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo N2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Volt Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo V1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi N3 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi V1 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso V2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso V3 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith V1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Boar Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo D1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi V2 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith M1 "
+					}
+				]
+			},
+			{
+				"name": "Stock",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso B1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Boltor Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 45,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Stock",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Braton Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 25,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V3 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso V1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi C2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi N1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith A1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo A1 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi V2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi V3 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi V5 "
+					}
+				]
+			},
+			{
+				"name": "Stock",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo B2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi A1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi E2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Burston Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo S6 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo T1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith F2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo B1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo V5 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi T1 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S3 "
+					}
+				]
+			},
+			{
+				"name": "Stock",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith K1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith V1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Latron Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith G1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi E1 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S5 "
+					}
+				]
+			},
+			{
+				"name": "Stock",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso F2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Paris Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith F1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith S4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso S1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi E2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi G1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi O1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V4 "
+					}
+				]
+			},
+			{
+				"name": "Grip",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith S1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso S2 "
+					}
+				]
+			},
+			{
+				"name": "String",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo B1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo V3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo V5 "
+					}
+				]
+			},
+			{
+				"name": "Upper Limb",
+				"ducats": 25,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith F2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith N2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith V1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso N4 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso S1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo S2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi N3 "
+					}
+				]
+			},
+			{
+				"name": "Lower Limb",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith V1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso F1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso O1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Soma Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith M1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S3 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith S3 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo N1 "
+					}
+				]
+			},
+			{
+				"name": "Stock",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith S2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso S1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Vectis Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith A1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo A1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi C1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi H1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi T1 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso V1 "
+					}
+				]
+			},
+			{
+				"name": "Stock",
+				"ducats": 65,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo B1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi V2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi V3 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi V4 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Akbronco Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso O1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso S3 "
+					}
+				]
+			},
+			{
+				"name": "Link",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith A2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith N1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith S5 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi S1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Akstiletto Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith A1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Lith A2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo A1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi A1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi H2 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi H1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi K1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi O1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi T1 "
+					}
+				]
+			},
+			{
+				"name": "Link",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso O1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo N5 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi N1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Bronco Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith N1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso C2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso V5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi N2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi S1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo V1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi E2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi N3 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso F1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo B1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo N6 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo V4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi S1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Hikou Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N2 "
+					}
+				]
+			},
+			{
+				"name": "Pouch",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi K1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V2 "
+					}
+				]
+			},
+			{
+				"name": "Stars",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith F2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Lex Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 25,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith S4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso D1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi A2 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith A2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi A2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi K1 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith M1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi A2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi C1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi E2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi H2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi N2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Sicarus Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi E1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso F2 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo S5 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Spira Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith N2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso V5 "
+					}
+				]
+			},
+			{
+				"name": "Pouch",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith S1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith S3 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Lith S6 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso S3 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith S5 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Meso S6 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo S3 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Vasto Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo S3 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo D1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V3 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith A1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Ankyros Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 100,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Gauntlet",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Bo Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Ornament",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 45,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Dakra Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith M1 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo D1 "
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso B1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Dual Kamas Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith S6 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo T1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo V1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi V5 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Meso D1 "
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso F1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso N1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi A1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Fang Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith K1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo B2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N2 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith C1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith F1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith N1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith S6 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi B1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi B2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi N1 "
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 25,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith F2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso N2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso S4 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi H2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Fragor Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith F1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Meso F1 "
+					}
+				]
+			},
+			{
+				"name": "Head",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi A1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi B2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi H1 "
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 65,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith V1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo T1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi C2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Glaive Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith G1 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi E1 "
+					}
+				]
+			},
+			{
+				"name": "Disc",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo S5 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Nikana Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo N5 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Axi A1 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Meso N4 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso V2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo N4 "
+					}
+				]
+			},
+			{
+				"name": "Hilt",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Neo N6 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi N2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Orthos Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso B1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi B2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi C1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi V3 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso D1 "
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso B1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso D1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso N4 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Reaper Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S5 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso F2 "
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith G1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Scindo Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith F1 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi S1 "
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso C1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Carrier Prime",
+		"type": "Prime",
+		"category": "Sentinel",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso V4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S3 "
+					}
+				]
+			},
+			{
+				"name": "Cerebrum",
+				"ducats": 65,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith C1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso C1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso C2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso N3 "
+					}
+				]
+			},
+			{
+				"name": "Carapace",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo S1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi N2 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith N2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith S3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo A1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo V3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Wyrm Prime",
+		"type": "Prime",
+		"category": "Sentinel",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Cerebrum",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Carapace",
+				"ducats": 15,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 45,
+				"relics": [
+					{
+						"vaulted": true,
+						"rarity": "Rare",
+						"name": "Prime Vault"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Kavasa Prime Collar",
+		"type": "Prime",
+		"category": "Sentinel",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith S4 Neo N1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi G1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Odonata Prime",
+		"type": "Prime",
+		"category": "Archwing",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith F1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso C2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso S1 "
+					}
+				]
+			},
+			{
+				"name": "Harness",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith K1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi K1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi T1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V4 "
+					}
+				]
+			},
+			{
+				"name": "Wings",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi N1 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith F2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi V1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Arcane Scorpion Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Locust Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Reverb Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Chorus Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Phoenix Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Backdraft Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Avalon Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Pendragon Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Aurora Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Squall Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Essence Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Swindle Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Coil Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Gauss Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Flux Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Menticide Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Vespa Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Thrak Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Vanguard Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Hemlock Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Chlora Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Aura Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Meridian Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Esprit Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Gambit Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Storm Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Arcane Pulse Helmet",
+		"type": "Arcane",
+		"category": "Arcane Helmet",
+		"components": []
+	},
+	{
+		"name": "Prisma Skana",
+		"type": "Prisma",
+		"category": "Prisma",
+		"components": []
+	},
+	{
+		"name": "Prisma Dual Cleavers",
+		"type": "Prisma",
+		"category": "Prisma",
+		"components": []
+	},
+	{
+		"name": "Prisma Gorgon",
+		"type": "Prisma",
+		"category": "Prisma",
+		"components": []
+	},
+	{
+		"name": "Prisma Grakata",
+		"type": "Prisma",
+		"category": "Prisma",
+		"components": []
+	},
+	{
+		"name": "Prisma Veritux",
+		"type": "Prisma",
+		"category": "Prisma",
+		"components": []
+	},
+	{
+		"name": "Arcane Acceleration",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Aegis",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Agility",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Arachne",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Avenger",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Awakening",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Barrier",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Consequence",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Deflection",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Energize",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Eruption",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Fury",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Grace",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Guardian",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Healing",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Ice",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Momentum",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Nullifier",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Phantasm",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Precision",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Rage",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Resistance",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Strike",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Tempo",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Trickery",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Ultimatum",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Velocity",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Victory",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Arcane Warmth",
+		"type": "Arcane",
+		"category": "Arcane Enhancements",
+		"components": []
+	},
+	{
+		"name": "Smeeta Kavat",
+		"type": "Kavat",
+		"category": "Companion",
+		"components": []
+	},
+	{
+		"name": "Adarza Kavat",
+		"type": "Kavat",
+		"category": "Companion",
+		"components": []
+	},
+	{
+		"name": "Life Strike",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Quickening",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Corrupt Charge",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Blind Rage",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Vengeful Revenant",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Fleeting Expertise",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Narrow Minded",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Overextended",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Transient Fortitude",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Critical Delay",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Heavy Caliber",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Vile Precision",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Tainted Mag",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": []
+	},
+	{
+		"name": "Vile Acceleration",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Depleted Reload",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": []
+	},
+	{
+		"name": "Burdened Magazine",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Vicious Spread",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Tainted Shell",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Frail Momentum",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Critical Deceleration",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Anemic Agility",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Creeping Bullseye",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Hollow Point",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Magnum Force",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Tainted Clip",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Spoiled Strike",
+		"type": "Mods",
+		"category": "Corrupted",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Power Drift",
+		"type": "Mods",
+		"category": "Exilus",
+		"components": []
+	},
+	{
+		"name": "Coaction Drift",
+		"type": "Mods",
+		"category": "Exilus",
+		"components": []
+	},
+	{
+		"name": "Cunning Drift",
+		"type": "Mods",
+		"category": "Exilus",
+		"components": []
+	},
+	{
+		"name": "Speed Drift",
+		"type": "Mods",
+		"category": "Exilus",
+		"components": []
+	},
+	{
+		"name": "Endurance Drift",
+		"type": "Mods",
+		"category": "Exilus",
+		"components": []
+	},
+	{
+		"name": "Agility Drift",
+		"type": "Mods",
+		"category": "Exilus",
+		"components": []
+	},
+	{
+		"name": "Stealth Drift",
+		"type": "Mods",
+		"category": "Exilus",
+		"components": []
+	},
+	{
+		"name": "Body Count",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Focused Defense",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Blood Rush",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Weeping Wounds",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Maiming Strike",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Argon Scope",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Bladed Rounds",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Catalyzer Link",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Guided Ordnance",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": []
+	},
+	{
+		"name": "Spring-Loaded Chamber",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": []
+	},
+	{
+		"name": "Shrapnel Shot",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Laser Sight",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Repeater Clip",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Nano-Applicator",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Narrow Barrel",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Hydraulic Crosshairs",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Embedded Catalyzer",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Sharpened Bullets",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Targeting Subsystem",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Pressurized Magazine",
+		"type": "Mods",
+		"category": "Acolyte",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Primed Continuity",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Flow",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Vigor",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Fury",
+		"type": "Mods",
+		"category": "Primed",
+		"components": []
+	},
+	{
+		"name": "Primed Pressure Point",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Reach",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Point Blank",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Ravage",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Morphic Transformer",
+		"type": "Mods",
+		"category": "Primed",
+		"components": []
+	},
+	{
+		"name": "Primed Pistol Gambit",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Heavy Trauma",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Target Cracker",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Fast Hands",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Heated Charge",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Bane of Infested",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Rifle Ammo Mutation",
+		"type": "Mods",
+		"category": "Primed",
+		"components": []
+	},
+	{
+		"name": "Primed Pistol Mutation",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Slip Magazine",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Shotgun Ammo Mutation",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 10
+	},
+	{
+		"name": "Primed Ammo Stock",
+		"type": "Mods",
+		"category": "Primed",
+		"components": []
+	},
+	{
+		"name": "Tempo Royale",
+		"type": "Mods",
+		"category": "Primed",
+		"components": []
+	},
+	{
+		"name": "Shred",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Buzz Kill",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Primed Chamber",
+		"type": "Mods",
+		"category": "Primed",
+		"components": []
+	},
+	{
+		"name": "High Voltage",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Rime Rounds",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Thermite Rounds",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Jolt",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Piercing Caliber",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Fanged Fusillade",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Shell Shock",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Voltaic Strike",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Malignant Force",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Sweeping Serration",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Frigid Blast",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Volcanic Edge",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Virulent Scourge",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Vicious Frost",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Frostbite",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Auger Strike",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Collision Force",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Magma Chamber",
+		"type": "Mods",
+		"category": "Primed",
+		"components": []
+	},
+	{
+		"name": "Pistol Pestilence",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Toxic Barrage",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Aviator",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 3
+	},
+	{
+		"name": "Bore",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Breach Loader",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Pummel",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Crash Course",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Full Contact",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Searing Steel",
+		"type": "Mods",
+		"category": "Primed",
+		"components": []
+	},
+	{
+		"name": "Maim",
+		"type": "Mods",
+		"category": "Primed",
+		"components": [],
+		"ranks": 5
+	},
+	{
+		"name": "Vaykor Hek",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Vaykor Marelok",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Telos Boltor",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Telos Akbolto",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Synoid Simulor",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Synoid Gammacor",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Secura Penta",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Secura Dual Cestra",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Rakta Cernos",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Rakta Ballistica",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Sancti Tigris",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Sancti Castanas",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Mara Detron",
+		"type": "Special",
+		"category": "Weapon",
+		"components": []
+	},
+	{
+		"name": "Cyngas",
+		"type": "Special",
+		"category": "Weapon",
+		"components": []
+	},
+	{
+		"name": "Crimson Dervish",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Crushing Ruin",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Cleaving Whirlwind",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Final Harbinger",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Decisive Judgement",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Tranquil Cleave",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Blind Justice",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "High Noon",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Swirling Tiger",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Rending Crane",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Iron Phoenix",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Astral Twilight",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Defiled Snapdragon",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Vulpine Mask",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Shimmering Blight",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Crossing Snakes",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Bleeding Willow",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Atlantis Vulcan",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Eleventh Storm",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Four Riders",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Stalking Fan",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Pointed Wind",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Gnashing Payara",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Spinning Needle",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Flailing Breach",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Vermilion Storm",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Brutal Tide",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Gleaming Talon",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Gaia's Tragedy",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Seismic Palm",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Coiling Viper",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Malicious Raptor",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Clashing Forest",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Reaping Spiral",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Homing Fang",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Gemini Cross",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Grim Fury",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Fateful Truth",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Sinking Talon",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Sundering Weave",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Burning Wasp",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Fracturing Wind",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Rising Steel",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Nekros Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Lith N3 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso N3 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi N3 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso F1 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Lith N1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso S3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi G1 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Lith N2 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo N3 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Neo N7 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Galatine Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Axi G1 "
+					}
+				]
+			},
+			{
+				"name": "Blade",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso C2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S6 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo N6 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo V2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo V3 "
+					}
+				]
+			},
+			{
+				"name": "Handle",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith S5 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo V2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi O1 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Tigris Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Neo T1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi T1 "
+					}
+				]
+			},
+			{
+				"name": "Stock",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso S1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo B2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo V4 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith K1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith V3 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith V4 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso S6 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo S6 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo V3 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi V5 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Telos Boltace",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Synoid Heliocor",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Sancti Magistar",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Secura Lecta",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Rakta Dark Dagger",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Vaykor Sydon",
+		"type": "Syndicate",
+		"category": "Syndicate",
+		"components": []
+	},
+	{
+		"name": "Legendary Core",
+		"type": "Mods",
+		"category": "Mods",
+		"components": []
+	},
+	{
+		"name": "Orvius",
+		"type": "Special",
+		"category": "Weapon",
+		"components": []
+	},
+	{
+		"name": "Sovereign Outcast",
+		"type": "Mods",
+		"category": "Stance",
+		"components": []
+	},
+	{
+		"name": "Valkyr Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith A2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith N3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso S3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S6 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith S6 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso C2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso V4 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo N7 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Axi V5 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Lith V3 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Meso V3 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Cernos Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith A2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi B1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Axi V4 "
+					}
+				]
+			},
+			{
+				"name": "Grip",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso V5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo V4 "
+					}
+				]
+			},
+			{
+				"name": "String",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso O1 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso S6 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo A1 "
+					}
+				]
+			},
+			{
+				"name": "Upper Limb",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V3 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Meso C2 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo N6 "
+					}
+				]
+			},
+			{
+				"name": "Lower Limb",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi C1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Axi C2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Venka Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo B2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Neo N4 "
+					}
+				]
+			},
+			{
+				"name": "Blades",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Lith V4 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo N7 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi V5 "
+					}
+				]
+			},
+			{
+				"name": "Gauntlet",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Meso V5 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo V4 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Aklex Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Axi A2 "
+					}
+				]
+			},
+			{
+				"name": "Link",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Axi A2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Machete Wraith",
+		"type": "Special",
+		"category": "Weapon",
+		"components": []
+	},
+	{
+		"name": "Vulkar Wraith",
+		"type": "Special",
+		"category": "Weapon",
+		"components": []
+	},
+	{
+		"name": "Helios Prime",
+		"type": "Prime",
+		"category": "Companion",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Lith N2 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith V4 "
+					}
+				]
+			},
+			{
+				"name": "Carapace",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S6 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Neo N5 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo V5 "
+					}
+				]
+			},
+			{
+				"name": "Cerebrum",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi H1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Axi H2 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Lith V3 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Euphona Prime",
+		"type": "Prime",
+		"category": "Weapon",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Neo N7 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": true,
+						"name": "Axi B1 "
+					},
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Axi O1 "
+					}
+				]
+			},
+			{
+				"name": "Barrel",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": true,
+						"name": "Meso N3 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Meso V5 "
+					}
+				]
+			},
+			{
+				"name": "Receiver",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Axi E2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Banshee Prime",
+		"type": "Prime",
+		"category": "Warframe",
+		"components": [
+			{
+				"name": "Blueprint",
+				"ducats": 45,
+				"relics": [
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo N7 "
+					},
+					{
+						"rarity": "Uncommon",
+						"vaulted": false,
+						"name": "Neo T1 "
+					}
+				]
+			},
+			{
+				"name": "Chassis",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Neo B1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Neo B2 "
+					}
+				]
+			},
+			{
+				"name": "Neuroptics",
+				"ducats": 15,
+				"relics": [
+					{
+						"rarity": "Common",
+						"vaulted": false,
+						"name": "Meso S4 "
+					}
+				]
+			},
+			{
+				"name": "Systems",
+				"ducats": 100,
+				"relics": [
+					{
+						"rarity": "Rare",
+						"vaulted": true,
+						"name": "Axi B1 "
+					},
+					{
+						"rarity": "Rare",
+						"vaulted": false,
+						"name": "Axi B2 "
+					}
+				]
+			}
+		]
+	},
+	{
+		"name": "Animal Instinct",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Bite",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Dig",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Hastened Deflection",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Howl",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Ferocity",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Link Armor",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Hunt",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Link Health",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Loyal Companion",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Maul",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Pack Leader",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Neutralize",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Shelter",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Brief Respite",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Link Shields",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Protect",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Stalk",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Dead Eye",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Loot Detector",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Rifle Scavenger",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Sprint Boost",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Energy Siphon",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Retrieve",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Enemy Sense",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Flow",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Intensify",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Savagery",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Rejuvenation",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Medi-Pet Kit",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Sniper Scavenger",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Enemy Radar",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Armored Agility",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Continuity",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Scavenge",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Corrosive Projection",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Infested Impedance",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Pistol Scavenger",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Shotgun Scavenger",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Jagged Edge",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Sawtooth Clip",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Melee Prowess",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Enduring Affliction",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Speed Trigger",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Power Throw",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Focus Energy",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Relentless Combination",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Vital Sense",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Reflex Coil",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Smite Grineer",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Energy Channel",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "True Steel",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Fury",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Heavy Trauma",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Killing Blow",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Parry",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Molten Impact",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Pressure Point",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Quick Return",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Blind Shot",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Rebound",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Smite Corpus",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "True Punishment",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Barrel Diffusion",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Convulsion",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Expel Corpus",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Rending Strike",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Smite Infested",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Expel Grineer",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Hawk Eye",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Gunslinger",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Whirlwind",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Hornet Strike",
+		"ranks": 10,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Hydraulic Barrel",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Lethal Momentum",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Meteor Munitions",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Pistol Ammo Mutation",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Deep Freeze",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Expel Infested",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Heated Charge",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Perpetual Agony",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Quickdraw",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Ruinous Extension",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Slip Magazine",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Lethal Torrent",
+		"ranks": 5,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Suppress",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	},
+	{
+		"name": "Reflex Draw",
+		"ranks": 3,
+		"type": "Mods",
+		"components": []
+	}
+]
