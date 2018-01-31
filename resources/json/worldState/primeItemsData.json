@@ -1,0 +1,4326 @@
+[
+    {
+        "Name": "Akbronco Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith S2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso O1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith T1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Link",
+                "Relics": [
+                    {
+                        "Name": "Lith A2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith N1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith S5",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi S1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Carrier Prime",
+        "Components": [
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Lith S2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo A1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Carapace",
+                "Relics": [
+                    {
+                        "Name": "Lith S5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Cerebrum",
+                "Relics": [
+                    {
+                        "Name": "Meso C1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso N3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso C2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith C1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 65
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso V4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Kavasa Prime Collar",
+        "Components": [
+            {
+                "Name": "Band",
+                "Relics": [
+                    {
+                        "Name": "Lith S2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso V3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith C1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith N2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith S6",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Buckle",
+                "Relics": [
+                    {
+                        "Name": "Axi K1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi B1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo S6",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith K1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 65
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi G1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo N1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith S4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Nyx Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith S2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Meso N1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo S2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Neo N1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Soma Prime",
+        "Components": [
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Lith S2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso S1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Lith S3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo N1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith M1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 25
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Neo S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Ash Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith S3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso S3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso C1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo N5",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi N1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 65
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Meso V2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Meso N2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso V4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo N3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo V4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi N2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Paris Prime",
+        "Components": [
+            {
+                "Name": "String",
+                "Relics": [
+                    {
+                        "Name": "Lith S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Lower Limb",
+                "Relics": [
+                    {
+                        "Name": "Meso O1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso F1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith B2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi O1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi E2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith F1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi G1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith H1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Upper Limb",
+                "Relics": [
+                    {
+                        "Name": "Axi N3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith F2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso N4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 25
+            },
+            {
+                "Name": "Grip",
+                "Relics": [
+                    {
+                        "Name": "Lith S1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso S2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Spira Prime",
+        "Components": [
+            {
+                "Name": "Pouch",
+                "Relics": [
+                    {
+                        "Name": "Lith S3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso S3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith S1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith S6",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo S8",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Lith S5",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo S3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso S6",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Akstiletto Prime",
+        "Components": [
+            {
+                "Name": "Link",
+                "Relics": [
+                    {
+                        "Name": "Meso O1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo N5",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi N1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith A2",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith A1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo A1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Axi A1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi H2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith H1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Axi H1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi K1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi O1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi T1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Cernos Prime",
+        "Components": [
+            {
+                "Name": "String",
+                "Relics": [
+                    {
+                        "Name": "Meso O1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo A1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso S6",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith A2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi B1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Grip",
+                "Relics": [
+                    {
+                        "Name": "Neo V4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Upper Limb",
+                "Relics": [
+                    {
+                        "Name": "Lith V3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso C2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N6",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Lower Limb",
+                "Relics": [
+                    {
+                        "Name": "Axi C2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi C1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso C3",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Oberon Prime",
+        "Components": [
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Meso O1",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Axi H2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Axi O1",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso N4",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi N5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 25
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Nekros Prime",
+        "Components": [
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Meso S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi G1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo N3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo N7",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith N2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso N5",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso N3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith N3",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi N3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Meso F1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi N5",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Valkyr Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith A2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith N3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S6",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Meso V4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo N7",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso C2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith S6",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith T1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Lith V3",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso V3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Axi V5",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi V6",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Lex Prime",
+        "Components": [
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Lith A2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi A2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi K1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi A2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso D1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso C3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 25
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Axi A2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi H2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith M1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi E2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi C1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "receiver",
+                "Relics": [
+                    {
+                        "Name": "Meso N5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Bronco Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso C2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith H1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Axi S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso F1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N6",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S8",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Axi E2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo V1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi N3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Fang Prime",
+        "Components": [
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Lith N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi B2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith C1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S6",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith F1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S7",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Axi H2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso S4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith F2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V6",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 25
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo B2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith K1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Nova Prime",
+        "Components": [
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Lith N1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo V1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Meso C1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith C1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo S2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith C1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo N2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Burston Prime",
+        "Components": [
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Lith S5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith N3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo H1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Axi T1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo B1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith F2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo V5",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo T1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S6",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith T1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Meso N3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith K1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso C3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Galatine Prime",
+        "Components": [
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Lith S5",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi O1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo V2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V6",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Meso S4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso C2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N6",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S6",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi G1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso G1",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Scindo Prime",
+        "Components": [
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Axi S1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Meso C1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith F1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Trinity Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi S1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso S4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo N6",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith K1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Axi A1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi C2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Axi H2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi H1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo S1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith S4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Neo N7",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo D1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S6",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi C1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 25
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Aklex Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi A2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Link",
+                "Relics": [
+                    {
+                        "Name": "Axi A2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Braton Prime",
+        "Components": [
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Axi A1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo B2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi E2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Lith A1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo A1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso G1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith N3",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith V3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi C2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V6",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 25
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Axi V2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V5",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith B2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Dual Kamas Prime",
+        "Components": [
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Axi A1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso N1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso F1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo T1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S6",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Meso D1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Fragor Prime",
+        "Components": [
+            {
+                "Name": "Head",
+                "Relics": [
+                    {
+                        "Name": "Axi A1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi H1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi B2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo H1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Neo T1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi C2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith V1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi N4",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 65
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso F1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith F1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo S8",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 65
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Nikana Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi A1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo N5",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo S8",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 65
+            },
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Meso V2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo N4",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso N4",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Hilt",
+                "Relics": [
+                    {
+                        "Name": "Axi N2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo N6",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi N4",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Helios Prime",
+        "Components": [
+            {
+                "Name": "Cerebrum",
+                "Relics": [
+                    {
+                        "Name": "Axi H2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi H1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith H1",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Carapace",
+                "Relics": [
+                    {
+                        "Name": "Neo N5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo V5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S6",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S7",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Lith V3",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi N5",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith N2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith V4",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso C3",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Saryn Prime",
+        "Components": [
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Lith A1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo V4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso S5",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo N5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi T1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso C1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso F1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi G1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith H1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso S4",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo S1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith S4",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso C3",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 65
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Meso S2",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo S2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Vasto Prime",
+        "Components": [
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Lith A1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso V2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Neo D1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo S3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Vectis Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith A1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo A1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Axi H1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi T1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi C1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Neo B1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi V3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi V4",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 65
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Meso V1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Odonata Prime",
+        "Components": [
+            {
+                "Name": "Wings",
+                "Relics": [
+                    {
+                        "Name": "Axi N1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Harness",
+                "Relics": [
+                    {
+                        "Name": "Axi K1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi T1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith K1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo N3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith F2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso C2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith F1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso S1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Hikou Prime",
+        "Components": [
+            {
+                "Name": "Pouch",
+                "Relics": [
+                    {
+                        "Name": "Axi K1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso N2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Stars",
+                "Relics": [
+                    {
+                        "Name": "Lith F2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Euphona Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi O1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo N7",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi N5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Meso N3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso V5",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Axi E2",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Tigris Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi T1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo T1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith T1",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Neo V4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo B2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso S1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith B2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Lith V3",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith K1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith V4",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo H1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Axi V5",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo S6",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo V3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso S6",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso N5",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Ankyros Prime",
+        "Components": [
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Axi R1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Gauntlet",
+                "Relics": [
+                    {
+                        "Name": "Meso M1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Boar Prime",
+        "Components": [
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Axi R1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith M1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Lith B1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso B1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Meso M1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo B3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo D1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Boltor Prime",
+        "Components": [
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Axi R1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Lith B1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Meso M1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo B3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Dakra Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi R1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith M1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Meso M1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Neo B3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo D1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 65
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Mag Prime",
+        "Components": [
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Axi R1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo D1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Lith B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso M1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith M1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Neo B3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso B1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Rhino Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi R1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Lith B1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Meso M1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo B3",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Volt Prime",
+        "Components": [
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Meso V2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso V3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo V1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi N3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Lith V1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Axi V1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Venka Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo N4",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo B2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Gauntlet",
+                "Relics": [
+                    {
+                        "Name": "Neo V4",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Meso V5",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Blades",
+                "Relics": [
+                    {
+                        "Name": "Neo N7",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Axi V5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Lith V4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso G1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Banshee Prime",
+        "Components": [
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Axi B1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi B2",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo N7",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo T1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo H1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Neo B1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo B2",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Meso S4",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo S7",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Vauban Prime",
+        "Components": [
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Meso N2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo V5",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo V3",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Meso V4",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Axi V1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith V4",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo V2",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Lith F2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Lith V2",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo N2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Orthos Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi B2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso B1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi V3",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Axi C1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Meso B1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso D1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Meso N4",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    },
+                    {
+                        "Name": "Neo H1",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Meso D1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Lith B2",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Sybaris Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi B2",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Meso S5",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Lith N3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Neo N6",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Neo S7",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Silva & Aegis Prime",
+        "Components": [
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Axi C2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    },
+                    {
+                        "Name": "Meso G1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso V5",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Hilt",
+                "Relics": [
+                    {
+                        "Name": "Neo V5",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Guard",
+                "Relics": [
+                    {
+                        "Name": "Neo S6",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    },
+                    {
+                        "Name": "Neo S7",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Ember Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi E1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Meso F2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Neo S5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Lith G1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Frost Prime",
+        "Components": [
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Axi E1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso F2",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo S5",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Lith G1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Glaive Prime",
+        "Components": [
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Axi E1",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Disc",
+                "Relics": [
+                    {
+                        "Name": "Neo S5",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith G1",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Latron Prime",
+        "Components": [
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Axi E1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Stock",
+                "Relics": [
+                    {
+                        "Name": "Meso F2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Neo S5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith G1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Sicarus Prime",
+        "Components": [
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Axi E1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Barrel",
+                "Relics": [
+                    {
+                        "Name": "Meso F2",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Neo S5",
+                        "Vaulted": true,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Reaper Prime",
+        "Components": [
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Meso F2",
+                        "Vaulted": true,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Neo S5",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Lith G1",
+                        "Vaulted": true,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": true
+    },
+    {
+        "Name": "Hydroid Prime",
+        "Components": [
+            {
+                "Name": "Neuroptics",
+                "Relics": [
+                    {
+                        "Name": "Axi N4",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso N5",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Systems",
+                "Relics": [
+                    {
+                        "Name": "Neo H1",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Chassis",
+                "Relics": [
+                    {
+                        "Name": "Neo S8",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Nami Skyla Prime",
+        "Components": [
+            {
+                "Name": "Blade",
+                "Relics": [
+                    {
+                        "Name": "Axi N5",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Handle",
+                "Relics": [
+                    {
+                        "Name": "Lith H1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Meso C3",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            }
+        ],
+        "Vaulted": false
+    },
+    {
+        "Name": "Ballistica Prime",
+        "Components": [
+            {
+                "Name": "Lower Limb",
+                "Relics": [
+                    {
+                        "Name": "Axi V6",
+                        "Vaulted": false,
+                        "Rarity": "Common"
+                    }
+                ],
+                "Ducats": 15
+            },
+            {
+                "Name": "Blueprint",
+                "Relics": [
+                    {
+                        "Name": "Lith B2",
+                        "Vaulted": false,
+                        "Rarity": "Rare"
+                    }
+                ],
+                "Ducats": 100
+            },
+            {
+                "Name": "Upper Limb",
+                "Relics": [
+                    {
+                        "Name": "Lith T1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "String",
+                "Relics": [
+                    {
+                        "Name": "Meso G1",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            },
+            {
+                "Name": "Receiver",
+                "Relics": [
+                    {
+                        "Name": "Neo S7",
+                        "Vaulted": false,
+                        "Rarity": "Uncommon"
+                    }
+                ],
+                "Ducats": 45
+            }
+        ],
+        "Vaulted": false
+    }
+]
