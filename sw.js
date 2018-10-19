@@ -9,9 +9,9 @@ self.addEventListener('install', function (event) {
         "img/neo.png",
         "img/lith.png",
         "img/bg-custom.png",
-        "css/app-2.css",
+        "css/app-3.css",
         "js/jquery-3.2.1.min.js",
-        "js/app-2.1.js"
+        "js/app-3.js"
       ]).then(() => self.skipWaiting());
     }))
 });

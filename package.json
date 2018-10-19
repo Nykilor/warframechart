@@ -1,0 +1,29 @@
+{
+  "name": "warframechart",
+  "version": "1.0.0",
+  "description": "----------------------------\r Live: https://warframchart.ct8.pl\r **Basic backend functionality**:\r - Data collection classes for item prices from https://warframe.market, and https://nexus-stats.com (cron_market_git.php, cron_chat_git.php).\r - Static data collection from (wikiFetch.php):\r   - http://warframe.wikia.com/wiki/Void_Relic/ByRelic\r   - http://warframe.wikia.com/wiki/Void_Relic/ByRewards/SimpleTable ( ByRewads.php class)\r   - http://warframe.wikia.com/wiki/Ducats/Prices\r  - Store data in files:\r    - resources/json/TYPE/ORDER_TYPE/ITEM/PLATFORM_graph.json (for market, and nexus)\r    - resources/json/worldState/FILE.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nykilor/warframechart.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nykilor/warframechart/issues"
+  },
+  "homepage": "https://github.com/Nykilor/warframechart#readme",
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "datatables.net": "^1.10.19",
+    "datatables.net-dt": "^1.10.19",
+    "datatables.net-rowgroup": "^1.1.0",
+    "jquery": "^3.3.1"
+  }
+}

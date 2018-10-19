@@ -1,0 +1,131 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jquery": true,
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+         "no-var": "error",
+         "no-negated-in-lhs": "error",
+         "no-cond-assign": [
+           "error",
+           "except-parens"
+        ],
+        "curly": [
+           "error",
+           "all"
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "eqeqeq": [
+          "error",
+          "smart"
+        ],
+        "no-unused-expressions": "error",
+        "no-sequences": "error",
+        "no-nested-ternary": "error",
+        "no-unreachable": "warn",
+        "wrap-iife": [
+          "error",
+          "inside"
+        ],
+        "no-caller": "error",
+        "quotes": [
+          "error",
+          "double"
+        ],
+        "no-undef": "error",
+        "no-unused-vars": "warn",
+        "operator-linebreak": [
+          "error",
+          "after"
+        ],
+        "comma-style": [
+          "error",
+          "last"
+        ],
+        "camelcase": [
+          "error",
+        {
+        	"properties": "never"
+        }
+        ],
+        "dot-notation": [
+          "error",
+        {
+        	"allowPattern": "^[a-z]+(_[a-z]+)+$"
+        }
+        ],
+        "max-len": [
+          "error",
+          {
+          	"code": 170,
+          	"ignoreComments": true,
+          	"ignoreUrls": true,
+          	"ignoreRegExpLiterals": true
+          }
+        ],
+        "no-mixed-spaces-and-tabs": "error",
+        "no-trailing-spaces": "error",
+        "no-multi-str": "error",
+        "comma-dangle": [
+          "error",
+          "never"
+        ],
+        "comma-spacing": [
+          "error",
+          {
+          	"before": false,
+          	"after": true
+          }
+        ],
+        "space-before-blocks": [
+          "error",
+          "always"
+        ],
+        "keyword-spacing": [
+          2
+        ],
+        "semi": [
+          "error",
+          "always"
+        ],
+        "semi-spacing": [
+          "error",
+        {
+        	"after": true
+        }
+        ],
+        "space-infix-ops": "error",
+        "eol-last": "error",
+        "no-with": "error",
+        "brace-style": "error",
+        "space-before-function-paren": [
+        "error",
+        "never"
+        ],
+        "no-loop-func": "error",
+        "no-spaced-func": "error",
+        "key-spacing": [
+        "error",
+        {
+        	"beforeColon": false,
+        	"afterColon": true
+        }
+        ],
+        "space-unary-ops": [
+        "error",
+        {
+        	"words": false,
+        	"nonwords": false
+        }
+        ],
+        "no-multiple-empty-lines": 2
+ }
+}

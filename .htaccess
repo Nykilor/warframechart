@@ -13,3 +13,6 @@ Header set Cache-Control "no-cache"
 <FilesMatch "^(relicByRelic)\.json">
 Header set Cache-Control "must-revalidate, max-age=7200"
 </FilesMatch>
+
+RewriteEngine on
+RewriteRule ^api(.*)$ api.php?request=$1 [QSA,NC,L]

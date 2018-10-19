@@ -1,0 +1,13 @@
+{
+    "name": "wchart/chart",
+    "description": "Warframe wiki, market and chat data collector.",
+    "type": "project",
+    "require": {
+        "doctrine/orm": "v2.5.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "WChart\\": "src/"
+        }
+    }
+}
