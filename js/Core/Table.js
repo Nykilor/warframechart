@@ -25,7 +25,6 @@ let Table = {
   renders: {
     //returns a button with the count of sellers for platform
     sellers(data, type, row) {
-      console.log(data);
       if (type === "display") {
         let orderCount = 0;
 
@@ -277,6 +276,40 @@ let Table = {
         data = "";
       }
       return data;
+    },
+    partsSumColumn(data, type, row, dataSet) {
+      let marketSum = 0;
+      if (type === "display") {
+        if (row.name.indexOf("Set") !== -1) {
+          const parts = row.set_parts;
+          const sumParts = function(objectKey) {
+            let sum = 0;
+            parts.forEach(function(id) {
+              if (dataSet[id - 1].double_part) {
+                sum += dataSet[id - 1][objectKey] * 2;
+              } else {
+                sum += dataSet[id - 1][objectKey];
+              }
+            });
+            return sum;
+          };
+
+          let objectKeyMarket = Table.baseCalcFrom;
+          marketSum = sumParts(objectKeyMarket);
+          const calculation = row[objectKeyMarket] - marketSum;
+          row.market_pv_diff = Math.abs(calculation);
+          marketSum = (row.market_pv_diff > 0) ? "S " + row.market_pv_diff : "P " + row.market_pv_diff;
+        }
+      } else {
+        if (row.name.indexOf("Set") !== -1) {
+          marketSum = row.market_pv_diff;
+        } else {
+          marketSum = 0;
+        }
+      }
+
+      return marketSum;
+
     }
   },
   //All event listners
@@ -331,7 +364,9 @@ let Table = {
         let $loading = $(".loading-indicator");
         $loading.addClass("show");
 
-        const item = Table.$elem.row(this).data();
+        const $row = $(this).parent();
+        let item = Table.$elem.row($row).data();
+
         const platform = platformFix(Table.orders);
 
         if (typeof(CompChart.loadedData.cache[item.id]) === "undefined") {
@@ -666,17 +701,18 @@ let Table = {
       });
     },
     order() {
-      Table.$elem.on("order.dt", function() {
-        const order = Table.$elem.order();
-        if (order.length > 0) {
-          const orderIndex = order[0][0];
-          if (orderIndex > 0) {
-            Table.$elem.rowGroup().disable();
-          } else {
-            Table.$elem.rowGroup().enable();
-          }
-        }
-      });
+      //TODO
+      // Table.$elem.on("order.dt", function() {
+      //   const order = Table.$elem.order();
+      //   if (order.length > 0) {
+      //     const orderIndex = order[0][0];
+      //     if (orderIndex > 0) {
+      //       Table.$elem.rowGroup().disable();
+      //     } else {
+      //       Table.$elem.rowGroup().enable();
+      //     }
+      //   }
+      // });
     },
     compareWithChatRow() {
       $("#ChatData").change(function() {
@@ -939,6 +975,9 @@ let Table = {
       let dataTableObject = {
         sDom: "<'table-body't><'table-footer'pli>",
         stateSave: true,
+        orderFixed: {
+          pre: [ 10, 'desc' ]
+        },
         lengthMenu: [
           [10, 15, 20, 40, -1],
           ["Mobile S(10)", "Mobile M(15)", "Mobile XL(20)", "Desktop(40)", "I'm a god(All)"]
@@ -1023,6 +1062,13 @@ let Table = {
             }
           },
           {
+            data: "market_pv_diff",
+            visible: true,
+            render(data, type, row) {
+              return Table.renders.partsSumColumn(data, type, row, dataSet);
+            }
+          },
+          {
             data: "item_type",
             visible: false
           },
@@ -1035,8 +1081,10 @@ let Table = {
             }
           }
         ],
+        //TODO:
         rowGroup: {
           dataSrc(a) {
+            console.log(a);
             return a.name.split(" ")[0];
           },
           startRender: null,
@@ -1047,8 +1095,8 @@ let Table = {
         language: {
           searchPlaceholder: "What do you need Tenno?"
         },
+        //TODO
         createdRow: function(row, data, index) {
-
           if (data.vaulted) {
             $(row).find(".name-col").addClass("icon-lock");
           }
@@ -1072,6 +1120,7 @@ let Table = {
       /*eslint-enable */
 
       if (callback) {
+        console.log(Table.$elem);
         callback();
       }
     });
