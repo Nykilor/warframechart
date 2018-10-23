@@ -424,6 +424,7 @@
                   <th><img src="img/ducats.png" alt="ducats" width="20" height="20" class="icon-vert-middle"> : <img src="img/PlatinumLarge.png" alt="plat" width="20" height="20" class="icon-vert-middle"></th>
                   <th></th>
                   <th>DROP</th>
+                  <th>PVS</th>
                 </tr>
               </thead>
               <tbody>

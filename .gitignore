@@ -1,3 +1,4 @@
 vendor/
 node_modules/
 cron/password.php
+package-lock.json
