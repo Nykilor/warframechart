@@ -337,6 +337,10 @@
             <input type="checkbox" class="filter-input show-column" name="column" value="9" hidden>
             <div>RELICT</div>
           </label>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="10" hidden>
+            <div>SAVE</div>
+          </label>
         </div>
         <div class="intro-wraper" data-step="3" data-intro="Here you can set from what column should be the DUCAT : PLATINUM ratio, if it's better to buy parts or set, and any other calculatiosn to come.">
           <hr>
@@ -424,7 +428,7 @@
                   <th><img src="img/ducats.png" alt="ducats" width="20" height="20" class="icon-vert-middle"> : <img src="img/PlatinumLarge.png" alt="plat" width="20" height="20" class="icon-vert-middle"></th>
                   <th></th>
                   <th>DROP</th>
-                  <th>PVS</th>
+                  <th>SAVE</th>
                 </tr>
               </thead>
               <tbody>

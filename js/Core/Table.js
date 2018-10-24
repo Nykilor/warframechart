@@ -6,6 +6,8 @@ import MarketData from "./MarketData.js";
 import App from "./App.js";
 
 jQueryMobile();
+
+//TODO GOT TO MAKE A KEY FOR A COPY OF ACCCTUALY USSSED DATA TO BE able to calc some stuff
 let Table = {
   //The DataTable elem
   "$elem": null,
@@ -269,7 +271,7 @@ let Table = {
         let newString = "<div class='drop-location'>";
         $.each(dataArray, function(key, value) {
           const capitalized = capitalize(value);
-          newString = newString + `<button type="button" class="search-for-button">${capitalized}</button>`;
+          newString = newString + `<button type="button" class="search-for-button" data-search="${capitalized}">${capitalized}</button>`;
         });
         data = newString + "</div>";
       } else if (type === "display" && data === "none") {
@@ -278,7 +280,7 @@ let Table = {
       return data;
     },
     partsSumColumn(data, type, row, dataSet) {
-      let marketSum = 0;
+      let marketSum = "";
       if (type === "display") {
         if (row.name.indexOf("Set") !== -1) {
           const parts = row.set_parts;
@@ -298,13 +300,35 @@ let Table = {
           marketSum = sumParts(objectKeyMarket);
           const calculation = row[objectKeyMarket] - marketSum;
           row.market_pv_diff = Math.abs(calculation);
-          marketSum = (row.market_pv_diff > 0) ? "S " + row.market_pv_diff : "P " + row.market_pv_diff;
+          //TODO THE REASON THIS DOSNT WORK IS BECAUSE WHEN ORDER TYPE IS CHANGED THE DATASET STAYS
+          //TODO  ON SELL INSTEAD OF GETTING BUY ONE, SO IT BUGGS AND THE VALUES DONT ADD UP LIKE THE SHOULD
+          if (row[objectKeyMarket] < marketSum) {
+            if (Table.dataType === "sell") {
+              marketSum = `S ${(marketSum - row[objectKeyMarket])}`;
+            } else {
+              if (row.name.indexOf("Ash Prime Set") !== -1) {
+                console.log(row, marketSum, row[objectKeyMarket], dataSet);
+              }
+
+              marketSum = `S ${(row[objectKeyMarket] - marketSum)}`;
+            }
+          } else if (row[objectKeyMarket] > marketSum) {
+            if (Table.dataType === "sell") {
+              marketSum = `P ${calculation}`;
+            } else {
+              marketSum = `P ${calculation}`;
+            }
+          }
+
+          const nameParts = row.name.split(" ");
+          let group = (typeof(nameParts[1]) !== "undefined") ? nameParts[0] + " " + nameParts[1] : nameParts[0];
+          marketSum = `<button type="button" class="search-for-button" data-search="${group}">${marketSum}</button>`;
         }
       } else {
         if (row.name.indexOf("Set") !== -1) {
           marketSum = row.market_pv_diff;
         } else {
-          marketSum = 0;
+          marketSum = "";
         }
       }
 
@@ -326,7 +350,7 @@ let Table = {
       l.baseCalc();
       l.order();
       l.compareWithChatRow();
-      l.dropLocationSearchButton();
+      l.searchForButton();
       l.onlinePlayerTime();
 
       //Chart
@@ -604,7 +628,7 @@ let Table = {
     column() {
       //sets default state
       $.each(Table.$elem.state().columns, function(a, b) {
-        if (b.visible && a > 0 && a < 10) {
+        if (b.visible && a > 0 && a < 11) {
           $(".show-column[value=" + a + "]").attr("checked", true);
         }
       });
@@ -667,7 +691,7 @@ let Table = {
       $(".data-type").click(function() {
         if ($(this).val() !== Table.dataType) {
           Table.dataType = $(this).val();
-          storage.set("dataType", Table.dataType);
+          storage.set("dataTypes", Table.dataType);
           Table.repopulate();
         }
       });
@@ -701,7 +725,6 @@ let Table = {
       });
     },
     order() {
-      //TODO
       // Table.$elem.on("order.dt", function() {
       //   const order = Table.$elem.order();
       //   if (order.length > 0) {
@@ -750,24 +773,34 @@ let Table = {
         }
       });
     },
-    dropLocationSearchButton() {
+    searchForButton() {
       $(document).on("click", ".search-for-button", function(e) {
-        const searchFor = $(this).html();
+        const searchFor = $(this).data("search");
         const $elem = $("#search");
+        let triggerSearch = false;
 
         if (!e.ctrlKey) {
+          triggerSearch = true;
           $elem.val(searchFor);
         } else {
           $elem.val(function(index, value) {
-            if (value.length > 0) {
-              return value + "|" + searchFor;
+            //Trigger only if needed
+            if (value.indexOf(searchFor) === -1) {
+              triggerSearch = true;
+              if (value.length > 0) {
+                return value + "|" + searchFor;
+              } else {
+                return searchFor;
+              }
             } else {
-              return searchFor;
+              return value;
             }
           });
         }
 
-        $("#search").trigger("input");
+        if (triggerSearch) {
+          $("#search").trigger("input");
+        }
       });
     },
     onlinePlayerTime() {
@@ -975,9 +1008,6 @@ let Table = {
       let dataTableObject = {
         sDom: "<'table-body't><'table-footer'pli>",
         stateSave: true,
-        orderFixed: {
-          pre: [ 10, 'desc' ]
-        },
         lengthMenu: [
           [10, 15, 20, 40, -1],
           ["Mobile S(10)", "Mobile M(15)", "Mobile XL(20)", "Desktop(40)", "I'm a god(All)"]
@@ -1063,8 +1093,9 @@ let Table = {
           },
           {
             data: "market_pv_diff",
-            visible: true,
-            render(data, type, row) {
+            visible: false,
+            class: "save-plat",
+            render(data, type, row, meta) {
               return Table.renders.partsSumColumn(data, type, row, dataSet);
             }
           },
@@ -1084,8 +1115,10 @@ let Table = {
         //TODO:
         rowGroup: {
           dataSrc(a) {
-            console.log(a);
-            return a.name.split(" ")[0];
+            const nameParts = a.name.split(" ");
+            let group = (typeof(nameParts[1]) !== "undefined") ? nameParts[0] + " " + nameParts[1] : nameParts[0];
+
+            return group;
           },
           startRender: null,
           endRender(rows, group) {
@@ -1103,15 +1136,15 @@ let Table = {
         },
         preDrawCallback(settings) {
           //Bug repairment with groups.
-          if (settings.oLoadedState !== null) {
-            if (settings.oLoadedState.order.length > 0) {
-              if (settings.oLoadedState.order[0][0] > 0) {
-                settings.rowGroup.disable();
-              }
-            } else {
-              settings.rowGroup.disable();
-            }
-          }
+          // if (settings.oLoadedState !== null) {
+          //   if (settings.oLoadedState.order.length > 0) {
+          //     if (settings.oLoadedState.order[0][0] > 0) {
+          //       settings.rowGroup.disable();
+          //     }
+          //   } else {
+          //     settings.rowGroup.disable();
+          //   }
+          // }
         }
       };
 

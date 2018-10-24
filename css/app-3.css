@@ -155,7 +155,7 @@ hr.divide-mobile {
 }
 dialog .container {
   padding: 12px 20px;
-  background-color: #a9a9a9;
+  background-color: #ececec;
   -webkit-box-shadow: -2px 4px 2px 1px rgba(0,0,0,0.12);
     -moz-box-shadow: -2px 4px 2px 1px rgba(0,0,0,0.12);
     box-shadow: -2px 4px 2px 1px rgba(0,0,0,0.12);
@@ -298,14 +298,19 @@ div.drop-location {
  overflow-y: auto;
 }
 div.drop-location button.search-for-button {
-  border: none;
   font-size: 0.8rem;
   display: block;
   width: 100%;
   text-align: left;
+}
+button.search-for-button {
+  border: none;
   background-color: transparent;
 }
-div.drop-location button.search-for-button:hover {
+td.save-plat button.search-for-button {
+  width: 100%;
+}
+button.search-for-button:hover {
   background-color: #def7ff;
   cursor: pointer;
 }
