@@ -106,7 +106,7 @@ let App = {
   },
   listners: {
     shareBTN() {
-      $("#share").click(function() {
+      $("#get-link").click(function() {
         //basic
         let options = {
           platform: Table.orders.replace(":", "").toLowerCase(),

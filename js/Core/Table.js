@@ -24,6 +24,10 @@ let Table = {
   //What column form should be the PLAT:DUCAT ratio calculated
   baseCalcFrom: storage.get("ratioCalc") || "min",
   onlinePlayerTime: {},
+  sourceData: {
+    buy: null,
+    sell: null
+  },
   renders: {
     //returns a button with the count of sellers for platform
     sellers(data, type, row) {
@@ -179,69 +183,35 @@ let Table = {
     },
     //returns a html string for item groups that shows if parts or set is better deal
     groupNameEndRender(rows, group) {
-      const calcPartsSet = function(items, chat = false) {
-        let sum = 0;
-        let set = 0;
-        let objectKey = (!chat) ? Table.baseCalcFrom : "chat_" + Table.baseCalcFrom;
-
-        for (let i = 0; i < items.length; i++) {
-          if (items[i].name.indexOf("Set") !== -1) {
-            set = items[i][objectKey];
-          } else {
-            if (items[i].double_part) {
-              sum += items[i][objectKey] * 2;
-            } else {
-              sum += items[i][objectKey];
-            }
-          }
-        }
-
-        return [sum, set];
-      };
-
-      const calculatioSummary = function(sum, set, icon) {
-        if (!isNaN(sum) && set > 0 && sum > 0) {
-          let msg = "";
-          if (sum < set) {
-            if (Table.dataType === "sell") {
-              msg = `<small class='save success-save'><span class='${icon}'> ${(set - sum)} P</span></small>`;
-            } else {
-              msg = `<small class='save fail-save'><span class='${icon}'> ${(set - sum)} P</span></small>`;
-            }
-          } else if (sum > set) {
-            if (Table.dataType === "sell") {
-              msg = `<small class='save success-save'><span class='${icon}'> ${(sum - set)} S</span></small>`;
-            } else {
-              msg = `<small class='save fail-save'><span class='${icon}'> ${(sum - set)} S</span></small>`;
-            }
-          }
-          return msg;
-        }
-      };
-
       const items = rows.data();
       //look for item with "Set" in it because it holds the information about the id's related to it
       let partAmount;
+      let sot;
       for (let i = 0; i < items.length; i++) {
         if (items[i].name.indexOf("Set") !== -1) {
           partAmount = items[i].set_parts.length + 1;
+          sot = items[i].market_pv_diff;
         }
       }
 
       if (items.length === partAmount) {
-        const calcArrayMarket = calcPartsSet(items);
-        const msgMarket = calculatioSummary(calcArrayMarket[0], calcArrayMarket[1], "icon-desktop");
-        let calcArrayChat = false;
-        let msgChat = false;
-
-        if (Table.compareWithChat) {
-          calcArrayChat = calcPartsSet(items, true);
-          msgChat = calculatioSummary(calcArrayChat[0], calcArrayChat[1], "icon-terminal");
+        let msg = "";
+        if (sot > 0) {
+          if (Table.dataType === "sell") {
+            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="10,desc">${sot} P</button>`;
+          } else {
+            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="10,desc">${sot} S</button>`;
+          }
+        } else if (sot < 0) {
+          if (Table.dataType === "sell") {
+            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="10,desc">${sot} S</button>`;
+          } else {
+            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="10,desc">${sot} P</button>`;
+          }
         }
-        let returnValue = (msgChat) ? msgChat + msgMarket : msgMarket;
 
         const star = (Table.favourite.indexOf(group) !== -1) ? "group-like" : "";
-        return returnValue + `<button class="favourite-btn-all icon-star ${star}" data-group="${group}">+</button>`;
+        return msg + `<button class="favourite-btn-all icon-star ${star}" data-group="${group}">${group} +</button>`;
       }
     },
     //returns the plat:ducat ratio of signle items
@@ -279,53 +249,74 @@ let Table = {
       }
       return data;
     },
-    partsSumColumn(data, type, row, dataSet) {
+    partsSumColumn(data, type, row, meta) {
       let marketSum = "";
+      let dataSet = Table.sourceData[Table.dataType];
       if (type === "display") {
         if (row.name.indexOf("Set") !== -1) {
           const parts = row.set_parts;
           const sumParts = function(objectKey) {
             let sum = 0;
-            parts.forEach(function(id) {
+            if (row[objectKey] === 0) {
+              return null;
+            }
+            for (let i = 0; i < parts.length; i++) {
+              const id = parts[i];
+              if (dataSet[id - 1][objectKey] === 0) {
+                sum = null;
+                break;
+              }
               if (dataSet[id - 1].double_part) {
                 sum += dataSet[id - 1][objectKey] * 2;
               } else {
                 sum += dataSet[id - 1][objectKey];
               }
-            });
+            }
             return sum;
           };
 
           let objectKeyMarket = Table.baseCalcFrom;
           marketSum = sumParts(objectKeyMarket);
-          const calculation = row[objectKeyMarket] - marketSum;
-          row.market_pv_diff = Math.abs(calculation);
-          //TODO THE REASON THIS DOSNT WORK IS BECAUSE WHEN ORDER TYPE IS CHANGED THE DATASET STAYS
-          //TODO  ON SELL INSTEAD OF GETTING BUY ONE, SO IT BUGGS AND THE VALUES DONT ADD UP LIKE THE SHOULD
-          if (row[objectKeyMarket] < marketSum) {
-            if (Table.dataType === "sell") {
-              marketSum = `S ${(marketSum - row[objectKeyMarket])}`;
-            } else {
-              if (row.name.indexOf("Ash Prime Set") !== -1) {
-                console.log(row, marketSum, row[objectKeyMarket], dataSet);
-              }
 
-              marketSum = `S ${(row[objectKeyMarket] - marketSum)}`;
-            }
-          } else if (row[objectKeyMarket] > marketSum) {
-            if (Table.dataType === "sell") {
-              marketSum = `P ${calculation}`;
+          let calculation;
+          if (marketSum !== null) {
+            if (row[objectKeyMarket] < marketSum) {
+              if (Table.dataType === "sell") {
+                calculation = marketSum - row[objectKeyMarket];
+                marketSum = `S ${calculation}`;
+              } else {
+                calculation = row[objectKeyMarket] - marketSum;
+                marketSum = `S ${calculation}`;
+              }
+            } else if (row[objectKeyMarket] > marketSum) {
+              if (Table.dataType === "sell") {
+                calculation = row[objectKeyMarket] - marketSum;
+                marketSum = `P ${calculation}`;
+              } else {
+                calculation = marketSum - row[objectKeyMarket];
+                marketSum = `P ${calculation}`;
+              }
             } else {
-              marketSum = `P ${calculation}`;
+              calculation = 0;
+              marketSum = "";
             }
+          } else {
+            calculation = "";
           }
 
+          for (let i = 0; i < parts.length; i++) {
+            const id = parts[i];
+            dataSet[id - 1].market_pv_diff = calculation;
+          }
+
+          row.market_pv_diff = calculation;
           const nameParts = row.name.split(" ");
           let group = (typeof(nameParts[1]) !== "undefined") ? nameParts[0] + " " + nameParts[1] : nameParts[0];
           marketSum = `<button type="button" class="search-for-button" data-search="${group}">${marketSum}</button>`;
         }
+        console.log("display2");
       } else {
-        if (row.name.indexOf("Set") !== -1) {
+        if (typeof(row.market_pv_diff) !== "undefined" || row.name.indexOf("Set") !== -1) {
           marketSum = row.market_pv_diff;
         } else {
           marketSum = "";
@@ -348,9 +339,10 @@ let Table = {
       l.dataType();
       l.column();
       l.baseCalc();
-      l.order();
+      //l.order();
       l.compareWithChatRow();
       l.searchForButton();
+      l.orderByButton();
       l.onlinePlayerTime();
 
       //Chart
@@ -725,17 +717,23 @@ let Table = {
       });
     },
     order() {
-      // Table.$elem.on("order.dt", function() {
-      //   const order = Table.$elem.order();
-      //   if (order.length > 0) {
-      //     const orderIndex = order[0][0];
-      //     if (orderIndex > 0) {
-      //       Table.$elem.rowGroup().disable();
-      //     } else {
-      //       Table.$elem.rowGroup().enable();
-      //     }
-      //   }
-      // });
+      Table.$elem.on("order.dt", function() {
+        const order = Table.$elem.order();
+        let enabled = false;
+        for (let i = 0; i < order.length; i++) {
+          if (order[i][0] === 0) {
+            enabled = true;
+            break;
+          } else {
+            enabled = false;
+          }
+        }
+        if (enabled) {
+          Table.$elem.rowGroup().enable();
+        } else {
+          Table.$elem.rowGroup().disable();
+        }
+      });
     },
     compareWithChatRow() {
       $("#ChatData").change(function() {
@@ -801,6 +799,16 @@ let Table = {
         if (triggerSearch) {
           $("#search").trigger("input");
         }
+      });
+    },
+    orderByButton() {
+      $(document).on("click", ".btn-order-by", function() {
+        const $elem = $(this);
+        const data = $elem.data("order");
+        let order = data.split(",");
+        order[0] = parseInt(order[0]);
+
+        Table.$elem.order(order).draw();
       });
     },
     onlinePlayerTime() {
@@ -1002,7 +1010,7 @@ let Table = {
   init(callback = false) {
     //ASYNC DATA FETCH, but with a promise to be resolved
     Table.dataPrep.getRequestedData().then(function(resolver) {
-      let dataSet = Table.dataPrep.prepareRequestedData(resolver);
+      Table.sourceData[Table.dataType] = Table.dataPrep.prepareRequestedData(resolver);
 
       //Set datatables object
       let dataTableObject = {
@@ -1013,7 +1021,7 @@ let Table = {
           ["Mobile S(10)", "Mobile M(15)", "Mobile XL(20)", "Desktop(40)", "I'm a god(All)"]
         ],
         fixedColumns: true,
-        data: dataSet,
+        data: Table.sourceData[Table.dataType],
         columns: [
           {
             data: "name",
@@ -1094,9 +1102,12 @@ let Table = {
           {
             data: "market_pv_diff",
             visible: false,
+            serchable: false,
             class: "save-plat",
+            defaultContent: "UNKNOWN",
             render(data, type, row, meta) {
-              return Table.renders.partsSumColumn(data, type, row, dataSet);
+              const retu =  Table.renders.partsSumColumn(data, type, row, meta);
+              return retu;
             }
           },
           {
@@ -1136,6 +1147,7 @@ let Table = {
         },
         preDrawCallback(settings) {
           //Bug repairment with groups.
+          //TODO: REPAIR THIS
           // if (settings.oLoadedState !== null) {
           //   if (settings.oLoadedState.order.length > 0) {
           //     if (settings.oLoadedState.order[0][0] > 0) {
@@ -1166,6 +1178,7 @@ let Table = {
     Table.$elem.clear();
     Table.dataPrep.getRequestedData().then((resolver) => {
       Table.dataPrep.prepareRequestedData(resolver, function(dataSet) {
+        Table.sourceData[Table.dataType] = dataSet;
         Table.$elem.rows.add(dataSet).draw();
       });
     });
