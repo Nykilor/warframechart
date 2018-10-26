@@ -368,11 +368,11 @@
           <h3 class="icon-globe">STAT. VALUES: </h3>
           <label class="filter-label">
             <input type="radio" class="filter-input value-type" name="values" value="0" hidden checked>
-            <div>GLOBAL</div>
+            <div title="Values will be based on global ones.">GLOBAL</div>
           </label>
           <label class="filter-label" id="order-based">
             <input type="radio" class="filter-input value-type" name="values" value="1" hidden>
-            <div>PLATFORM</div>
+            <div title="Values will be based on the values from players withs the platfrom picked from below.">PLATFORM</div>
           </label>
         </div>
 
@@ -435,7 +435,6 @@
         </div>
     </div>
   </main>
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script type="text/javascript">
   <?php
     $index = new WChart\Controller\Js($_GET);
