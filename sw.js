@@ -1,7 +1,7 @@
 "use strict";
-var cache_id = "app-v3-1";
-self.addEventListener('install', function (event) {
-  event.waitUntil(caches.open(cache_id).then((cache) => {
+let cacheId = "app-v4";
+self.addEventListener("install", function(event) {
+  event.waitUntil(caches.open(cacheId).then((cache) => {
       return cache.addAll([
         "/",
         "img/axi.png",
@@ -10,16 +10,15 @@ self.addEventListener('install', function (event) {
         "img/lith.png",
         "img/bg-custom.png",
         "css/app-3.css",
-        "js/jquery-3.2.1.min.js",
-        "js/app-3.js"
+        "js/Bundle.js"
       ]).then(() => self.skipWaiting());
-    }))
+  }));
 });
 
-self.addEventListener('fetch', function (event) {
+self.addEventListener("fetch", function(event) {
   event.respondWith(
     // Open the cache created when install
-    caches.open(cache_id).then(function(cache) {
+    caches.open(cacheId).then(function(cache) {
       // Go to the network to ask for that resource
       return fetch(event.request).then(function(networkResponse) {
         // Add a copy of the response to the cache (updating the old version)
@@ -30,7 +29,7 @@ self.addEventListener('fetch', function (event) {
         // If there is no internet connection, try to match the request
         // to some of our cached resources
         return cache.match(event.request);
-      })
+      });
     })
   );
 });
