@@ -24,6 +24,7 @@ let Table = {
   //What column form should be the PLAT:DUCAT ratio calculated
   baseCalcFrom: storage.get("ratioCalc") || "min",
   onlinePlayerTime: {},
+  ignoredPlayers: storage.get("ignored-players") || [],
   sourceData: {
     buy: null,
     sell: null
@@ -131,15 +132,18 @@ let Table = {
           const playerName = a.replace(Table.orders, "");
           const platform = Table.orders.slice(0, -1);
           const onlineTimeContent = (typeof(Table.onlinePlayerTime[a]) !== "undefined") ? ["icon-calendar", Table.onlinePlayerTime[a]] : ["icon-calendar-empty", ""];
+          const isIgnoredPlayer = (Table.ignoredPlayers.indexOf(a) !== -1) ? "icon-eye" : "icon-eye-off";
 
           if (typeof(b) === "number") {
             tbody = tbody + `<tr>
+              <td><button type="button" class="${isIgnoredPlayer} ignore-player-button" data-player="${a}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
               <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
               <td>${b}</td>
             </tr>`;
           } else {
             tbody = tbody + `<tr>
+              <td><button type="button" class="${isIgnoredPlayer} ignore-player-button" data-player="${a}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
               <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
               <td>${b[0]} - <small> R ${b[1]}</small></td>
@@ -159,6 +163,7 @@ let Table = {
       const table = `<table class="inner-list-table">
         <thead>
           <tr>
+            <th></th>
             <th></th>
             <th>PLAYER</th>
             <th>PRICE</th>
@@ -314,7 +319,6 @@ let Table = {
           let group = (typeof(nameParts[1]) !== "undefined") ? nameParts[0] + " " + nameParts[1] : nameParts[0];
           marketSum = `<button type="button" class="search-for-button" data-search="${group}">${marketSum}</button>`;
         }
-        console.log("display2");
       } else {
         if (typeof(row.market_pv_diff) !== "undefined" || row.name.indexOf("Set") !== -1) {
           marketSum = row.market_pv_diff;
@@ -342,6 +346,7 @@ let Table = {
       //l.order();
       l.compareWithChatRow();
       l.searchForButton();
+      l.ignorePlayerButton();
       l.orderByButton();
       l.onlinePlayerTime();
 
@@ -811,6 +816,25 @@ let Table = {
         Table.$elem.order(order).draw();
       });
     },
+    ignorePlayerButton() {
+      $(document).on("click", ".ignore-player-button", function() {
+        const $elem = $(this);
+        const data = $elem.data("player");
+        let list = Table.ignoredPlayers;
+        let index = list.indexOf(data);
+        console.log(index);
+
+        if (index !== -1) {
+          $elem.removeClass("icon-eye").addClass("icon-eye-off");
+          list.splice(index, 1);
+        } else {
+          $elem.removeClass("icon-eye-off").addClass("icon-eye");
+          list.push(data);
+        }
+        console.log(list);
+        storage.set("ignored-players", list);
+      });
+    },
     onlinePlayerTime() {
       $(document).on("click", ".check-online-time-button", function() {
         const $that = $(this);
@@ -892,10 +916,11 @@ let Table = {
           const now = Math.floor((timeNow.getTime() - lastUpdate) / 60000);
           const $elem = $("#last-update");
           $elem.html("<span id='lastUpdate'>" + now + "</span> minutes ago.");
-
+          //TODO MOVE THIS PART ELSEWHERE TO IMPLEMENT THE RECALCULATION WITH IGNORED PLAYERS IN MIND,
+          // AND I GOT TO MOVE THIS BECAUSE I DON"T WANT TO FETCH NEW DATA AFTER EACH IGNORE IT"S A TERIBLE IDEA
           $.each(result, function(a, b) {
             const platform = platformFix(Table.orders);
-
+            //TODO
             if (Table.statValue) {
               b.min = b.min[platform];
               b.max = b.max[platform];
@@ -1160,9 +1185,8 @@ let Table = {
         }
       };
 
-      /*eslint-disable */
+
       Table.$elem = $("#dataTable").DataTable(dataTableObject);
-      /*eslint-enable */
 
       if (callback) {
         console.log(Table.$elem);

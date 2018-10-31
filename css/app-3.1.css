@@ -400,10 +400,10 @@ table.dataTable tr.dtrg-end td{
 .table-wrapper {
   width: 100%;
 }
-.inner-list-table tr td:first-child {
+.inner-list-table tr td:nth-child(1), .inner-list-table tr td:nth-child(2) {
   width: 30px;
 }
-.inner-list-table tr td:nth-child(3) {
+.inner-list-table tr td:nth-child(4) {
   text-align: right;
 }
 .inner-list-table button {
