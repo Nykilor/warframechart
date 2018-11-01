@@ -50,6 +50,8 @@
                         <p>Show/Hide column.</p>
                         <h4 class="icon-globe">Stat. Values</h4>
                         <p>Use GLOBAL or PLATFORM based stat. values.</p>
+                        <h4 class="icon-calculator">Calculate values based on</h4>
+                        <p>Here you select from what values should the calculations of ratio, set-parts value and other to come be based on.</p>
                         <h4 class="icon-desktop">Platform</h4>
                         <p>The little counter next to cart defines how many orders are there for this item at platform "PC", "PS4", "XB1/XBOX". If you use this option while having PLATFORM based stats the value's will change depending on the platform.</p>
                         <h4 class="icon-basket">Order type</h4>
@@ -72,11 +74,8 @@
                       </ul>
                       <h4>Shorts</h4>
                       <ul>
-                          <li><small class="save success-save"><span class="icon-desktop">32 S</span></small> - read it as '<b>S</b>ave <b>32</b> platinium by buying/selling <b>S</b>et by using <b>warframe.market</b>'</li>
-                          <li><small class="save fail-save"><span class="icon-desktop">1 P</span></small> - read it as '<b>L</b>ose <b>1</b> platinium by buying/selling <b>P</b>artialy by using <b>warframe.market</b>'</li>
-                          <hr>
-                          <li><small class="save success-save"><span class="icon-terminal">32 S</span></small> - read it as '<b>S</b>ave <b>32</b> platinium by buying/selling <b>S</b>et by using <b>chat</b>'</li>
-                          <li><small class="save fail-save"><span class="icon-terminal">2 P</span></small> - read it as '<b>L</b>ose <b>2</b> platinium by buying/selling <b>P</b>artialy by using <b>chat</b>'</li>
+                          <li><small class="save success-save"><span class="icon-desktop">32 S</span></small> - read it as '<b>S</b>ave <b>32</b> platinium by buying/selling <b>S</b>et by using <b>warframe.market</b>', click to sort by it.</li>
+                          <li><small class="save fail-save"><span class="icon-desktop">1 P</span></small> - read it as '<b>L</b>ose <b>1</b> platinium by buying/selling <b>P</b>artialy by using <b>warframe.market</b>', click to sort by it.</li>
                       </ul>
                     </div>
                     <h3 class="icon-cursor">Shortcuts</h3>
@@ -103,7 +102,7 @@
                     <h3>Hey can you add "this, that" to the listing?</h3>
                         <p>Sure just use the <a href="https://www.reddit.com/message/compose/?to=nykilor&subject=Add%20to%20chart" target="_blank" rel="noopener"><button type="button" name="request" class="menu-btn icon-plus">ADD ITEM</button></a> button and pm me on reddit.</p>
                     <h3>Can i somehow help you?</h3>
-                        <p>*HERE SHOULD BE A GITHUB LINK* you can help me optimize this, or just <a href="http://paypal.me/AMigacz" target="_blank" rel="noopener">donate</a> a few $ for better hosting and a coffee for me.</p>
+                        <p><a href="https://github.com/Nykilor/warframechart">*HERE SHOULD BE A GITHUB LINK*</a> you can help me optimize this, or just <a href="http://paypal.me/AMigacz" target="_blank" rel="noopener">donate</a> a few $ for better hosting and a coffee for me.</p>
                     <h3>This site is to heavy for my PC/PHONE/POTATO to handle, is there any other option?</h3>
                         <p>Click here <a href="nojs/sell.html" title="nojs" class="menu-btn" target="_blank">NO&nbsp;JS/PRINT</a>, there you'll find just the most basic values.</p>
                     <h3>What are you now planing?</h3>
@@ -279,7 +278,7 @@
           <li><button type="button" name="help" id="faq-help-open" class="menu-btn icon-help">Help\FAQ</button></li>
           <li><button type="button" name="relic-run" id="build-relic-run" class="menu-btn icon-hammer" class="intro-wraper" data-step="17" data-intro="Use this if you do a relic run, here you can quickly check the value of items.">RELIC RUN</button></li>
           <li><a href="nojs/sellpc.html" title="nojs" class="menu-btn icon-print" target="_blank" data-step="18" data-intro="Simple HTML table with no JS at all.">NO&nbsp;JS</a></li>
-          <li><button type="button" name="share" id="share" class="menu-btn icon-share" data-step="19" data-intro="Share your settings with friends in game so they can check for themselfs the values. (The url will force all your settings on them rewriting their own.)">SHARE</button><textarea class="share-copy-area"></textarea></li>
+          <li><button type="button" name="get-link" id="get-link" class="menu-btn icon-get-link" data-step="19" data-intro="Share your settings with friends in game so they can check for themselfs the values. (The url will force all your settings on them rewriting their own.)">SHARE</button><textarea class="share-copy-area"></textarea></li>
         </ul>
       </nav>
       <hr class="divide-mobile">
@@ -369,11 +368,11 @@
           <h3 class="icon-globe">STAT. VALUES: </h3>
           <label class="filter-label">
             <input type="radio" class="filter-input value-type" name="values" value="0" hidden checked>
-            <div>GLOBAL</div>
+            <div title="Values will be based on global ones.">GLOBAL</div>
           </label>
           <label class="filter-label" id="order-based">
             <input type="radio" class="filter-input value-type" name="values" value="1" hidden>
-            <div>PLATFORM</div>
+            <div title="Values will be based on the values from players withs the platfrom picked from below.">PLATFORM</div>
           </label>
         </div>
 
@@ -424,7 +423,6 @@
                   <th><img src="img/ducats.png" alt="ducats" width="20" height="20" class="icon-vert-middle"> : <img src="img/PlatinumLarge.png" alt="plat" width="20" height="20" class="icon-vert-middle"></th>
                   <th></th>
                   <th>DROP</th>
-                  <th>PVS</th>
                 </tr>
               </thead>
               <tbody>
@@ -437,7 +435,6 @@
         </div>
     </div>
   </main>
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script type="text/javascript">
   <?php
     $index = new WChart\Controller\Js($_GET);

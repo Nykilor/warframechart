@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/rowgroup/1.0.2/css/rowGroup.dataTables.min.css">
-  <link rel="stylesheet" href="css/app-3.css">
+  <link rel="stylesheet" href="css/app-3.1.css">
   <style>
   noscript {
     position: absolute;

@@ -6,6 +6,8 @@ import MarketData from "./MarketData.js";
 import App from "./App.js";
 
 jQueryMobile();
+
+//TODO GOT TO MAKE A KEY FOR A COPY OF ACCCTUALY USSSED DATA TO BE able to calc some stuff
 let Table = {
   //The DataTable elem
   "$elem": null,
@@ -22,6 +24,11 @@ let Table = {
   //What column form should be the PLAT:DUCAT ratio calculated
   baseCalcFrom: storage.get("ratioCalc") || "min",
   onlinePlayerTime: {},
+  ignoredPlayers: storage.get("ignored-players") || [],
+  sourceData: {
+    buy: null,
+    sell: null
+  },
   renders: {
     //returns a button with the count of sellers for platform
     sellers(data, type, row) {
@@ -125,15 +132,18 @@ let Table = {
           const playerName = a.replace(Table.orders, "");
           const platform = Table.orders.slice(0, -1);
           const onlineTimeContent = (typeof(Table.onlinePlayerTime[a]) !== "undefined") ? ["icon-calendar", Table.onlinePlayerTime[a]] : ["icon-calendar-empty", ""];
+          const isIgnoredPlayer = (Table.ignoredPlayers.indexOf(a) !== -1) ? "icon-eye" : "icon-eye-off";
 
           if (typeof(b) === "number") {
             tbody = tbody + `<tr>
+              <td><button type="button" class="${isIgnoredPlayer} ignore-player-button" data-player="${a}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
               <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
               <td>${b}</td>
             </tr>`;
           } else {
             tbody = tbody + `<tr>
+              <td><button type="button" class="${isIgnoredPlayer} ignore-player-button" data-player="${a}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
               <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
               <td>${b[0]} - <small> R ${b[1]}</small></td>
@@ -153,6 +163,7 @@ let Table = {
       const table = `<table class="inner-list-table">
         <thead>
           <tr>
+            <th></th>
             <th></th>
             <th>PLAYER</th>
             <th>PRICE</th>
@@ -177,69 +188,35 @@ let Table = {
     },
     //returns a html string for item groups that shows if parts or set is better deal
     groupNameEndRender(rows, group) {
-      const calcPartsSet = function(items, chat = false) {
-        let sum = 0;
-        let set = 0;
-        let objectKey = (!chat) ? Table.baseCalcFrom : "chat_" + Table.baseCalcFrom;
-
-        for (let i = 0; i < items.length; i++) {
-          if (items[i].name.indexOf("Set") !== -1) {
-            set = items[i][objectKey];
-          } else {
-            if (items[i].double_part) {
-              sum += items[i][objectKey] * 2;
-            } else {
-              sum += items[i][objectKey];
-            }
-          }
-        }
-
-        return [sum, set];
-      };
-
-      const calculatioSummary = function(sum, set, icon) {
-        if (!isNaN(sum) && set > 0 && sum > 0) {
-          let msg = "";
-          if (sum < set) {
-            if (Table.dataType === "sell") {
-              msg = `<small class='save success-save'><span class='${icon}'> ${(set - sum)} P</span></small>`;
-            } else {
-              msg = `<small class='save fail-save'><span class='${icon}'> ${(set - sum)} P</span></small>`;
-            }
-          } else if (sum > set) {
-            if (Table.dataType === "sell") {
-              msg = `<small class='save success-save'><span class='${icon}'> ${(sum - set)} S</span></small>`;
-            } else {
-              msg = `<small class='save fail-save'><span class='${icon}'> ${(sum - set)} S</span></small>`;
-            }
-          }
-          return msg;
-        }
-      };
-
       const items = rows.data();
       //look for item with "Set" in it because it holds the information about the id's related to it
       let partAmount;
+      let sot;
       for (let i = 0; i < items.length; i++) {
         if (items[i].name.indexOf("Set") !== -1) {
           partAmount = items[i].set_parts.length + 1;
+          sot = items[i].market_pv_diff;
         }
       }
 
       if (items.length === partAmount) {
-        const calcArrayMarket = calcPartsSet(items);
-        const msgMarket = calculatioSummary(calcArrayMarket[0], calcArrayMarket[1], "icon-desktop");
-        let calcArrayChat = false;
-        let msgChat = false;
-
-        if (Table.compareWithChat) {
-          calcArrayChat = calcPartsSet(items, true);
-          msgChat = calculatioSummary(calcArrayChat[0], calcArrayChat[1], "icon-terminal");
+        let msg = "";
+        if (sot > 0) {
+          if (Table.dataType === "sell") {
+            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="10,desc">${sot} P</button>`;
+          } else {
+            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="10,desc">${sot} S</button>`;
+          }
+        } else if (sot < 0) {
+          if (Table.dataType === "sell") {
+            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="10,desc">${sot} S</button>`;
+          } else {
+            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="10,desc">${sot} P</button>`;
+          }
         }
-        let returnValue = (msgChat) ? msgChat + msgMarket : msgMarket;
 
         const star = (Table.favourite.indexOf(group) !== -1) ? "group-like" : "";
-        return returnValue + `<button class="favourite-btn-all icon-star ${star}" data-group="${group}">+</button>`;
+        return msg + `<button class="favourite-btn-all icon-star ${star}" data-group="${group}">${group} +</button>`;
       }
     },
     //returns the plat:ducat ratio of signle items
@@ -269,7 +246,7 @@ let Table = {
         let newString = "<div class='drop-location'>";
         $.each(dataArray, function(key, value) {
           const capitalized = capitalize(value);
-          newString = newString + `<button type="button" class="search-for-button">${capitalized}</button>`;
+          newString = newString + `<button type="button" class="search-for-button" data-search="${capitalized}">${capitalized}</button>`;
         });
         data = newString + "</div>";
       } else if (type === "display" && data === "none") {
@@ -277,34 +254,76 @@ let Table = {
       }
       return data;
     },
-    partsSumColumn(data, type, row, dataSet) {
-      let marketSum = 0;
+    partsSumColumn(data, type, row, meta) {
+      let marketSum = "";
+      let dataSet = Table.sourceData[Table.dataType];
       if (type === "display") {
         if (row.name.indexOf("Set") !== -1) {
           const parts = row.set_parts;
           const sumParts = function(objectKey) {
             let sum = 0;
-            parts.forEach(function(id) {
+            if (row[objectKey] === 0) {
+              return null;
+            }
+            for (let i = 0; i < parts.length; i++) {
+              const id = parts[i];
+              if (dataSet[id - 1][objectKey] === 0) {
+                sum = null;
+                break;
+              }
               if (dataSet[id - 1].double_part) {
                 sum += dataSet[id - 1][objectKey] * 2;
               } else {
                 sum += dataSet[id - 1][objectKey];
               }
-            });
+            }
             return sum;
           };
 
           let objectKeyMarket = Table.baseCalcFrom;
           marketSum = sumParts(objectKeyMarket);
-          const calculation = row[objectKeyMarket] - marketSum;
-          row.market_pv_diff = Math.abs(calculation);
-          marketSum = (row.market_pv_diff > 0) ? "S " + row.market_pv_diff : "P " + row.market_pv_diff;
+
+          let calculation;
+          if (marketSum !== null) {
+            if (row[objectKeyMarket] < marketSum) {
+              if (Table.dataType === "sell") {
+                calculation = marketSum - row[objectKeyMarket];
+                marketSum = `S ${calculation}`;
+              } else {
+                calculation = row[objectKeyMarket] - marketSum;
+                marketSum = `S ${calculation}`;
+              }
+            } else if (row[objectKeyMarket] > marketSum) {
+              if (Table.dataType === "sell") {
+                calculation = row[objectKeyMarket] - marketSum;
+                marketSum = `P ${calculation}`;
+              } else {
+                calculation = marketSum - row[objectKeyMarket];
+                marketSum = `P ${calculation}`;
+              }
+            } else {
+              calculation = 0;
+              marketSum = "";
+            }
+          } else {
+            calculation = "";
+          }
+
+          for (let i = 0; i < parts.length; i++) {
+            const id = parts[i];
+            dataSet[id - 1].market_pv_diff = calculation;
+          }
+
+          row.market_pv_diff = calculation;
+          const nameParts = row.name.split(" ");
+          let group = (typeof(nameParts[1]) !== "undefined") ? nameParts[0] + " " + nameParts[1] : nameParts[0];
+          marketSum = `<button type="button" class="search-for-button" data-search="${group}">${marketSum}</button>`;
         }
       } else {
-        if (row.name.indexOf("Set") !== -1) {
+        if (typeof(row.market_pv_diff) !== "undefined" || row.name.indexOf("Set") !== -1) {
           marketSum = row.market_pv_diff;
         } else {
-          marketSum = 0;
+          marketSum = "";
         }
       }
 
@@ -324,9 +343,11 @@ let Table = {
       l.dataType();
       l.column();
       l.baseCalc();
-      l.order();
+      //l.order();
       l.compareWithChatRow();
-      l.dropLocationSearchButton();
+      l.searchForButton();
+      l.ignorePlayerButton();
+      l.orderByButton();
       l.onlinePlayerTime();
 
       //Chart
@@ -604,7 +625,7 @@ let Table = {
     column() {
       //sets default state
       $.each(Table.$elem.state().columns, function(a, b) {
-        if (b.visible && a > 0 && a < 10) {
+        if (b.visible && a > 0 && a < 11) {
           $(".show-column[value=" + a + "]").attr("checked", true);
         }
       });
@@ -667,7 +688,7 @@ let Table = {
       $(".data-type").click(function() {
         if ($(this).val() !== Table.dataType) {
           Table.dataType = $(this).val();
-          storage.set("dataType", Table.dataType);
+          storage.set("dataTypes", Table.dataType);
           Table.repopulate();
         }
       });
@@ -701,18 +722,23 @@ let Table = {
       });
     },
     order() {
-      //TODO
-      // Table.$elem.on("order.dt", function() {
-      //   const order = Table.$elem.order();
-      //   if (order.length > 0) {
-      //     const orderIndex = order[0][0];
-      //     if (orderIndex > 0) {
-      //       Table.$elem.rowGroup().disable();
-      //     } else {
-      //       Table.$elem.rowGroup().enable();
-      //     }
-      //   }
-      // });
+      Table.$elem.on("order.dt", function() {
+        const order = Table.$elem.order();
+        let enabled = false;
+        for (let i = 0; i < order.length; i++) {
+          if (order[i][0] === 0) {
+            enabled = true;
+            break;
+          } else {
+            enabled = false;
+          }
+        }
+        if (enabled) {
+          Table.$elem.rowGroup().enable();
+        } else {
+          Table.$elem.rowGroup().disable();
+        }
+      });
     },
     compareWithChatRow() {
       $("#ChatData").change(function() {
@@ -750,24 +776,63 @@ let Table = {
         }
       });
     },
-    dropLocationSearchButton() {
+    searchForButton() {
       $(document).on("click", ".search-for-button", function(e) {
-        const searchFor = $(this).html();
+        const searchFor = $(this).data("search");
         const $elem = $("#search");
+        let triggerSearch = false;
 
         if (!e.ctrlKey) {
+          triggerSearch = true;
           $elem.val(searchFor);
         } else {
           $elem.val(function(index, value) {
-            if (value.length > 0) {
-              return value + "|" + searchFor;
+            //Trigger only if needed
+            if (value.indexOf(searchFor) === -1) {
+              triggerSearch = true;
+              if (value.length > 0) {
+                return value + "|" + searchFor;
+              } else {
+                return searchFor;
+              }
             } else {
-              return searchFor;
+              return value;
             }
           });
         }
 
-        $("#search").trigger("input");
+        if (triggerSearch) {
+          $("#search").trigger("input");
+        }
+      });
+    },
+    orderByButton() {
+      $(document).on("click", ".btn-order-by", function() {
+        const $elem = $(this);
+        const data = $elem.data("order");
+        let order = data.split(",");
+        order[0] = parseInt(order[0]);
+
+        Table.$elem.order(order).draw();
+      });
+    },
+    ignorePlayerButton() {
+      $(document).on("click", ".ignore-player-button", function() {
+        const $elem = $(this);
+        const data = $elem.data("player");
+        let list = Table.ignoredPlayers;
+        let index = list.indexOf(data);
+        console.log(index);
+
+        if (index !== -1) {
+          $elem.removeClass("icon-eye").addClass("icon-eye-off");
+          list.splice(index, 1);
+        } else {
+          $elem.removeClass("icon-eye-off").addClass("icon-eye");
+          list.push(data);
+        }
+        console.log(list);
+        storage.set("ignored-players", list);
       });
     },
     onlinePlayerTime() {
@@ -851,10 +916,11 @@ let Table = {
           const now = Math.floor((timeNow.getTime() - lastUpdate) / 60000);
           const $elem = $("#last-update");
           $elem.html("<span id='lastUpdate'>" + now + "</span> minutes ago.");
-
+          //TODO MOVE THIS PART ELSEWHERE TO IMPLEMENT THE RECALCULATION WITH IGNORED PLAYERS IN MIND,
+          // AND I GOT TO MOVE THIS BECAUSE I DON"T WANT TO FETCH NEW DATA AFTER EACH IGNORE IT"S A TERIBLE IDEA
           $.each(result, function(a, b) {
             const platform = platformFix(Table.orders);
-
+            //TODO
             if (Table.statValue) {
               b.min = b.min[platform];
               b.max = b.max[platform];
@@ -969,21 +1035,18 @@ let Table = {
   init(callback = false) {
     //ASYNC DATA FETCH, but with a promise to be resolved
     Table.dataPrep.getRequestedData().then(function(resolver) {
-      let dataSet = Table.dataPrep.prepareRequestedData(resolver);
+      Table.sourceData[Table.dataType] = Table.dataPrep.prepareRequestedData(resolver);
 
       //Set datatables object
       let dataTableObject = {
         sDom: "<'table-body't><'table-footer'pli>",
         stateSave: true,
-        orderFixed: {
-          pre: [ 10, 'desc' ]
-        },
         lengthMenu: [
           [10, 15, 20, 40, -1],
           ["Mobile S(10)", "Mobile M(15)", "Mobile XL(20)", "Desktop(40)", "I'm a god(All)"]
         ],
         fixedColumns: true,
-        data: dataSet,
+        data: Table.sourceData[Table.dataType],
         columns: [
           {
             data: "name",
@@ -1063,9 +1126,13 @@ let Table = {
           },
           {
             data: "market_pv_diff",
-            visible: true,
-            render(data, type, row) {
-              return Table.renders.partsSumColumn(data, type, row, dataSet);
+            visible: false,
+            serchable: false,
+            class: "save-plat",
+            defaultContent: "UNKNOWN",
+            render(data, type, row, meta) {
+              const retu =  Table.renders.partsSumColumn(data, type, row, meta);
+              return retu;
             }
           },
           {
@@ -1084,8 +1151,10 @@ let Table = {
         //TODO:
         rowGroup: {
           dataSrc(a) {
-            console.log(a);
-            return a.name.split(" ")[0];
+            const nameParts = a.name.split(" ");
+            let group = (typeof(nameParts[1]) !== "undefined") ? nameParts[0] + " " + nameParts[1] : nameParts[0];
+
+            return group;
           },
           startRender: null,
           endRender(rows, group) {
@@ -1103,21 +1172,21 @@ let Table = {
         },
         preDrawCallback(settings) {
           //Bug repairment with groups.
-          if (settings.oLoadedState !== null) {
-            if (settings.oLoadedState.order.length > 0) {
-              if (settings.oLoadedState.order[0][0] > 0) {
-                settings.rowGroup.disable();
-              }
-            } else {
-              settings.rowGroup.disable();
-            }
-          }
+          //TODO: REPAIR THIS
+          // if (settings.oLoadedState !== null) {
+          //   if (settings.oLoadedState.order.length > 0) {
+          //     if (settings.oLoadedState.order[0][0] > 0) {
+          //       settings.rowGroup.disable();
+          //     }
+          //   } else {
+          //     settings.rowGroup.disable();
+          //   }
+          // }
         }
       };
 
-      /*eslint-disable */
+
       Table.$elem = $("#dataTable").DataTable(dataTableObject);
-      /*eslint-enable */
 
       if (callback) {
         console.log(Table.$elem);
@@ -1133,6 +1202,7 @@ let Table = {
     Table.$elem.clear();
     Table.dataPrep.getRequestedData().then((resolver) => {
       Table.dataPrep.prepareRequestedData(resolver, function(dataSet) {
+        Table.sourceData[Table.dataType] = dataSet;
         Table.$elem.rows.add(dataSet).draw();
       });
     });
