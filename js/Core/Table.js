@@ -882,14 +882,6 @@ let Table = {
     }
   },
   dataPrep: {
-    //array, function
-    loop(dataSet, callback) {
-      for (let i = 0; i < dataSet.length; i++) {
-        callback(dataSet, i);
-      }
-
-      return dataSet;
-    },
     //array, int, array
     chatValue(dataSet, i, chatData) {
       const item = dataSet[i];
@@ -901,7 +893,6 @@ let Table = {
           break;
         }
       }
-
       item.chat_min = itemChat.min;
       item.chat_max = itemChat.max;
       item.chat_avg = itemChat.avg;
@@ -916,77 +907,6 @@ let Table = {
           const now = Math.floor((timeNow.getTime() - lastUpdate) / 60000);
           const $elem = $("#last-update");
           $elem.html("<span id='lastUpdate'>" + now + "</span> minutes ago.");
-          //TODO MOVE THIS PART ELSEWHERE TO IMPLEMENT THE RECALCULATION WITH IGNORED PLAYERS IN MIND,
-          // AND I GOT TO MOVE THIS BECAUSE I DON"T WANT TO FETCH NEW DATA AFTER EACH IGNORE IT"S A TERIBLE IDEA
-          $.each(result, function(a, b) {
-            const platform = platformFix(Table.orders);
-            //TODO
-            if (Table.statValue) {
-              b.min = b.min[platform];
-              b.max = b.max[platform];
-              b.avg = b.avg[platform];
-              b.median = b.median[platform];
-              b.mode = b.mode[platform];
-            } else {
-              let deleteZeros = function(variable) {
-                let values = [];
-                for (let i = 0; i < variable.length; i++) {
-                  if (variable[i] !== 0) {
-                    values.push(variable[i]);
-                  }
-                }
-                return values;
-              };
-
-              const minVal = deleteZeros(Object.values(b.min));
-              const maxVal = deleteZeros(Object.values(b.max));
-              const avgVal = deleteZeros(Object.values(b.avg));
-              const medianVal = deleteZeros(Object.values(b.median));
-              const mode = deleteZeros(Object.values(b.mode));
-
-              b.min = (minVal.length > 0) ? Math.min(...minVal) : 0;
-              b.max = (maxVal.length > 0) ? Math.max(...maxVal) : 0;
-
-              if (avgVal.length > 1) {
-                const sum = avgVal.reduce(function(a, b) {
-                  return a + b;
-                });
-                const avg = sum / avgVal.length;
-                b.avg = Math.floor(avg);
-              } else {
-                b.avg = (typeof(avgVal[0]) !== "undefined") ? avgVal[0] : 0;
-              }
-
-              //mode
-              if (mode.length > 0) {
-                const modeSum = mode.reduce(function(a, b) {
-                  return a + b;
-                });
-
-                b.mode = Math.floor(modeSum / mode.length);
-              } else {
-                b.mode = 0;
-              }
-
-
-              //Profesional programing right here gentelmen
-              medianVal.sort();
-              switch (medianVal.length) {
-                case 3:
-                  b.median = medianVal[1];
-                  break;
-                case 2:
-                  b.median = (medianVal[0] + medianVal[1]) / 2;
-                  break;
-                case 1:
-                  b.median = medianVal[0];
-                  break;
-                case 0:
-                  b.median = 0;
-                  break;
-              }
-            }
-          });
 
           if (Table.compareWithChat) {
             ChatData.getBase(Table.dataType).then(function(chat) {
@@ -1009,20 +929,89 @@ let Table = {
         const market = resolver.market;
         const chat = (typeof(resolver.chat) !== "undefined") ? resolver.chat : false;
 
+        $.each(market, function(a, b) {
+          const platform = platformFix(Table.orders);
+          //TODO Ignoring should be accounted in.
+          if (Table.statValue) {
+            b.min = b.min[platform];
+            b.max = b.max[platform];
+            b.avg = b.avg[platform];
+            b.median = b.median[platform];
+            b.mode = b.mode[platform];
+          } else {
+            let deleteZeros = function(variable) {
+              let values = [];
+              for (let i = 0; i < variable.length; i++) {
+                if (variable[i] !== 0) {
+                  values.push(variable[i]);
+                }
+              }
+              return values;
+            };
+
+            const minVal = deleteZeros(Object.values(b.min));
+            const maxVal = deleteZeros(Object.values(b.max));
+            const avgVal = deleteZeros(Object.values(b.avg));
+            const medianVal = deleteZeros(Object.values(b.median));
+            const mode = deleteZeros(Object.values(b.mode));
+
+            b.min = (minVal.length > 0) ? Math.min(...minVal) : 0;
+            b.max = (maxVal.length > 0) ? Math.max(...maxVal) : 0;
+
+            if (avgVal.length > 1) {
+              const sum = avgVal.reduce(function(a, b) {
+                return a + b;
+              });
+              const avg = sum / avgVal.length;
+              b.avg = Math.floor(avg);
+            } else {
+              b.avg = (typeof(avgVal[0]) !== "undefined") ? avgVal[0] : 0;
+            }
+
+            //mode
+            if (mode.length > 0) {
+              const modeSum = mode.reduce(function(a, b) {
+                return a + b;
+              });
+
+              b.mode = Math.floor(modeSum / mode.length);
+            } else {
+              b.mode = 0;
+            }
+
+
+            //Profesional programing right here gentelmen
+            medianVal.sort();
+            switch (medianVal.length) {
+              case 3:
+                b.median = medianVal[1];
+                break;
+              case 2:
+                b.median = (medianVal[0] + medianVal[1]) / 2;
+                break;
+              case 1:
+                b.median = medianVal[0];
+                break;
+              case 0:
+                b.median = 0;
+                break;
+            }
+          }
+        });
+
+
         //var passed to DataTable object
         let dataSet;
-
         //Set the variable
         if (Table.compareWithChat) {
-          dataSet = Table.dataPrep.loop(market, function(set, i) {
-            //If you want a comparisment do that
+          for (let i = 0; i < market.length; i++) {
             if (chat) {
-              Table.dataPrep.chatValue(set, i, chat);
+              Table.dataPrep.chatValue(market, i, chat);
             }
-          });
-        } else {
-          dataSet = market;
+          }
         }
+
+        dataSet = market;
 
         if (callback) {
           callback(dataSet);
