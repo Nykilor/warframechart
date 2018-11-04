@@ -11,6 +11,7 @@ let App = {
   introJS: false,
   online: navigator.onLine,
   timezone: "GMT+0200",
+  isLowEndPC: (typeof(navigator) !== "undefined" && navigator.hardwareConcurrency > 4) ?  false : true,
   //Controller
   check_GET: {
     options: get.options,
@@ -346,6 +347,13 @@ let App = {
     App.listners.introJS();
     App.check_GET.before();
     Table.init(function() {
+      //for the last update number to be updated every 60s
+      setInterval(function() {
+        $("#lastUpdate").text(function(a, b) {
+          let number = parseInt(b) + 1;
+          return number;
+        });
+      }, 60000);
       Table.listners.init();
       App.check_GET.after();
       App.listners.shareBTN();
@@ -355,4 +363,5 @@ let App = {
     });
   }
 };
+
 export default App;

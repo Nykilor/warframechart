@@ -1,4 +1,4 @@
-import { storage, capitalize, isValidRegex, jQueryMobile, platformFix, createYMDDate } from "./../utilities.js";
+import { storage, capitalize, isValidRegex, jQueryMobile, platformFix, createYMDDate, deleteZeros, findMode } from "./../utilities.js";
 import CompChart from "./CompChart.js";
 import ValuesComparisment from "./ValuesComparisment.js";
 import ChatData from "./ChatData.js";
@@ -25,6 +25,7 @@ let Table = {
   baseCalcFrom: storage.get("ratioCalc") || "min",
   onlinePlayerTime: {},
   ignoredPlayers: storage.get("ignored-players") || [],
+  ignoredPlayersCalcOnClose: false,
   sourceData: {
     buy: null,
     sell: null
@@ -132,18 +133,18 @@ let Table = {
           const playerName = a.replace(Table.orders, "");
           const platform = Table.orders.slice(0, -1);
           const onlineTimeContent = (typeof(Table.onlinePlayerTime[a]) !== "undefined") ? ["icon-calendar", Table.onlinePlayerTime[a]] : ["icon-calendar-empty", ""];
-          const isIgnoredPlayer = (Table.ignoredPlayers.indexOf(a) !== -1) ? "icon-eye" : "icon-eye-off";
+          const isIgnoredPlayer = (Table.ignoredPlayers.indexOf(a) !== -1) ? ["icon-eye", "ignored-player-listing"] : ["icon-eye-off", ""];
 
           if (typeof(b) === "number") {
-            tbody = tbody + `<tr>
-              <td><button type="button" class="${isIgnoredPlayer} ignore-player-button" data-player="${a}"></button></td>
+            tbody = tbody + `<tr class="${isIgnoredPlayer[1]}">
+              <td><button type="button" class="${isIgnoredPlayer[0]} ignore-player-button" data-player="${a}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
               <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
               <td>${b}</td>
             </tr>`;
           } else {
-            tbody = tbody + `<tr>
-              <td><button type="button" class="${isIgnoredPlayer} ignore-player-button" data-player="${a}"></button></td>
+            tbody = tbody + `<tr class="${isIgnoredPlayer[1]}">
+              <td><button type="button" class="${isIgnoredPlayer[0]} ignore-player-button" data-player="${a}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
               <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
               <td>${b[0]} - <small> R ${b[1]}</small></td>
@@ -485,6 +486,10 @@ let Table = {
           // This row is "shown" open - close it
           row.child.hide();
           tr.removeClass("shown");
+          if (Table.ignoredPlayersCalcOnClose) {
+            Table.ignoredPlayersCalcOnClose = false;
+            Table.repopulate();
+          }
         } else {
           // Open this row
           row.child(Table.renders.sellersList(row.data())).show();
@@ -819,11 +824,12 @@ let Table = {
     ignorePlayerButton() {
       $(document).on("click", ".ignore-player-button", function() {
         const $elem = $(this);
+        const $tr = $elem.parent().parent();
         const data = $elem.data("player");
         let list = Table.ignoredPlayers;
         let index = list.indexOf(data);
-        console.log(index);
 
+        $tr.toggleClass("ignored-player-listing");
         if (index !== -1) {
           $elem.removeClass("icon-eye").addClass("icon-eye-off");
           list.splice(index, 1);
@@ -831,7 +837,8 @@ let Table = {
           $elem.removeClass("icon-eye-off").addClass("icon-eye");
           list.push(data);
         }
-        console.log(list);
+
+        Table.ignoredPlayersCalcOnClose = true;
         storage.set("ignored-players", list);
       });
     },
@@ -898,6 +905,126 @@ let Table = {
       item.chat_avg = itemChat.avg;
       item.chat_median = itemChat.median;
     },
+    calculateStatsFromOrders(orders, ignoreThoseKeys) {
+      let min, max, avg, median, mode;
+      let ordersCopy = JSON.parse(JSON.stringify(orders));
+      let platform = Table.orders;
+      //Deletes the ignored keys for future calculations
+      ignoreThoseKeys.forEach(function(key) {
+        delete ordersCopy[key];
+      });
+      //Removes the not needed keys
+      $.each(ordersCopy, function(key) {
+        if (!(key.substring(0, 3) === platform)) {
+          delete ordersCopy[key];
+        }
+      });
+      //creates values array (it's always sorted so no need to do that again)
+      let ordersCopyValues = Object.values(ordersCopy);
+
+      if (ordersCopyValues.length > 0) {
+        let ordersCopyValuesSum = ordersCopyValues.reduce((a, b) => a + b, 0);
+        //self explainatory
+        min = Math.min(...ordersCopyValues);
+        max = Math.max(...ordersCopyValues);
+        avg = Math.floor(ordersCopyValuesSum / ordersCopyValues.length);
+        let halfLengthKey = Math.floor((ordersCopyValues.length / 2) - 1);
+        median = (ordersCopyValues.length % 2) ? (ordersCopyValues[halfLengthKey] + ordersCopyValues[halfLengthKey + 1]) / 2 : ordersCopyValues[halfLengthKey];
+        median = Math.floor(median);
+        mode = parseInt(findMode(ordersCopyValues));
+      } else {
+        min = 0;
+        max = 0;
+        avg = 0;
+        median = 0;
+        mode = 0;
+      }
+
+      return { min, max, avg, median, mode };
+    },
+    marketValue(dataSet) {
+      //creates copy to not change the given object
+      let market = JSON.parse(JSON.stringify(dataSet));
+      const platform = platformFix(Table.orders);
+      $.each(market, function(a, b) {
+        if (Table.statValue) {
+          let ignore = [];
+          let newValues;
+          //check if the players from ignored list got anything listed for this item
+          Table.ignoredPlayers.forEach(function(player) {
+            if (b.orders.hasOwnProperty(player)) {
+              ignore.push(player);
+            }
+          });
+
+          if (ignore.length > 0) {
+            newValues = Table.dataPrep.calculateStatsFromOrders(b.orders, ignore);
+            //The spread operator for b = { ...b, ...newValues } didn't seem to be working
+            b.min = newValues.min;
+            b.max = newValues.max;
+            b.avg = newValues.avg;
+            b.median = newValues.median;
+            b.mode = newValues.mode;
+          } else {
+            b.min = b.min[platform];
+            b.max = b.max[platform];
+            b.avg = b.avg[platform];
+            b.median = b.median[platform];
+            b.mode = b.mode[platform];
+          }
+        } else {
+          const minVal = deleteZeros(Object.values(b.min));
+          const maxVal = deleteZeros(Object.values(b.max));
+          const avgVal = deleteZeros(Object.values(b.avg));
+          const medianVal = deleteZeros(Object.values(b.median));
+          const mode = deleteZeros(Object.values(b.mode));
+
+          b.min = (minVal.length > 0) ? Math.min(...minVal) : 0;
+          b.max = (maxVal.length > 0) ? Math.max(...maxVal) : 0;
+
+          if (avgVal.length > 1) {
+            const sum = avgVal.reduce(function(a, b) {
+              return a + b;
+            });
+            const avg = sum / avgVal.length;
+            b.avg = Math.floor(avg);
+          } else {
+            b.avg = (typeof(avgVal[0]) !== "undefined") ? avgVal[0] : 0;
+          }
+
+          //mode
+          if (mode.length > 0) {
+            const modeSum = mode.reduce(function(a, b) {
+              return a + b;
+            });
+
+            b.mode = Math.floor(modeSum / mode.length);
+          } else {
+            b.mode = 0;
+          }
+
+
+          //Profesional programing right here gentelmen
+          medianVal.sort();
+          switch (medianVal.length) {
+            case 3:
+              b.median = medianVal[1];
+              break;
+            case 2:
+              b.median = (medianVal[0] + medianVal[1]) / 2;
+              break;
+            case 1:
+              b.median = medianVal[0];
+              break;
+            case 0:
+              b.median = 0;
+              break;
+          }
+        }
+      });
+
+      return market;
+    },
     getRequestedData() {
       return new Promise(function(resolve) {
         return MarketData.getBase(Table.dataType).then(function(result, status, object) {
@@ -926,80 +1053,8 @@ let Table = {
       });
     },
     prepareRequestedData(resolver, callback = false) {
-        const market = resolver.market;
         const chat = (typeof(resolver.chat) !== "undefined") ? resolver.chat : false;
-
-        $.each(market, function(a, b) {
-          const platform = platformFix(Table.orders);
-          //TODO Ignoring should be accounted in.
-          if (Table.statValue) {
-            b.min = b.min[platform];
-            b.max = b.max[platform];
-            b.avg = b.avg[platform];
-            b.median = b.median[platform];
-            b.mode = b.mode[platform];
-          } else {
-            let deleteZeros = function(variable) {
-              let values = [];
-              for (let i = 0; i < variable.length; i++) {
-                if (variable[i] !== 0) {
-                  values.push(variable[i]);
-                }
-              }
-              return values;
-            };
-
-            const minVal = deleteZeros(Object.values(b.min));
-            const maxVal = deleteZeros(Object.values(b.max));
-            const avgVal = deleteZeros(Object.values(b.avg));
-            const medianVal = deleteZeros(Object.values(b.median));
-            const mode = deleteZeros(Object.values(b.mode));
-
-            b.min = (minVal.length > 0) ? Math.min(...minVal) : 0;
-            b.max = (maxVal.length > 0) ? Math.max(...maxVal) : 0;
-
-            if (avgVal.length > 1) {
-              const sum = avgVal.reduce(function(a, b) {
-                return a + b;
-              });
-              const avg = sum / avgVal.length;
-              b.avg = Math.floor(avg);
-            } else {
-              b.avg = (typeof(avgVal[0]) !== "undefined") ? avgVal[0] : 0;
-            }
-
-            //mode
-            if (mode.length > 0) {
-              const modeSum = mode.reduce(function(a, b) {
-                return a + b;
-              });
-
-              b.mode = Math.floor(modeSum / mode.length);
-            } else {
-              b.mode = 0;
-            }
-
-
-            //Profesional programing right here gentelmen
-            medianVal.sort();
-            switch (medianVal.length) {
-              case 3:
-                b.median = medianVal[1];
-                break;
-              case 2:
-                b.median = (medianVal[0] + medianVal[1]) / 2;
-                break;
-              case 1:
-                b.median = medianVal[0];
-                break;
-              case 0:
-                b.median = 0;
-                break;
-            }
-          }
-        });
-
-
+        let market = Table.dataPrep.marketValue(resolver.market);
         //var passed to DataTable object
         let dataSet;
         //Set the variable
@@ -1188,13 +1243,21 @@ let Table = {
     Table.init();
   },
   repopulate() {
+    //TODO: All the dataprep stuff that changes the values before adding them to the table got ot be implemented inside the table callers so when i call Table.$elem.draw(false)
+    // The table will calculate it all by itself without the need to clear the whole thing and add it again, thus improving the experience
     Table.$elem.clear();
+    console.log(Table.$elem);
+    let page = Table.$elem.page.info().page;
     Table.dataPrep.getRequestedData().then((resolver) => {
       Table.dataPrep.prepareRequestedData(resolver, function(dataSet) {
         Table.sourceData[Table.dataType] = dataSet;
         Table.$elem.rows.add(dataSet).draw();
+        if (page > 0) {
+          Table.$elem.page(page).draw("page");
+        }
       });
     });
   }
 };
+
 export default Table;

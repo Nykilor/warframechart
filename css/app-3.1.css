@@ -268,6 +268,7 @@ a.menu-btn:visited, a.menu-btn:link {
 }
 table button {
   transition: all 0.2s ease-out;
+  background-color: transparent;
 }
 table button:hover {
   background-color: #def7ff;
@@ -286,6 +287,9 @@ table button:hover {
 }
 table.dataTable tbody tr {
   background-color: #e0e0e0;
+}
+.ignored-player-listing {
+  opacity: 0.7;
 }
 .check-online-time-button {
   transition: 0.2s all ease-in;

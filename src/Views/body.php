@@ -49,7 +49,9 @@
                     <h4 class="icon-table">Columns</h4>
                         <p>Show/Hide column.</p>
                         <h4 class="icon-globe">Stat. Values</h4>
-                        <p>Use GLOBAL or PLATFORM based stat. values.</p>
+                        <p>Use GLOBAL or PLATFORM / PLAYERS based stat. values.</p>
+                        <p>GLOBAL - Dosn't matter from which platform.</p>
+                        <p>PLATFORM / PLAYERS - The value will be based depending on the platform chosen and ignored players, ignoring players will affect every aspect of the table.</p>
                         <h4 class="icon-calculator">Calculate values based on</h4>
                         <p>Here you select from what values should the calculations of ratio, set-parts value and other to come be based on.</p>
                         <h4 class="icon-desktop">Platform</h4>
@@ -372,7 +374,7 @@
           </label>
           <label class="filter-label" id="order-based">
             <input type="radio" class="filter-input value-type" name="values" value="1" hidden>
-            <div title="Values will be based on the values from players withs the platfrom picked from below.">PLATFORM</div>
+            <div title="Table will be based on values from players with the platform picked from below.">PLATFORM / PLAYERS</div>
           </label>
         </div>
 
