@@ -1,4 +1,4 @@
-import { storage, capitalize, isValidRegex, jQueryMobile, platformFix, createYMDDate, deleteZeros, findMode } from "./../utilities.js";
+import { storage, capitalize, isValidRegex, jQueryMobile, createYMDDate, deleteZeros, findMode } from "./../utilities.js";
 import CompChart from "./CompChart.js";
 import ValuesComparisment from "./ValuesComparisment.js";
 import ChatData from "./ChatData.js";
@@ -7,12 +7,13 @@ import App from "./App.js";
 
 jQueryMobile();
 
-//TODO GOT TO MAKE A KEY FOR A COPY OF ACCCTUALY USSSED DATA TO BE able to calc some stuff
+//TODO Give the user a possiblity to recalc GRAPH. Reputation <= ideas ?
+//TODO Transfer from the prepearing to the Table object so i can make it recalculate by the bultin function not my repopulate() abomination
 let Table = {
   //The DataTable elem
   "$elem": null,
   //The platform
-  orders: storage.get("orders") || "PC:",
+  platform: storage.get("platform") || "pc",
   //Display either the values for certain platform or get min,max,avg,median,mode from all 3 (xbox, pc, ps4)
   statValue: storage.get("statValue") || false,
   //Fav list
@@ -24,7 +25,7 @@ let Table = {
   //What column form should be the PLAT:DUCAT ratio calculated
   baseCalcFrom: storage.get("ratioCalc") || "min",
   onlinePlayerTime: {},
-  ignoredPlayers: storage.get("ignored-players") || [],
+  ignoredPlayers: storage.get("ignored-players") || {},
   ignoredPlayersCalcOnClose: false,
   sourceData: {
     buy: null,
@@ -36,8 +37,8 @@ let Table = {
       if (type === "display") {
         let orderCount = 0;
 
-        $.each(data, function(a) {
-          if (a.indexOf(Table.orders) !== -1) {
+        $.each(data, function(a, b) {
+          if (b.platform === Table.platform) {
             orderCount++;
           }
         });
@@ -51,9 +52,9 @@ let Table = {
         return $buttonOrders + $buttonFav;
       } else {
         let string = "";
-        $.each(data, function(a) {
-          if (a.indexOf(Table.orders) !== -1) {
-            string = string + a.substr(a.indexOf(":") + 1) + ", ";
+        $.each(data, function(a, b) {
+          if (b.platform === Table.platform) {
+            string = string + a + ", ";
           }
         });
         return string;
@@ -129,25 +130,26 @@ let Table = {
       const orders = data.orders;
       let tbody = "";
       $.each(orders, function(a, b) {
-        if (a.indexOf(Table.orders) !== -1) {
-          const playerName = a.replace(Table.orders, "");
-          const platform = Table.orders.slice(0, -1);
-          const onlineTimeContent = (typeof(Table.onlinePlayerTime[a]) !== "undefined") ? ["icon-calendar", Table.onlinePlayerTime[a]] : ["icon-calendar-empty", ""];
-          const isIgnoredPlayer = (Table.ignoredPlayers.indexOf(a) !== -1) ? ["icon-eye", "ignored-player-listing"] : ["icon-eye-off", ""];
+        if (b.platform === Table.platform) {
+          const playerName = a;
+          const platform = Table.platform;
+          const platAndName = platform + ":" + playerName;
+          const onlineTimeContent = (typeof(Table.onlinePlayerTime[platAndName]) !== "undefined") ? ["icon-calendar", Table.onlinePlayerTime[a]] : ["icon-calendar-empty", ""];
+          const isIgnoredPlayer = (Table.ignoredPlayers.hasOwnProperty(playerName)) ? ["icon-eye", "ignored-player-listing"] : ["icon-eye-off", ""];
 
-          if (typeof(b) === "number") {
+          if (typeof(b.mod_rank) === "undefined") {
             tbody = tbody + `<tr class="${isIgnoredPlayer[1]}">
-              <td><button type="button" class="${isIgnoredPlayer[0]} ignore-player-button" data-player="${a}"></button></td>
+              <td><button type="button" class="${isIgnoredPlayer[0]} ignore-player-button" data-player="${playerName}" data-platform="${b.platform}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
               <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
-              <td>${b}</td>
+              <td>${b.price}</td>
             </tr>`;
           } else {
             tbody = tbody + `<tr class="${isIgnoredPlayer[1]}">
-              <td><button type="button" class="${isIgnoredPlayer[0]} ignore-player-button" data-player="${a}"></button></td>
+              <td><button type="button" class="${isIgnoredPlayer[0]} ignore-player-button" data-player="${playerName}" data-platform="${b.platform}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
               <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
-              <td>${b[0]} - <small> R ${b[1]}</small></td>
+              <td>${b.price} - <small> R ${b.mod_rank}</small></td>
             </tr>`;
           }
 
@@ -389,7 +391,7 @@ let Table = {
         const $row = $(this).parent();
         let item = Table.$elem.row($row).data();
 
-        const platform = platformFix(Table.orders);
+        const platform = Table.platform;
 
         if (typeof(CompChart.loadedData.cache[item.id]) === "undefined") {
           //Get the data and then
@@ -556,7 +558,7 @@ let Table = {
       };
       let searchByColumns = function(val) {
         //The avaliable columns to search by, they must be in the same order as the initated columns in Tables Object
-        const columnsSearchBy = ["item", "min", "max", "avg", "median", "mode", "ducat", "ratio", "player", "drop", "type"];
+        const columnsSearchBy = ["item", "min", "avg", "median", "mode", "ducat", "ratio", "player", "drop", "type"];
         const searchIfColumnExists = function(string) {
         const equalSignPlace = string.indexOf("=");
           if (equalSignPlace !== -1) {
@@ -630,7 +632,7 @@ let Table = {
     column() {
       //sets default state
       $.each(Table.$elem.state().columns, function(a, b) {
-        if (b.visible && a > 0 && a < 11) {
+        if (b.visible && a > 0 && a < 10) {
           $(".show-column[value=" + a + "]").attr("checked", true);
         }
       });
@@ -675,13 +677,13 @@ let Table = {
       });
     },
     platform() {
-      if (Table.orders !== "PC:") {
-        $(`input[value="${Table.orders}"]`).attr("checked", true);
+      if (Table.platform !== "pc") {
+        $(`input[value="${Table.platform}"]`).attr("checked", true);
       }
       $(".platform").click(function() {
-        if ($(this).val !== Table.orders) {
-          Table.orders = $(this).val();
-          storage.set("orders", Table.orders);
+        if ($(this).val !== Table.platform) {
+          Table.platform = $(this).val();
+          storage.set("platform", Table.platform);
           Table.repopulate();
         }
       });
@@ -825,19 +827,24 @@ let Table = {
       $(document).on("click", ".ignore-player-button", function() {
         const $elem = $(this);
         const $tr = $elem.parent().parent();
-        const data = $elem.data("player");
+        const name = $elem.data("player");
+        const platform = $elem.data("platform");
         let list = Table.ignoredPlayers;
-        let index = list.indexOf(data);
+        let isIgnored = false;
 
-        $tr.toggleClass("ignored-player-listing");
-        if (index !== -1) {
-          $elem.removeClass("icon-eye").addClass("icon-eye-off");
-          list.splice(index, 1);
-        } else {
-          $elem.removeClass("icon-eye-off").addClass("icon-eye");
-          list.push(data);
+        if (list.hasOwnProperty(name) && list[name].platform === platform) {
+          isIgnored = true;
         }
 
+        $tr.toggleClass("ignored-player-listing");
+        if (isIgnored) {
+          $elem.removeClass("icon-eye").addClass("icon-eye-off");
+          delete list[name];
+        } else {
+          $elem.removeClass("icon-eye-off").addClass("icon-eye");
+          list[name] = platform;
+        }
+        console.log(list);
         Table.ignoredPlayersCalcOnClose = true;
         storage.set("ignored-players", list);
       });
@@ -860,10 +867,9 @@ let Table = {
           return;
         }
 
-
         $that.prop("disabled", true);
         $that.removeClass("icon-calendar-empty").addClass("icon-spin6");
-        $.getJSON(`api/data/player/${platform}/"${player}`, function(result, textStatus, xhr) {
+        $.getJSON(`api/data/player/${platform}/${player}`, function(result, textStatus, xhr) {
           const status = xhr.status;
           if (status === 204) {
             $that.removeClass("icon-spin6").addClass("icon-calendar-times-o text-not-success");
@@ -901,32 +907,27 @@ let Table = {
         }
       }
       item.chat_min = itemChat.min;
-      item.chat_max = itemChat.max;
       item.chat_avg = itemChat.avg;
       item.chat_median = itemChat.median;
     },
     calculateStatsFromOrders(orders, ignoreThoseKeys) {
-      let min, max, avg, median, mode;
+      let min, avg, median, mode;
       let ordersCopy = JSON.parse(JSON.stringify(orders));
-      let platform = Table.orders;
-      //Deletes the ignored keys for future calculations
-      ignoreThoseKeys.forEach(function(key) {
-        delete ordersCopy[key];
-      });
+      let ordersCopyValues = [];
       //Removes the not needed keys
-      $.each(ordersCopy, function(key) {
-        if (!(key.substring(0, 3) === platform)) {
-          delete ordersCopy[key];
+      $.each(ordersCopy, function(key, value) {
+        let index = ignoreThoseKeys.indexOf(key);
+        if (index === -1 || (index !== -1 && ignoreThoseKeys[index] === value.platform)) {
+          if (value.platform === Table.platform) {
+            ordersCopyValues.push(value.price);
+          }
         }
       });
-      //creates values array (it's always sorted so no need to do that again)
-      let ordersCopyValues = Object.values(ordersCopy);
 
       if (ordersCopyValues.length > 0) {
         let ordersCopyValuesSum = ordersCopyValues.reduce((a, b) => a + b, 0);
         //self explainatory
         min = Math.min(...ordersCopyValues);
-        max = Math.max(...ordersCopyValues);
         avg = Math.floor(ordersCopyValuesSum / ordersCopyValues.length);
         let halfLengthKey = Math.floor((ordersCopyValues.length / 2) - 1);
         median = (ordersCopyValues.length % 2) ? (ordersCopyValues[halfLengthKey] + ordersCopyValues[halfLengthKey + 1]) / 2 : ordersCopyValues[halfLengthKey];
@@ -934,26 +935,29 @@ let Table = {
         mode = parseInt(findMode(ordersCopyValues));
       } else {
         min = 0;
-        max = 0;
         avg = 0;
         median = 0;
         mode = 0;
       }
 
-      return { min, max, avg, median, mode };
+      return { min, avg, median, mode };
     },
     marketValue(dataSet) {
       //creates copy to not change the given object
       let market = JSON.parse(JSON.stringify(dataSet));
-      const platform = platformFix(Table.orders);
+      const platform = Table.platform;
       $.each(market, function(a, b) {
         if (Table.statValue) {
           let ignore = [];
           let newValues;
           //check if the players from ignored list got anything listed for this item
-          Table.ignoredPlayers.forEach(function(player) {
-            if (b.orders.hasOwnProperty(player)) {
-              ignore.push(player);
+          $.each(Table.ignoredPlayers, function(name, playerPlatform) {
+            if (b.orders.hasOwnProperty(name)) {
+              //So if the ignored players platform is the same as the platform for the player from the listing
+              //And the player got the same platform like the Table
+              if (b.orders[name].platform === playerPlatform && playerPlatform === platform) {
+                ignore.push(name);
+              }
             }
           });
 
@@ -961,26 +965,22 @@ let Table = {
             newValues = Table.dataPrep.calculateStatsFromOrders(b.orders, ignore);
             //The spread operator for b = { ...b, ...newValues } didn't seem to be working
             b.min = newValues.min;
-            b.max = newValues.max;
             b.avg = newValues.avg;
             b.median = newValues.median;
             b.mode = newValues.mode;
           } else {
             b.min = b.min[platform];
-            b.max = b.max[platform];
             b.avg = b.avg[platform];
             b.median = b.median[platform];
             b.mode = b.mode[platform];
           }
         } else {
           const minVal = deleteZeros(Object.values(b.min));
-          const maxVal = deleteZeros(Object.values(b.max));
           const avgVal = deleteZeros(Object.values(b.avg));
           const medianVal = deleteZeros(Object.values(b.median));
           const mode = deleteZeros(Object.values(b.mode));
 
           b.min = (minVal.length > 0) ? Math.min(...minVal) : 0;
-          b.max = (maxVal.length > 0) ? Math.max(...maxVal) : 0;
 
           if (avgVal.length > 1) {
             const sum = avgVal.reduce(function(a, b) {
@@ -1111,14 +1111,6 @@ let Table = {
             }
           },
           {
-            data: "max",
-            class: "max-col",
-            visible: false,
-            render(data, type, row, meta) {
-              return Table.renders.chatValuesDisplay(row, type, "max");
-            }
-          },
-          {
             data: "avg",
             class: "avg-col",
             render(data, type, row, meta) {
@@ -1246,7 +1238,6 @@ let Table = {
     //TODO: All the dataprep stuff that changes the values before adding them to the table got ot be implemented inside the table callers so when i call Table.$elem.draw(false)
     // The table will calculate it all by itself without the need to clear the whole thing and add it again, thus improving the experience
     Table.$elem.clear();
-    console.log(Table.$elem);
     let page = Table.$elem.page.info().page;
     Table.dataPrep.getRequestedData().then((resolver) => {
       Table.dataPrep.prepareRequestedData(resolver, function(dataSet) {

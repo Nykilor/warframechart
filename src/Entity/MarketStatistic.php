@@ -20,8 +20,6 @@ class MarketStatistic implements \JsonSerializable {
     /** @Column(type="integer") **/
     protected $pc_min = 0;
     /** @Column(type="integer") **/
-    protected $pc_max = 0;
-    /** @Column(type="integer") **/
     protected $pc_avg = 0;
     /** @Column(type="integer") **/
     protected $pc_median = 0;
@@ -30,8 +28,6 @@ class MarketStatistic implements \JsonSerializable {
     /** @Column(type="integer") **/
     protected $ps4_min = 0;
     /** @Column(type="integer") **/
-    protected $ps4_max = 0;
-    /** @Column(type="integer") **/
     protected $ps4_avg = 0;
     /** @Column(type="integer") **/
     protected $ps4_median = 0;
@@ -39,8 +35,6 @@ class MarketStatistic implements \JsonSerializable {
     protected $ps4_mode = 0;
     /** @Column(type="integer") **/
     protected $xbox_min = 0;
-    /** @Column(type="integer") **/
-    protected $xbox_max = 0;
     /** @Column(type="integer") **/
     protected $xbox_avg = 0;
     /** @Column(type="integer") **/
@@ -73,16 +67,6 @@ class MarketStatistic implements \JsonSerializable {
 
     public function setMin(string $platform, int $id) {
       $prop = $platform."_min";
-      $this->$prop = $id;
-    }
-
-    public function getMax(string $platform) {
-      $prop = $platform."_max";
-      return $this->$prop;
-    }
-
-    public function setMax(string $platform, int $id) {
-      $prop = $platform."_max";
       $this->$prop = $id;
     }
 

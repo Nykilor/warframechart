@@ -66,18 +66,6 @@ export function createRange(start, edge, step) {
 };
 
 /**
- * [Fixes a bug that i made myself where i use xb1 on backend but xbox on frontend]
- * @param  {[string]} platform
- * @return {[string]}          [returns xbox if the string was "xb1"]
- */
-export function platformFix(platform) {
-  platform = platform.replace(":", "").toLowerCase();
-  platform = (platform === "xb1") ? "xbox" : platform;
-
-  return platform;
-};
-
-/**
  * [Creates a Y-M-D date and can substract or add day based value]
  * @param  {[int]} days
  * @param  {Date}   [fromDate=new Date()]

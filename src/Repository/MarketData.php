@@ -27,7 +27,7 @@ class MarketData {
       } else {
         $platform = ["pc", "ps4", "xbox"];
       }
-      $cols = ["min", "max", "avg", "median", "mode"];
+      $cols = ["min", "avg", "median", "mode"];
       $custom = ["stat.date"];
 
       foreach ($cols as $value) {

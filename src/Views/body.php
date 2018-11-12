@@ -89,7 +89,7 @@
                 <h1 class="icon-ok">FAQ</h1>
                 <div class="sub-text">
                     <h3>Why's the min 60, but the lowest order 80?</h3>
-                        <p>If you use the "GLOBAL" option the min, max, avg and median will be the global values, it means that it does not matter if it's PC/PS4/XB1 price. If you wan't a lowest for your platform consider switching to the "PLATFORM" option.</p>
+                        <p>If you use the "GLOBAL" option the min, avg and median will be the global values, it means that it does not matter if it's PC/PS4/XB1 price. If you wan't a lowest for your platform consider switching to the "PLATFORM" option.</p>
                     <h3>What's the delay between the calls?</h3>
                         <p>30 mins, where the collection should take from 3 - 15 mins. It's for now 900+ calls, 3 calls per item; 1 call per platform.</p>
                     <h3>How do you get the data?</h3>
@@ -162,37 +162,37 @@
           </div>
         </div>
         <h2 id="chart-title"></h2>
-        <div class="chart" style="display: none;">
-          <details class="graph-options details-options">
-            <summary title="Days: 7, Nodes: 8"><span class="icon-cog"></span></summary>
-            <div class="filters">
-              <div class="icon-sun-filled informative-icons">
-                <input type="number" class="graph-number-input" name="daysBack" id="chartDaysBack" value="" min="1" max="365" step="7" placeholder="Days back on graph: " list="daysBackList">
-                <datalist id="daysBackList">
-                  <option value="3">
-                  <option value="7">
-                  <option value="14">
-                  <option value="21">
-                  <option value="30">
-                  <option value="45">
-                  <option value="60">
-                  <option value="90">
-                </datalist>
-              </div>
-              <div class="icon-dot-2 informative-icons">
-                <input type="number" class="graph-number-input" name="maxNodesPerDay" id="chartMaxNodesPerDay" min="2" max="24" step="2" placeholder="Max node per day: " list="maxNodesPerDayList">
-                <datalist id="maxNodesPerDayList">
-                  <option value="2">
-                  <option value="6">
-                  <option value="12">
-                  <option value="16">
-                  <option value="24">
-                </datalist>
-              </div>
-              <hr>
-              <p>Animations: <input type="checkbox" name="animations" value="true" id="chartAnimations" checked></p>
+        <details class="graph-options details-options">
+          <summary title="Days: 7, Nodes: 8"><span class="icon-cog"></span></summary>
+          <div class="filters">
+            <div class="icon-sun-filled informative-icons">
+              <input type="number" class="graph-number-input" name="daysBack" id="chartDaysBack" value="" min="1" max="365" step="7" placeholder="Days back on graph: " list="daysBackList">
+              <datalist id="daysBackList">
+                <option value="3">
+                <option value="7">
+                <option value="14">
+                <option value="21">
+                <option value="30">
+                <option value="45">
+                <option value="60">
+                <option value="90">
+              </datalist>
             </div>
-          </details>
+            <div class="icon-dot-2 informative-icons">
+              <input type="number" class="graph-number-input" name="maxNodesPerDay" id="chartMaxNodesPerDay" min="2" max="24" step="2" placeholder="Max node per day: " list="maxNodesPerDayList">
+              <datalist id="maxNodesPerDayList">
+                <option value="2">
+                <option value="6">
+                <option value="12">
+                <option value="16">
+                <option value="24">
+              </datalist>
+            </div>
+            <hr>
+            <p>Animations: <input type="checkbox" name="animations" value="true" id="chartAnimations" checked></p>
+          </div>
+        </details>
+        <div class="chart" style="display: none;">
           <canvas id="chart" style="width: 100%; min-height: 50vh;"></canvas>
         </div>
         <div class="values-comparisment" style="display: none;">
@@ -205,18 +205,14 @@
               </label>
               <label class="filter-label">
                 <input type="checkbox" class="filter-input show-column-comparisment" name="column" value="2" hidden>
-                <div>MAX</div>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column-comparisment" name="column" value="3" hidden>
                 <div>AVG</div>
               </label>
               <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column-comparisment" name="column" value="4" hidden>
+                <input type="checkbox" class="filter-input show-column-comparisment" name="column" value="3" hidden>
                 <div>MED</div>
               </label>
               <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column-comparisment" name="column" value="5" hidden>
+                <input type="checkbox" class="filter-input show-column-comparisment" name="column" value="4" hidden>
                 <div>MODE</div>
               </label>
             </div>
@@ -225,7 +221,6 @@
             <thead>
               <th>DATE</th>
               <th>MIN</th>
-              <th>MAX</th>
               <th>AVG</th>
               <th>MED</th>
               <th>MODE</th>
@@ -308,34 +303,30 @@
           </label>
           <label class="filter-label">
             <input type="checkbox" class="filter-input show-column" name="column" value="2" hidden>
-            <div>MAX</div>
-          </label>
-          <label class="filter-label">
-            <input type="checkbox" class="filter-input show-column" name="column" value="3" hidden>
             <div>AVG</div>
           </label>
           <label class="filter-label">
-            <input type="checkbox" class="filter-input show-column" name="column" value="4" hidden>
+            <input type="checkbox" class="filter-input show-column" name="column" value="3" hidden>
             <div>MED</div>
           </label>
           <label class="filter-label">
-            <input type="checkbox" class="filter-input show-column" name="column" value="5" hidden>
+            <input type="checkbox" class="filter-input show-column" name="column" value="4" hidden>
             <div>MODE</div>
           </label>
           <label class="filter-label">
-            <input type="checkbox" class="filter-input show-column" name="column" value="6" hidden>
+            <input type="checkbox" class="filter-input show-column" name="column" value="5" hidden>
             <div>DUCATS</div>
           </label>
           <label class="filter-label">
-            <input type="checkbox" class="filter-input show-column" name="column" value="7" hidden>
+            <input type="checkbox" class="filter-input show-column" name="column" value="6" hidden>
             <div>RATIO</div>
           </label>
           <label class="filter-label">
-            <input type="checkbox" class="filter-input show-column" name="column" value="8" hidden>
+            <input type="checkbox" class="filter-input show-column" name="column" value="7" hidden>
             <div>ACTION</div>
           </label>
           <label class="filter-label">
-            <input type="checkbox" class="filter-input show-column" name="column" value="9" hidden>
+            <input type="checkbox" class="filter-input show-column" name="column" value="8" hidden>
             <div>RELICT</div>
           </label>
         </div>
@@ -346,10 +337,6 @@
             <label class="filter-label">
               <input type="radio" class="filter-input ratio-calc" name="ratio" value="min" hidden>
               <div>MIN</div>
-            </label>
-            <label class="filter-label">
-              <input type="radio" class="filter-input ratio-calc" name="ratio" value="max" hidden>
-              <div>MAX</div>
             </label>
             <label class="filter-label">
               <input type="radio" class="filter-input ratio-calc" name="ratio" value="avg" hidden>
@@ -383,15 +370,15 @@
           <div class="platform-wraper">
             <h3 class="icon-desktop">PLATFORM: </h3>
             <label class="filter-label">
-              <input type="radio" class="filter-input platform" name="platform" value="PC:" hidden checked>
+              <input type="radio" class="filter-input platform" name="platform" value="pc" hidden checked>
               <div>PC</div>
             </label>
             <label class="filter-label">
-              <input type="radio" class="filter-input platform" name="platform" value="PS4:" hidden>
+              <input type="radio" class="filter-input platform" name="platform" value="ps4" hidden>
               <div>PS4</div>
             </label>
             <label class="filter-label">
-              <input type="radio" class="filter-input platform" name="platform" value="XB1:" hidden>
+              <input type="radio" class="filter-input platform" name="platform" value="xbox" hidden>
               <div>XB1</div>
             </label>
           </div>
@@ -417,7 +404,6 @@
                 <tr>
                   <th>ITEM</th>
                   <th>MIN</th>
-                  <th>MAX</th>
                   <th>AVG</th>
                   <th>MED</th>
                   <th>MODE</th>

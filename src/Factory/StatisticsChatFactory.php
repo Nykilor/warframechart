@@ -42,7 +42,6 @@ class StatisticsChatFactory implements FromApiFactoryInterface {
                   $ent_buy = new E\ChatStatistic();
                   $ent_buy->setItem($this->ent[$name]);
                   $ent_buy->setMin(floor($cvalue["buying"]["min"]));
-                  $ent_buy->setMax(floor($cvalue["buying"]["max"]));
                   $ent_buy->setAvg(floor($cvalue["buying"]["avg"]));
                   $ent_buy->setMedian(floor($cvalue["buying"]["median"]));
                   $ent_buy->setType("buy");
@@ -51,7 +50,6 @@ class StatisticsChatFactory implements FromApiFactoryInterface {
                   $ent_sell = new E\ChatStatistic();
                   $ent_sell->setItem($this->ent[$name]);
                   $ent_sell->setMin(floor($cvalue["selling"]["min"]));
-                  $ent_sell->setMax(floor($cvalue["selling"]["max"]));
                   $ent_sell->setAvg(floor($cvalue["selling"]["avg"]));
                   $ent_sell->setMedian(floor($cvalue["selling"]["median"]));
                   $ent_sell->setType("sell");

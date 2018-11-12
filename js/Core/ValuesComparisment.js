@@ -10,7 +10,6 @@ let ValuesComparisment = {
       set.push({
         date: value,
         min: dataCopy.min[key],
-        max: dataCopy.max[key],
         avg: dataCopy.avg[key],
         median: dataCopy.median[key],
         mode: dataCopy.mode[key]
@@ -81,11 +80,6 @@ let ValuesComparisment = {
         {
           data: "min",
           class: "values-min-col"
-        },
-        {
-          data: "max",
-          class: "values-max-col",
-          visible: false
         },
         {
           data: "avg",

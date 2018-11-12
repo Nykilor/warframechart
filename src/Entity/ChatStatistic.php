@@ -20,8 +20,6 @@ class ChatStatistic implements \JsonSerializable {
     /** @Column(type="integer") **/
     protected $min = 0;
     /** @Column(type="integer") **/
-    protected $max = 0;
-    /** @Column(type="integer") **/
     protected $avg = 0;
     /** @Column(type="integer") **/
     protected $median = 0;

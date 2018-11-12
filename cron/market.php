@@ -31,19 +31,15 @@ foreach ($market->statistics as $type => $arr) {
     //Returns the static data
     $base = $item->getItem()->jsonSerialize();
     $base["orders"] = $item->getSource();
-    //We don't need the ID
-    // unset($base["id"]);
     //Platforms for loop
     $platforms = ["pc", "ps4", "xbox"];
     $base["min"] = [];
-    $base["max"] = [];
     $base["avg"] = [];
     $base["median"] = [];
     $base["mode"] = [];
 
     foreach ($platforms as $key => $value) {
       $base["min"][$value] = $item->getMin($value);
-      $base["max"][$value] = $item->getMax($value);
       $base["avg"][$value] = $item->getAvg($value);
       $base["median"][$value] = $item->getMedian($value);
       $base["mode"][$value] = $item->getMode($value);

@@ -34,18 +34,16 @@ class StatisticsMarketFactory implements FromApiFactoryInterface {
                 foreach ($the_prices as $platform => $prices) {
                   if(count($prices) > 0) {
                     $min[$platform] = min($prices);
-                    $max[$platform] = max($prices);
                     $avg[$platform] = intval(array_sum($prices) / count($prices));
                     $median[$platform] = self::calculateMedian($prices);
                     //MODE
                     $frequency_of_numbers = array_count_values($prices);
                     $mode[$platform] = array_search(max($frequency_of_numbers), $frequency_of_numbers);
                   } else {
-                    $min[$platform] = $max[$platform] = $avg[$platform] = $median[$platform] = $mode[$platform] = 0;
+                    $min[$platform] = $avg[$platform] = $median[$platform] = $mode[$platform] = 0;
                   }
 
                   $ent->setMin($platform, $min[$platform]);
-                  $ent->setMax($platform, $max[$platform]);
                   $ent->setAvg($platform, $avg[$platform]);
                   $ent->setMedian($platform, $median[$platform]);
                   $ent->setMode($platform, $mode[$platform]);
@@ -84,17 +82,22 @@ class StatisticsMarketFactory implements FromApiFactoryInterface {
         foreach ($data["orders"] as $order) {
             if($order["user"]["status"] === "ingame") {
                 $values[$order["order_type"]]["values"][$order["platform"]][] = $order["platinum"];
+                $player_order = [];
+                $player_order["price"] = $order["platinum"];
+                $player_order["platform"] = $order["platform"];
+                $player_order["reputation"] = $order["user"]["reputation"];
                 if(isset($order["mod_rank"])) {
-                    $values[$order["order_type"]]["orders"][self::getFrontendName($order["user"]["ingame_name"], $order["platform"])] = [$order["platinum"], $order["mod_rank"]];
-                } else {
-                    $values[$order["order_type"]]["orders"][self::getFrontendName($order["user"]["ingame_name"], $order["platform"])] = $order["platinum"];
+                    $player_order["mod_rank"] = $order["mod_rank"];
                 }
+                $values[$order["order_type"]]["orders"][$order["user"]["ingame_name"]] = $player_order;
             }
         }
 
         foreach ($values as $type => $value) {
           //Sorts by: first value of array or/and integre value. From min to max.
           $sorting = function($a,$b) {
+              $a = $a["price"];
+              $b = $b["price"];
               $is_a_int = (gettype($a) === "integer")? true : false;
               $is_b_int = (gettype($b) === "integer")? true : false;
               $result = false;
@@ -130,18 +133,6 @@ class StatisticsMarketFactory implements FromApiFactoryInterface {
         $ent->setDate($this->date);
         $ent->setSource(json_encode($error));
         return $ent;
-    }
-
-    public static function getFrontendName(string $name, string $platform) : string {
-        if($platform === "xbox") {
-            $platform = "XB1";
-        }
-
-        $platform = strtoupper($platform);
-
-        $name = $platform.":".$name;
-
-        return $name;
     }
 
     public static function calculateMedian($arr) {

@@ -66,13 +66,6 @@ let CompChart = {
                     borderColor: "rgba(144, 238, 144, 0.5)"
                   },
                   {
-                    label: "MAX",
-                    data: dataSet.max,
-                    borderWidth: 1,
-                    backgroundColor: "rgba(240, 128, 128, 0.5)",
-                    borderColor: "rgba(240, 128, 128, 0.5)"
-                  },
-                  {
                     label: "AVG",
                     data: dataSet.avg,
                     borderWidth: 1,
@@ -216,7 +209,6 @@ let CompChart = {
           CompChart.chart.canvas = new Chart(ctx, CompChart.chart.config({
             labels: [],
             min: [],
-            max: [],
             avg: [],
             median: [],
             mode: []
@@ -259,59 +251,58 @@ let CompChart = {
         $(".graph-options summary").prop("title", "Days: " + CompChart.chart.daysBack + ", Nodes: " + CompChart.chart.maxNodesPerDay);
         //Froce redraw of the chart
           let redraw = function(inRange = false, diffrence = 0) {
-          let item = CompChart.loadedData.active;
-          let platform = Table.orders.replace(":", "").toLowerCase();
-          platform = (platform === "xb1") ? "xbox" : platform;
-          let dataSet = CompChart.loadedData.cache[item.id][Table.dataType][platform].data;
+            let item = CompChart.loadedData.active;
+            let platform = Table.platform;
+            console.log(CompChart.loadedData[item.id]);
+            let dataSet = CompChart.loadedData.cache[item.id][Table.dataType][platform].data;
 
-          if (inRange) {
+            if (inRange) {
 
-            if (!dataSet) {
-              dataSet = {
-                labels: [],
-                min: [],
-                max: [],
-                avg: [],
-                median: [],
-                mode: [],
-                empty: true
-              };
-            }
-          } else {
-            let start = createYMDDate(-CompChart.chart.daysBack);
-            //end got to be the start from last fetch
-            let end = createYMDDate(-(CompChart.chart.daysBack - diffrence));
-            //Call the getData to fetch the diffrence, join it and show it to the audience
-            CompChart.getChartData(item.id, platform, function(dataSet) {
-              //If the set does not have the key empty.
-              let cachedData = CompChart.loadedData.cache[item.id][Table.dataType][platform].data;
-              if (typeof(dataSet.empty) === "undefined") {
-
-                if (!cachedData) {
-                  cachedData = {};
-                }
-
-                $.each(dataSet, function(key, value) {
-                  if (cachedData[key]) {
-                    cachedData[key] = [...value, ...cachedData[key]];
-                  } else {
-                    cachedData[key] = value;
-                  }
-                });
-                CompChart.loadedData.cache[item.id][Table.dataType][platform].data = cachedData;
+              if (!dataSet) {
+                dataSet = {
+                  labels: [],
+                  min: [],
+                  avg: [],
+                  median: [],
+                  mode: [],
+                  empty: true
+                };
               }
-              CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded = CompChart.chart.daysBack;
-              dataSet = cachedData;
-            }, start, end);
-          }
+            } else {
+              let start = createYMDDate(-CompChart.chart.daysBack);
+              //end got to be the start from last fetch
+              let end = createYMDDate(-(CompChart.chart.daysBack - diffrence));
+              //Call the getData to fetch the diffrence, join it and show it to the audience
+              CompChart.getChartData(item.id, platform, function(dataSet) {
+                //If the set does not have the key empty.
+                let cachedData = CompChart.loadedData.cache[item.id][Table.dataType][platform].data;
+                if (typeof(dataSet.empty) === "undefined") {
 
-          if (dataSet) {
-            let filtered = CompChart.chart.getFilteredSet(dataSet);
-            if (App.ValuesComparisment) {
-              ValuesComparisment.init(filtered, item);
+                  if (!cachedData) {
+                    cachedData = {};
+                  }
+
+                  $.each(dataSet, function(key, value) {
+                    if (cachedData[key]) {
+                      cachedData[key] = [...value, ...cachedData[key]];
+                    } else {
+                      cachedData[key] = value;
+                    }
+                  });
+                  CompChart.loadedData.cache[item.id][Table.dataType][platform].data = cachedData;
+                }
+                CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded = CompChart.chart.daysBack;
+                dataSet = cachedData;
+              }, start, end);
             }
-            CompChart.chart.init(filtered, item, true);
-          }
+
+            if (dataSet) {
+              let filtered = CompChart.chart.getFilteredSet(dataSet);
+              if (App.ValuesComparisment) {
+                ValuesComparisment.init(filtered, item);
+              }
+              CompChart.chart.init(filtered, item, true);
+            }
         };
         let timeout = false;
         //Update input placeholder with current vlaues
@@ -325,8 +316,7 @@ let CompChart = {
             const val = parseInt($(this).val());
             const item = CompChart.loadedData.active;
 
-            let platform = Table.orders.replace(":", "").toLowerCase();
-            platform =  (platform === "xb1") ? "xbox" : platform;
+            let platform = Table.platform;
             let inRange = false;
             let diffrence = 0;
 
@@ -388,7 +378,6 @@ let CompChart = {
       let dataSet = {
         "labels": [],
         "min": [],
-        "max": [],
         "avg": [],
         "median": [],
         "mode": []

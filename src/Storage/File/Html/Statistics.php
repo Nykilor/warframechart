@@ -46,14 +46,12 @@ class Statistics extends \WChart\Storage\AbstractFile {
     private function createTableRow($statistic, $platform) : string {
         $name = $statistic["name"];
         $min = $statistic["min"];
-        $max = $statistic["max"];
         $avg = $statistic["avg"];
         $median = $statistic["median"];
         $mode = $statistic["mode"];
 
         if(is_array($min)) {
           $min = $min[$platform];
-          $max = $max[$platform];
           $avg = $avg[$platform];
           $median = $median[$platform];
           $mode = $mode[$platform];
@@ -66,9 +64,6 @@ class Statistics extends \WChart\Storage\AbstractFile {
             </td>
             <td>
             $min
-            </td>
-            <td>
-            $max
             </td>
             <td>
             $avg
@@ -90,7 +85,6 @@ ROW;
               <tr>
                 <th>ITEM</th>
                 <th>MIN</th>
-                <th>MAX</th>
                 <th>AVG</th>
                 <th>MED</th>
                 <th>MODE</th>

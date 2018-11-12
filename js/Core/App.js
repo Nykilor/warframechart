@@ -21,11 +21,11 @@ let App = {
           case "platform":
             if (["xb1", "ps4", "pc"].indexOf(value) !== -1) {
               const val = value.toUpperCase() + ":";
-              Table.orders = val;
+              Table.platform = val;
             }
             break;
           case "ratio":
-            const index = ["min", "max", "avg", "median", "mode"].indexOf(value);
+            const index = ["min", "avg", "median", "mode"].indexOf(value);
             if (index !== -1) {
               Table.ratioCalcFrom = value;
             }
@@ -110,7 +110,7 @@ let App = {
       $("#get-link").click(function() {
         //basic
         let options = {
-          platform: Table.orders.replace(":", "").toLowerCase(),
+          platform: Table.platform,
           type: Table.dataType,
           ratio: Table.ratioCalcFrom
         };

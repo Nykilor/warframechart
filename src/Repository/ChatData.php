@@ -58,7 +58,7 @@ class ChatData {
   }
 
   public function getChatTimeChartData2(int $item_id, \DateTime $start, \DateTime $end, string $type = "both") {
-    $sql = "SELECT `date`,`min`,`max`,`avg`,`median`,`type`";
+    $sql = "SELECT `date`,`min`,`avg`,`median`,`type`";
     $sql .= " FROM `chat_statistics`";
     //The range
     $start_date_string = $start->format("Y-m-d");
