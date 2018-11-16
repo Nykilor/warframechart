@@ -354,7 +354,7 @@
           <hr>
         </div>
         <div class="intro-wraper" data-step="4" data-intro="Set if the values ought be platform based, or global (PC,PS4,XB1). E.g. The min price on Saryn Prime Set is 30 on PC and 40 on PS4, if you want a platform based value while having PS4 platform set you'll see 40; but if you use the global you'll see 30.">
-          <h3 class="icon-globe">STAT. VALUES: </h3>
+          <h3 class="icon-globe">STAT. VALUES(EN): </h3>
           <label class="filter-label">
             <input type="radio" class="filter-input value-type" name="values" value="0" hidden checked>
             <div title="Values will be based on global ones.">GLOBAL</div>

@@ -9,6 +9,7 @@ jQueryMobile();
 
 //TODO Give the user a possiblity to recalc GRAPH. Reputation <= ideas ?
 //TODO Transfer from the prepearing to the Table object so i can make it recalculate by the bultin function not my repopulate() abomination
+//TODO Ignoring is bugged the NAME.PLATFORM = PC etc is bad, it should be NAME.PLATFORM.PC = TRUE/FALSE etc.
 let Table = {
   //The DataTable elem
   "$elem": null,
@@ -136,19 +137,28 @@ let Table = {
           const platAndName = platform + ":" + playerName;
           const onlineTimeContent = (typeof(Table.onlinePlayerTime[platAndName]) !== "undefined") ? ["icon-calendar", Table.onlinePlayerTime[a]] : ["icon-calendar-empty", ""];
           const isIgnoredPlayer = (Table.ignoredPlayers.hasOwnProperty(playerName)) ? ["icon-eye", "ignored-player-listing"] : ["icon-eye-off", ""];
+          let reputable = "";
+
+          if (b.reputation >= 200) {
+            reputable = "class=\"gold-reputation\"";
+          } else if (b.reputation >= 100) {
+            reputable = "class=\"silver-reputation\"";
+          } else if (b.reputation >= 50) {
+            reputable = "class=\"reputable\"";
+          }
 
           if (typeof(b.mod_rank) === "undefined") {
             tbody = tbody + `<tr class="${isIgnoredPlayer[1]}">
               <td><button type="button" class="${isIgnoredPlayer[0]} ignore-player-button" data-player="${playerName}" data-platform="${b.platform}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
-              <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
+              <td ${reputable} title="Reputation: ${b.reputation}"><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
               <td>${b.price}</td>
             </tr>`;
           } else {
             tbody = tbody + `<tr class="${isIgnoredPlayer[1]}">
               <td><button type="button" class="${isIgnoredPlayer[0]} ignore-player-button" data-player="${playerName}" data-platform="${b.platform}"></button></td>
               <td><button type="button" class="${onlineTimeContent[0]} check-online-time-button" data-player="${playerName}" data-platform="${platform}"></button></td>
-              <td><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
+              <td ${reputable} title="Reputation: ${b.reputation}"><a href="https://warframe.market/profile/${playerName}" target="_blank">${playerName}</a></td>
               <td>${b.price} - <small> R ${b.mod_rank}</small></td>
             </tr>`;
           }
@@ -178,12 +188,16 @@ let Table = {
       </table>`;
       return table;
     },
-    //returns modified row for chat values to be displayed
-    chatValuesDisplay(values, type, key) {
-      if (type === "display" && Table.compareWithChat) {
-        const chatKey = "chat_" + key;
-        const chatValue = (typeof(values[chatKey]) !== "undefined") ? values[chatKey] : "?";
-        const comparisment = values[key] + "<br>" + chatValue;
+    valuesDisplay(values, type, key) {
+      if (type === "display") {
+        let comparisment = values[key];
+
+        if (Table.compareWithChat) {
+          const chatKey = "chat_" + key;
+          const chatValue = (typeof(values[chatKey]) !== "undefined") ? values[chatKey] : null;
+          comparisment = (chatValue !== null) ? values[key] + "<br>" + chatValue : values[key];
+        }
+
         return comparisment;
       } else {
         return values[key];
@@ -206,15 +220,15 @@ let Table = {
         let msg = "";
         if (sot > 0) {
           if (Table.dataType === "sell") {
-            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="10,desc">${sot} P</button>`;
+            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="9,desc">${sot} P</button>`;
           } else {
-            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="10,desc">${sot} S</button>`;
+            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="9,desc">${sot} S</button>`;
           }
         } else if (sot < 0) {
           if (Table.dataType === "sell") {
-            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="10,desc">${sot} S</button>`;
+            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="9,desc">${sot} S</button>`;
           } else {
-            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="10,desc">${sot} P</button>`;
+            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="9,desc">${sot} P</button>`;
           }
         }
 
@@ -439,7 +453,7 @@ let Table = {
                 CompChart.chart.init(CompChart.chart.getFilteredSet(dataSet), item);
               }
             } else {
-              //todo This is the spot if there is any data in cache and the called amout of data lacks few days (i.e. 90 loaded 99 requested) (load 9 more, join it with the cache array and draw)
+              //This is the spot if there is any data in cache and the called amout of data lacks few days (i.e. 90 loaded 99 requested) (load 9 more, join it with the cache array and draw)
               const diffrence = CompChart.chart.daysBack - CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded;
               let start = createYMDDate(-CompChart.chart.daysBack);
               //end got to be the start from last fetch
@@ -825,24 +839,29 @@ let Table = {
     },
     ignorePlayerButton() {
       $(document).on("click", ".ignore-player-button", function() {
+        const list = Table.ignoredPlayers;
         const $elem = $(this);
         const $tr = $elem.parent().parent();
         const name = $elem.data("player");
         const platform = $elem.data("platform");
-        let list = Table.ignoredPlayers;
-        let isIgnored = false;
-
-        if (list.hasOwnProperty(name) && list[name].platform === platform) {
-          isIgnored = true;
-        }
+        const playerIsOnList = list.hasOwnProperty(name);
+        const playerPlatformIndex = (playerIsOnList) ? list[name].indexOf(platform) : -1;
+        const isIgnored = (playerIsOnList && playerPlatformIndex !== -1) ? true : false;
 
         $tr.toggleClass("ignored-player-listing");
         if (isIgnored) {
           $elem.removeClass("icon-eye").addClass("icon-eye-off");
-          delete list[name];
+          if (list[name].length === 1) {
+            delete list[name];
+          } else {
+            list[name].splice(playerPlatformIndex, 0);
+          }
         } else {
           $elem.removeClass("icon-eye-off").addClass("icon-eye");
-          list[name] = platform;
+          if (!playerIsOnList) {
+            list[name] = [];
+          }
+          list[name].push(platform);
         }
         console.log(list);
         Table.ignoredPlayersCalcOnClose = true;
@@ -942,10 +961,12 @@ let Table = {
 
       return { min, avg, median, mode };
     },
+    //TODO: This should be done inside the Table Object so i can get rid of repopulate
     marketValue(dataSet) {
       //creates copy to not change the given object
       let market = JSON.parse(JSON.stringify(dataSet));
       const platform = Table.platform;
+
       $.each(market, function(a, b) {
         if (Table.statValue) {
           let ignore = [];
@@ -955,7 +976,7 @@ let Table = {
             if (b.orders.hasOwnProperty(name)) {
               //So if the ignored players platform is the same as the platform for the player from the listing
               //And the player got the same platform like the Table
-              if (b.orders[name].platform === playerPlatform && playerPlatform === platform) {
+              if (playerPlatform.indexOf(b.orders[name].platform) !== -1 && playerPlatform.indexOf(platform) !== -1) {
                 ignore.push(name);
               }
             }
@@ -963,22 +984,21 @@ let Table = {
 
           if (ignore.length > 0) {
             newValues = Table.dataPrep.calculateStatsFromOrders(b.orders, ignore);
-            //The spread operator for b = { ...b, ...newValues } didn't seem to be working
             b.min = newValues.min;
             b.avg = newValues.avg;
             b.median = newValues.median;
             b.mode = newValues.mode;
           } else {
-            b.min = b.min[platform];
-            b.avg = b.avg[platform];
-            b.median = b.median[platform];
-            b.mode = b.mode[platform];
+            b.min = b[platform + "_min"];
+            b.avg = b[platform + "_avg"];
+            b.median = b[platform + "_median"];
+            b.mode = b[platform + "_mode"];
           }
         } else {
-          const minVal = deleteZeros(Object.values(b.min));
-          const avgVal = deleteZeros(Object.values(b.avg));
-          const medianVal = deleteZeros(Object.values(b.median));
-          const mode = deleteZeros(Object.values(b.mode));
+          const minVal = deleteZeros([b.pc_min, b.ps4_min, b.xbox_min]);
+          const avgVal = deleteZeros([b.pc_avg, b.ps4_avg, b.xbox_avg]);
+          const medianVal = deleteZeros([b.pc_median, b.ps4_median, b.xbox_median]);
+          const mode = deleteZeros([b.pc_mode, b.ps4_mode, b.xbox_mode]);
 
           b.min = (minVal.length > 0) ? Math.min(...minVal) : 0;
 
@@ -1080,7 +1100,6 @@ let Table = {
     //ASYNC DATA FETCH, but with a promise to be resolved
     Table.dataPrep.getRequestedData().then(function(resolver) {
       Table.sourceData[Table.dataType] = Table.dataPrep.prepareRequestedData(resolver);
-
       //Set datatables object
       let dataTableObject = {
         sDom: "<'table-body't><'table-footer'pli>",
@@ -1106,27 +1125,34 @@ let Table = {
           {
             data: "min",
             class: "min-col",
+            defaultContent: 0,
             render(data, type, row, meta) {
-              return Table.renders.chatValuesDisplay(row, type, "min");
+              return Table.renders.valuesDisplay(row, type, "min");
             }
           },
           {
             data: "avg",
             class: "avg-col",
+            defaultContent: 0,
             render(data, type, row, meta) {
-              return Table.renders.chatValuesDisplay(row, type, "avg");
+              return Table.renders.valuesDisplay(row, type, "avg");
             }
           },
           {
             data: "median",
             class: "median-col",
+            defaultContent: 0,
             render(data, type, row, meta) {
-              return Table.renders.chatValuesDisplay(row, type, "median");
+              return Table.renders.valuesDisplay(row, type, "median");
             }
           },
           {
             data: "mode",
-            class: "mode-col"
+            class: "mode-col",
+            defaultContent: 0,
+            render(data, type, row, meta) {
+              return Table.renders.valuesDisplay(row, type, "median");
+            }
           },
           {
             data: "ducat",
@@ -1184,7 +1210,6 @@ let Table = {
             }
           }
         ],
-        //TODO:
         rowGroup: {
           dataSrc(a) {
             const nameParts = a.name.split(" ");
@@ -1200,7 +1225,6 @@ let Table = {
         language: {
           searchPlaceholder: "What do you need Tenno?"
         },
-        //TODO
         createdRow: function(row, data, index) {
           if (data.vaulted) {
             $(row).find(".name-col").addClass("icon-lock");

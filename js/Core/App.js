@@ -19,9 +19,8 @@ let App = {
       $.each(this.options, function(key, value) {
         switch (key) {
           case "platform":
-            if (["xb1", "ps4", "pc"].indexOf(value) !== -1) {
-              const val = value.toUpperCase() + ":";
-              Table.platform = val;
+            if (["xbox", "ps4", "pc"].indexOf(value) !== -1) {
+              Table.platform = value;
             }
             break;
           case "ratio":

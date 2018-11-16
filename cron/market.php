@@ -39,10 +39,10 @@ foreach ($market->statistics as $type => $arr) {
     $base["mode"] = [];
 
     foreach ($platforms as $key => $value) {
-      $base["min"][$value] = $item->getMin($value);
-      $base["avg"][$value] = $item->getAvg($value);
-      $base["median"][$value] = $item->getMedian($value);
-      $base["mode"][$value] = $item->getMode($value);
+      $base[$value."_min"] = $item->getMin($value);
+      $base[$value."_avg"] = $item->getAvg($value);
+      $base[$value."_median"] = $item->getMedian($value);
+      $base[$value."_mode"] = $item->getMode($value);
     }
     //add to array
     $full_file_array[$type][] = $base;

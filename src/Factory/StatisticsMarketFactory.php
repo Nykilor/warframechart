@@ -80,7 +80,7 @@ class StatisticsMarketFactory implements FromApiFactoryInterface {
         ];
 
         foreach ($data["orders"] as $order) {
-            if($order["user"]["status"] === "ingame") {
+            if($order["user"]["status"] === "ingame" && $order["region"] === "en") {
                 $values[$order["order_type"]]["values"][$order["platform"]][] = $order["platinum"];
                 $player_order = [];
                 $player_order["price"] = $order["platinum"];

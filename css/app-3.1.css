@@ -291,6 +291,23 @@ table.dataTable tbody tr {
 .ignored-player-listing {
   opacity: 0.7;
 }
+.inner-list-table a {
+  color: black;
+  text-decoration: none;
+}
+.inner-list-table a:hover {
+  background-color: #def7ff;
+  transition: all 0.2s ease-out;
+}
+.reputable a {
+  color: green;
+}
+.silver-reputation a {
+  color: #26707d;
+}
+.gold-reputation a {
+  color: #c7a800;
+}
 .check-online-time-button {
   transition: 0.2s all ease-in;
 }
@@ -495,7 +512,8 @@ input.highlight-vaulted:checked + div {
   z-index: 99;
   -webkit-box-shadow: -2px 4px 2px 1px rgba(0,0,0,0.12);
   -moz-box-shadow: -2px 4px 2px 1px rgba(0,0,0,0.12);
-  box-shadow: -2px 4px 2px 1px rgba(0,0,0,0.12)
+  box-shadow: -2px 4px 2px 1px rgba(0,0,0,0.12);
+  text-align: center;
 }
 .details-drop {
   display: inline-block;

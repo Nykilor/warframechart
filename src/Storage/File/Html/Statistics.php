@@ -51,10 +51,10 @@ class Statistics extends \WChart\Storage\AbstractFile {
         $mode = $statistic["mode"];
 
         if(is_array($min)) {
-          $min = $min[$platform];
-          $avg = $avg[$platform];
-          $median = $median[$platform];
-          $mode = $mode[$platform];
+          $min = $min[$platform."_min"];
+          $avg = $avg[$platform."_avg"];
+          $median = $median[$platform."_median"];
+          $mode = $mode[$platform."_mode"];
         }
 
         return <<<ROW
