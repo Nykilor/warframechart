@@ -961,7 +961,7 @@ let Table = {
 
       return { min, avg, median, mode };
     },
-    //TODO: This should be done inside the Table Object so i can get rid of repopulate
+    //TODO: This should be done inside the Table Object so i can get rid of repopulate ( tried, to complex changes got to be made )
     marketValue(dataSet) {
       //creates copy to not change the given object
       let market = JSON.parse(JSON.stringify(dataSet));
@@ -1232,7 +1232,6 @@ let Table = {
         },
         preDrawCallback(settings) {
           //Bug repairment with groups.
-          //TODO: REPAIR THIS
           // if (settings.oLoadedState !== null) {
           //   if (settings.oLoadedState.order.length > 0) {
           //     if (settings.oLoadedState.order[0][0] > 0) {
@@ -1260,7 +1259,7 @@ let Table = {
   },
   repopulate() {
     //TODO: All the dataprep stuff that changes the values before adding them to the table got ot be implemented inside the table callers so when i call Table.$elem.draw(false)
-    // The table will calculate it all by itself without the need to clear the whole thing and add it again, thus improving the experience
+    // The table will calculate it all by itself without the need to clear the whole thing and add it again, thus improving the experience (tried to complex changes, let it be for some time like this)
     Table.$elem.clear();
     let page = Table.$elem.page.info().page;
     Table.dataPrep.getRequestedData().then((resolver) => {

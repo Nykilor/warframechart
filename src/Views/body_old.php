@@ -164,7 +164,7 @@
         <h2 id="chart-title"></h2>
         <details class="graph-options details-options">
           <summary title="Days: 7, Nodes: 8"><span class="icon-cog"></span></summary>
-          <div class="filters flex-column">
+          <div class="filters">
             <div class="icon-sun-filled informative-icons">
               <input type="number" class="graph-number-input" name="daysBack" id="chartDaysBack" value="" min="1" max="365" step="7" placeholder="Days back on graph: " list="daysBackList">
               <datalist id="daysBackList">
@@ -235,19 +235,7 @@
         </div>
       </div>
     </dialog>
-  <div>
-    <div class="open-menu-absolute">
-      <button name="menu-open" class="open-menu icon-layout">
-      </button>
-    </div>
-    <header class="meta-header clearfix">
-      <div class="close-menu-container">
-        <button type="button" name="menu-close" class="icon-cancel-1 close-menu"></button>
-      </div>
-      <div class="logo-container">
-        <img class="logo" alt="logo" src="img/PlatinumLarge.png">
-      </div>
-      <hr class="divide">
+  <header class="meta-header clearfix">
       <nav class="header-part left center-mobile">
         <ul>
           <li>
@@ -283,156 +271,158 @@
                 </div>
             </details>
           </li>
-          <li><a href="https://www.reddit.com/message/compose/?to=nykilor&subject=Add%20to%20chart" target="_blank" rel="noopener"><button type="button" name="request" class="menu-btn icon-plus" data-step="16" data-intro="Click this to send me PM on reddit about adding an item to the table.">ADD ITEM</button></a></li>
+          <li><a href="https://www.reddit.com/message/compose/?to=nykilor&subject=Add%20to%20chart" target="_blank" rel="noopener" data-step="16" data-intro="Click this to send me PM on reddit about adding an item to the table."><button type="button" name="request" class="menu-btn icon-plus">ADD ITEM</button></a></li>
           <li><button type="button" name="help" id="faq-help-open" class="menu-btn icon-help">Help\FAQ</button></li>
           <li><button type="button" name="relic-run" id="build-relic-run" class="menu-btn icon-hammer" class="intro-wraper" data-step="17" data-intro="Use this if you do a relic run, here you can quickly check the value of items.">RELIC RUN</button></li>
+          <li><a href="nojs/sellpc.html" title="nojs" class="menu-btn icon-print" target="_blank" data-step="18" data-intro="Simple HTML table with no JS at all.">NO&nbsp;JS</a></li>
           <li><button type="button" name="get-link" id="get-link" class="menu-btn icon-get-link" data-step="19" data-intro="Share your settings with friends in game so they can check for themselfs the values. (The url will force all your settings on them rewriting their own.)">SHARE</button><textarea class="share-copy-area"></textarea></li>
-          <li><a href="nojs/sellpc.html" title="nojs" target="_blank"><button type="button" name="request" class="icon-print menu-btn icon-plus" data-step="18" data-intro="Simple HTML table with no JS at all.">NO JS</button></a></li>
         </ul>
       </nav>
-      <hr class="divide">
+      <hr class="divide-mobile">
       <div class="header-part right center-mobile">
           <time>
-              <b>Update:<br></b> <span id="last-update"></span>
+              <b>Last update:</b> <span id="last-update"></span>
           </time>
       </div>
-    </header>
-    <main>
-      <div class="search-bar">
-        <label>
-          <input type="search" autocomplete="off" id="search" placeholder="What do you need Tenno?" aria-controls="dataTable" data-step="7" data-intro="Use the bar to search for things that you're interested in. You don't have to click it, you can start typing right away. You can search by name or relict, you can look up for multiple like 'Saryn|Vauban|lith v3'.">
-          <span class="icon-star-filled" id="show-fav" data-step="11" data-intro="Click this button to search for your favourite items/groups."></span>
-        </label>
-      </div>
-      <details class="filters-details" data-step="1" data-intro="You can set your table here.">
-        <summary class="table-summary icon-cog">TABLE FILTERS / OPTIONS</summary>
-        <div class="filters">
-          <div class="intro-wraper" data-step="2" data-intro="Here you can change the visibility of the columns.">
-            <h3 class="icon-table">COLUMNS: </h3>
-            <div class="flex flex-row flex-wrap-center">
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column" name="column" value="1" hidden>
-                <div>MIN</div>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column" name="column" value="2" hidden>
-                <div>AVG</div>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column" name="column" value="3" hidden>
-                <div>MED</div>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column" name="column" value="4" hidden>
-                <div>MODE</div>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column" name="column" value="5" hidden>
-                <div>DUCATS</div>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column" name="column" value="6" hidden>
-                <div>RATIO</div>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column" name="column" value="7" hidden>
-                <div>ACTION</div>
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input show-column" name="column" value="8" hidden>
-                <div>RELICT</div>
-              </label>
-            </div>
-          </div>
-          <div class="intro-wraper" data-step="3" data-intro="Here you can set from what column should be the DUCAT : PLATINUM ratio, if it's better to buy parts or set, and any other calculatiosn to come.">
-            <h3 class="icon-calculator">CALCULATE VALUES BASED ON:</h3>
-            <label for="filter-label flex flex-row">
-              <label class="filter-label">
-                <input type="radio" class="filter-input ratio-calc" name="ratio" value="min" hidden>
-                <div>MIN</div>
-              </label>
-              <label class="filter-label">
-                <input type="radio" class="filter-input ratio-calc" name="ratio" value="avg" hidden>
-                <div>AVG</div>
-              </label>
-              <label class="filter-label">
-                <input type="radio" class="filter-input ratio-calc" name="ratio" value="median" hidden>
-                <div>MED</div>
-              </label>
-              <label class="filter-label">
-                <input type="radio" class="filter-input ratio-calc" name="ratio" value="mode" hidden>
-                <div>MODE</div>
-              </label>
-            </label>
-          </div>
-          <div class="intro-wraper" data-step="4" data-intro="Set if the values ought be platform based, or global (PC,PS4,XB1). E.g. The min price on Saryn Prime Set is 30 on PC and 40 on PS4, if you want a platform based value while having PS4 platform set you'll see 40; but if you use the global you'll see 30.">
-            <h3 class="icon-globe">STAT. VALUES(EN): </h3>
+  </header>
+  <main>
+    <div class="search-bar">
+      <label>
+        <input type="search" autocomplete="off" id="search" placeholder="What do you need Tenno?" aria-controls="dataTable" data-step="7" data-intro="Use the bar to search for things that you're interested in. You don't have to click it, you can start typing right away. You can search by name or relict, you can look up for multiple like 'Saryn|Vauban|lith v3'.">
+        <span class="icon-star-filled" id="show-fav" data-step="11" data-intro="Click this button to search for your favourite items/groups."></span>
+      </label>
+    </div>
+    <details class="filters-details" data-step="1" data-intro="You can set your table here.">
+      <summary class="table-summary icon-cog">TABLE FILTERS / OPTIONS</summary>
+      <div class="filters">
+        <div class="intro-wraper" data-step="2" data-intro="Here you can change the visibility of the columns.">
+          <h3 class="icon-table">COLUMNS: </h3>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="1" hidden>
+            <div>MIN</div>
+          </label>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="2" hidden>
+            <div>AVG</div>
+          </label>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="3" hidden>
+            <div>MED</div>
+          </label>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="4" hidden>
+            <div>MODE</div>
+          </label>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="5" hidden>
+            <div>DUCATS</div>
+          </label>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="6" hidden>
+            <div>RATIO</div>
+          </label>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="7" hidden>
+            <div>ACTION</div>
+          </label>
+          <label class="filter-label">
+            <input type="checkbox" class="filter-input show-column" name="column" value="8" hidden>
+            <div>RELICT</div>
+          </label>
+        </div>
+        <div class="intro-wraper" data-step="3" data-intro="Here you can set from what column should be the DUCAT : PLATINUM ratio, if it's better to buy parts or set, and any other calculatiosn to come.">
+          <hr>
+          <h3 class="icon-calculator">CALCULATE VALUES BASED ON:</h3>
+          <label for="filter-label">
             <label class="filter-label">
-              <input type="radio" class="filter-input value-type" name="values" value="0" hidden checked>
-              <div title="Values will be based on global ones.">GLOBAL</div>
-            </label>
-            <label class="filter-label" id="order-based">
-              <input type="radio" class="filter-input value-type" name="values" value="1" hidden>
-              <div title="Table will be based on values from players with the platform picked from below.">PLATFORM / PLAYERS</div>
-            </label>
-          </div>
-          <div class="intro-wraper" data-step="5" data-intro="Select the platform you're interested in, it will affect the STAT. VALUES and the number next to the <span class='icon-basket'></span>">
-            <div class="platform-wraper">
-              <h3 class="icon-desktop">PLATFORM: </h3>
-              <label class="filter-label">
-                <input type="radio" class="filter-input platform" name="platform" value="pc" hidden checked>
-                <div>PC</div>
-              </label>
-              <label class="filter-label">
-                <input type="radio" class="filter-input platform" name="platform" value="ps4" hidden>
-                <div>PS4</div>
-              </label>
-              <label class="filter-label">
-                <input type="radio" class="filter-input platform" name="platform" value="xbox" hidden>
-                <div>XB1</div>
-              </label>
-            </div>
-          </div>
-          <div class="intro-wraper" data-step="6" data-intro="Transit between SELL and BUY orders.">
-            <h3 class="icon-basket">ORDER TYPE: </h3>
-            <label class="filter-label">
-              <input type="radio" class="filter-input data-type" name="dataType" value="sell" hidden checked>
-              <div>SELL</div>
+              <input type="radio" class="filter-input ratio-calc" name="ratio" value="min" hidden>
+              <div>MIN</div>
             </label>
             <label class="filter-label">
-              <input type="radio" class="filter-input data-type" name="dataType" value="buy" hidden>
-              <div>BUY</div>
+              <input type="radio" class="filter-input ratio-calc" name="ratio" value="avg" hidden>
+              <div>AVG</div>
+            </label>
+            <label class="filter-label">
+              <input type="radio" class="filter-input ratio-calc" name="ratio" value="median" hidden>
+              <div>MED</div>
+            </label>
+            <label class="filter-label">
+              <input type="radio" class="filter-input ratio-calc" name="ratio" value="mode" hidden>
+              <div>MODE</div>
+            </label>
+          </label>
+          <hr>
+        </div>
+        <div class="intro-wraper" data-step="4" data-intro="Set if the values ought be platform based, or global (PC,PS4,XB1). E.g. The min price on Saryn Prime Set is 30 on PC and 40 on PS4, if you want a platform based value while having PS4 platform set you'll see 40; but if you use the global you'll see 30.">
+          <h3 class="icon-globe">STAT. VALUES(EN): </h3>
+          <label class="filter-label">
+            <input type="radio" class="filter-input value-type" name="values" value="0" hidden checked>
+            <div title="Values will be based on global ones.">GLOBAL</div>
+          </label>
+          <label class="filter-label" id="order-based">
+            <input type="radio" class="filter-input value-type" name="values" value="1" hidden>
+            <div title="Table will be based on values from players with the platform picked from below.">PLATFORM / PLAYERS</div>
+          </label>
+        </div>
+
+        <hr>
+        <div class="intro-wraper" data-step="5" data-intro="Select the platform you're interested in, it will affect the STAT. VALUES and the number next to the <span class='icon-basket'></span>">
+          <div class="platform-wraper">
+            <h3 class="icon-desktop">PLATFORM: </h3>
+            <label class="filter-label">
+              <input type="radio" class="filter-input platform" name="platform" value="pc" hidden checked>
+              <div>PC</div>
+            </label>
+            <label class="filter-label">
+              <input type="radio" class="filter-input platform" name="platform" value="ps4" hidden>
+              <div>PS4</div>
+            </label>
+            <label class="filter-label">
+              <input type="radio" class="filter-input platform" name="platform" value="xbox" hidden>
+              <div>XB1</div>
             </label>
           </div>
         </div>
-      </details>
-      <div class="container-for-table-comparisment">
-          <div class="table-wrapper">
-              <table id="dataTable" width="100%">
-                <thead data-step="8" data-intro="Click on any of the column headers to order the table by it. If you order by 'ITEM' that will create groups and the script will sum if you should buy/sell parts or whole sets.">
-                  <tr>
-                    <th>ITEM</th>
-                    <th>MIN</th>
-                    <th>AVG</th>
-                    <th>MED</th>
-                    <th>MODE</th>
-                    <th><img src="img/ducats.png" alt="ducats" width="20" height="20" class="icon-vert-middle"><span class="hidden">DUCATS</span></th>
-                    <th><img src="img/ducats.png" alt="ducats" width="20" height="20" class="icon-vert-middle"> : <img src="img/PlatinumLarge.png" alt="plat" width="20" height="20" class="icon-vert-middle"></th>
-                    <th></th>
-                    <th>DROP</th>
-                  </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-                <tfoot>
-
-                </tfoot>
-              </table>
-          </div>
+        <hr>
+        <div class="intro-wraper" data-step="6" data-intro="Transit between SELL and BUY orders.">
+          <h3 class="icon-basket">ORDER TYPE: </h3>
+          <label class="filter-label">
+            <input type="radio" class="filter-input data-type" name="dataType" value="sell" hidden checked>
+            <div>SELL</div>
+          </label>
+          <label class="filter-label">
+            <input type="radio" class="filter-input data-type" name="dataType" value="buy" hidden>
+            <div>BUY</div>
+          </label>
+        </div>
       </div>
-    </main>
-  </div>
+    </details>
+    <div class="container-for-table-comparisment">
+        <div class="table-wrapper">
+            <table id="dataTable" width="100%">
+              <thead data-step="8" data-intro="Click on any of the column headers to order the table by it. If you order by 'ITEM' that will create groups and the script will sum if you should buy/sell parts or whole sets.">
+                <tr>
+                  <th>ITEM</th>
+                  <th>MIN</th>
+                  <th>AVG</th>
+                  <th>MED</th>
+                  <th>MODE</th>
+                  <th><img src="img/ducats.png" alt="ducats" width="20" height="20" class="icon-vert-middle"><span class="hidden">DUCATS</span></th>
+                  <th><img src="img/ducats.png" alt="ducats" width="20" height="20" class="icon-vert-middle"> : <img src="img/PlatinumLarge.png" alt="plat" width="20" height="20" class="icon-vert-middle"></th>
+                  <th></th>
+                  <th>DROP</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+              <tfoot>
+
+              </tfoot>
+            </table>
+        </div>
+    </div>
+  </main>
   <script type="text/javascript">
   <?php
     $index = new WChart\Controller\Js($_GET);

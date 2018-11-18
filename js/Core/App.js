@@ -320,6 +320,16 @@ let App = {
           });
         }
       });
+    },
+    menu() {
+      let $metaHeader = $(".meta-header");
+      $(".open-menu").click(function() {
+        $metaHeader.toggleClass("show");
+      });
+
+      $(".close-menu").click(function() {
+        $metaHeader.toggleClass("show");
+      });
     }
   },
   init() {
@@ -344,6 +354,7 @@ let App = {
     App.listners.dialogs();
     App.listners.detailsHideOnClick();
     App.listners.introJS();
+    App.listners.menu();
     App.check_GET.before();
     Table.init(function() {
       //for the last update number to be updated every 60s
