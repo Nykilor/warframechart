@@ -237,15 +237,12 @@
     </dialog>
   <div>
     <div class="open-menu-absolute">
-      <button name="menu-open" class="open-menu icon-layout">
+      <button name="menu-open" class="open-menu icon-menu">
       </button>
     </div>
     <header class="meta-header clearfix">
       <div class="close-menu-container">
         <button type="button" name="menu-close" class="icon-cancel-1 close-menu"></button>
-      </div>
-      <div class="logo-container">
-        <img class="logo" alt="logo" src="img/PlatinumLarge.png">
       </div>
       <hr class="divide">
       <nav class="header-part left center-mobile">
@@ -287,7 +284,7 @@
           <li><button type="button" name="help" id="faq-help-open" class="menu-btn icon-help">Help\FAQ</button></li>
           <li><button type="button" name="relic-run" id="build-relic-run" class="menu-btn icon-hammer" class="intro-wraper" data-step="17" data-intro="Use this if you do a relic run, here you can quickly check the value of items.">RELIC RUN</button></li>
           <li><button type="button" name="get-link" id="get-link" class="menu-btn icon-get-link" data-step="19" data-intro="Share your settings with friends in game so they can check for themselfs the values. (The url will force all your settings on them rewriting their own.)">SHARE</button><textarea class="share-copy-area"></textarea></li>
-          <li><a href="nojs/sellpc.html" title="nojs" target="_blank"><button type="button" name="request" class="icon-print menu-btn icon-plus" data-step="18" data-intro="Simple HTML table with no JS at all.">NO JS</button></a></li>
+          <li><a href="nojs/sellpc.html" title="nojs" target="_blank"><button type="button" name="request" class="menu-btn icon-print" data-step="18" data-intro="Simple HTML table with no JS at all.">NO JS</button></a></li>
         </ul>
       </nav>
       <hr class="divide">

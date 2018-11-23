@@ -34,8 +34,10 @@
 .icon-dot-2:before { content: '\e820'; } /* '' */
 .icon-calendar:before { content: '\e821'; } /* '' */
 .icon-emo-saint:before { content: '\e822'; } /* '' */
+.icon-indent-right:before { content: '\e823'; } /* '' */
 .icon-spin6:before { content: '\e839'; } /* '' */
 .icon-docs:before { content: '\f0c5'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-table:before { content: '\f0ce'; } /* '' */
 .icon-terminal:before { content: '\f120'; } /* '' */
 .icon-calendar-empty:before { content: '\f133'; } /* '' */
