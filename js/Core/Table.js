@@ -863,7 +863,6 @@ let Table = {
           }
           list[name].push(platform);
         }
-        console.log(list);
         Table.ignoredPlayersCalcOnClose = true;
         storage.set("ignored-players", list);
       });

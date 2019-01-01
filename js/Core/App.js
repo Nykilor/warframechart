@@ -171,6 +171,56 @@ let App = {
       const faq = new Dialog("faq", "faq-help-open").setBasicListners();
       faq.setCloseButton(".dialog-close");
 
+      //ignored listing
+      let ignoredOpenCallback = function(that) {
+        const elem = that.$elem;
+        const list = Table.ignoredPlayers;
+
+        if ($.isEmptyObject(list)) {
+          $(elem).find(".container").html("<h2 style='text-align: center;'>NO IGNORED PLAYERS !</h2>");
+          return;
+        }
+
+        let tbody = "";
+
+        $.each(list, function(player, platforms) {
+          let string = "<tr>";
+          platforms.forEach(function(value) {
+            string += `<td><button type="button" class="icon-eye ignore-player-button" data-player="${player}" data-platform="${platforms}"></button></td>
+                      <td><button type="button" class="search-for-button icon-search button-ignored-search" data-search="${player}"></button><a href="https://warframe.market/profile/${player}" target="_blank">${player}</a></td>
+                      <td>${value}</td>`;
+          });
+          string += "</tr>";
+          tbody += string;
+        });
+
+
+        const table = `<table class="center-table">
+          <thead>
+            <tr>
+              <th width="50"></th>
+              <th>PLAYER</th>
+              <th width="50">PLATFORM</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${tbody}
+          </tbody>
+          </table>`;
+          $(elem).find(".container").html(table);
+      };
+
+      let ignoredCloseCallback = function(that) {
+        let openOrders = $("#dataTable tbody").find(".shown");
+        const table = Table.$elem;
+        $.each(openOrders, function(index, elem) {
+          let row = table.row(elem);
+          row.child(Table.renders.sellersList(row.data()));
+        });
+      };
+
+      const ignored = new Dialog("ignored-list", "ignored-open").setBasicListners(ignoredOpenCallback, ignoredCloseCallback);
+
       //Builder
       let relic = false;
       const builder = new Dialog("relic-run", "build-relic-run").setBasicListners();

@@ -13,7 +13,7 @@ Dialog.prototype.setBasicListners = function(openCallback = false, closeCallback
   $(that.$buttonId).click(function() {
     $("body").css("overflow-y", "hidden");
     if (openCallback) {
-      openCallback();
+      openCallback(that);
     }
     that.$elem.showModal();
     $(that.$elemId).scrollTop(0);
@@ -23,7 +23,7 @@ Dialog.prototype.setBasicListners = function(openCallback = false, closeCallback
     if ($(e.target).is("dialog")) {
       $("body").css("overflow-y", "inherit");
       if (closeCallback) {
-        closeCallback();
+        closeCallback(that);
       }
       that.$elem.close();
     }

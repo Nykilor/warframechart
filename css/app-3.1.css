@@ -305,11 +305,11 @@ table.dataTable tbody tr {
 .ignored-player-listing {
   opacity: 0.7;
 }
-.inner-list-table a {
+.inner-list-table a, .center-table a {
   color: black;
   text-decoration: none;
 }
-.inner-list-table a:hover {
+.inner-list-table a:hover, .center-table a:hover {
   background-color: #def7ff;
   transition: all 0.2s ease-out;
 }
@@ -444,7 +444,13 @@ table.dataTable tr.dtrg-end td{
 .fail-save  {
   background-color: #f7bfbf;
 }
-.inner-list-table {
+.center-table {
+  border-collapse: collapse
+}
+.center-table tr td {
+  border-top: 1px solid #0000012b;
+}
+.inner-list-table, .center-table {
   width: 100%;
 }
 .table-wrapper {
@@ -456,14 +462,18 @@ table.dataTable tr.dtrg-end td{
 .inner-list-table tr td:nth-child(4) {
   text-align: right;
 }
-.inner-list-table button {
+.inner-list-table button, .center-table button {
   border: none;
   font-size: 0.8rem;
   display: block;
   width: 100%;
   overflow: hidden;
 }
-table.inner-list-table thead th {
+.center-table button.button-ignored-search {
+  display: inline;
+  width: auto;
+}
+table.inner-list-table thead th, table.center-table thead th {
   color: black;
 }
 tr.shown + tr {
