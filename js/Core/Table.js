@@ -16,7 +16,7 @@ let Table = {
   //The platform
   platform: storage.get("platform") || "pc",
   //Display either the values for certain platform or get min,max,avg,median,mode from all 3 (xbox, pc, ps4)
-  statValue: storage.get("statValue") || false,
+  statValue: typeof(storage.get("statValue") === "undefined") ? true : storage.get("statValue"),
   //Fav list
   favourite: storage.get("favourite") || [],
   //Show values for buyers or sellers
@@ -220,15 +220,15 @@ let Table = {
         let msg = "";
         if (sot > 0) {
           if (Table.dataType === "sell") {
-            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="9,desc">${sot} P</button>`;
+            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="10,desc">${sot} P</button>`;
           } else {
-            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="9,desc">${sot} S</button>`;
+            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="10,desc">${sot} S</button>`;
           }
         } else if (sot < 0) {
           if (Table.dataType === "sell") {
-            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="9,desc">${sot} S</button>`;
+            msg = `<button class='save success-save btn-order-by icon-desktop' data-order="10,desc">${sot} S</button>`;
           } else {
-            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="9,desc">${sot} P</button>`;
+            msg = `<button class='save fail-save btn-order-by icon-desktop' data-order="10,desc">${sot} P</button>`;
           }
         }
 
@@ -238,6 +238,7 @@ let Table = {
     },
     //returns the plat:ducat ratio of signle items
     ratio(data, type, row) {
+      console.log(true);
       let ratio = 0;
 
       if (typeof(row.ducat) !== "undefined") {
@@ -504,7 +505,9 @@ let Table = {
           tr.removeClass("shown");
           if (Table.ignoredPlayersCalcOnClose) {
             Table.ignoredPlayersCalcOnClose = false;
-            Table.repopulate();
+            //Table.repopulate();
+            Table.invalidate();
+            console.log("Invalidating");
           }
         } else {
           // Open this row
@@ -579,14 +582,13 @@ let Table = {
               const column = string.substring(0, equalSignPlace).toLocaleLowerCase();
               const searchFor = string.substr(equalSignPlace + 1);
               const columnIndex = columnsSearchBy.indexOf(column);
-
               if (columnIndex !== -1) {
-                Table.$elem.column(columnIndex).search(searchFor);
+                Table.$elem.column(columnIndex).search(searchFor, false, false, true);
               }
           }
         };
         if (val.indexOf("|") !== -1) {
-          const val = val.split("|");
+          val = val.split("|");
         }
 
         if (typeof(val) === "object") {
@@ -599,7 +601,7 @@ let Table = {
         } else {
           searchIfColumnExists(val);
         }
-
+        console.log(val);
         Table.$elem.draw();
       };
       //last val
@@ -675,6 +677,7 @@ let Table = {
       });
     },
     statValue() {
+      console.log(storage.get("something"));
       if (Table.statValue) {
         $("#order-based input").attr("checked", true);
       }
@@ -1186,6 +1189,10 @@ let Table = {
             }
           },
           {
+            data: "item_type",
+            visible: false
+          },
+          {
             data: "market_pv_diff",
             visible: false,
             serchable: false,
@@ -1195,10 +1202,6 @@ let Table = {
               const retu =  Table.renders.partsSumColumn(data, type, row, meta);
               return retu;
             }
-          },
-          {
-            data: "item_type",
-            visible: false
           },
           {
             data: "vaulted",
@@ -1247,7 +1250,7 @@ let Table = {
       Table.$elem = $("#dataTable").DataTable(dataTableObject);
 
       if (callback) {
-        console.log(Table.$elem);
+        console.log(Table);
         callback();
       }
     });
@@ -1259,6 +1262,7 @@ let Table = {
   repopulate() {
     //TODO: All the dataprep stuff that changes the values before adding them to the table got ot be implemented inside the table callers so when i call Table.$elem.draw(false)
     // The table will calculate it all by itself without the need to clear the whole thing and add it again, thus improving the experience (tried to complex changes, let it be for some time like this)
+    // WE CAN MAKE CHANGES TO Table.sourceData[Table.dataType] AND then use Table.row().invalidate().draw() to recalcuate it without clearing the whole table
     Table.$elem.clear();
     let page = Table.$elem.page.info().page;
     Table.dataPrep.getRequestedData().then((resolver) => {
@@ -1268,6 +1272,15 @@ let Table = {
         if (page > 0) {
           Table.$elem.page(page).draw("page");
         }
+      });
+    });
+  },
+  invalidate() {
+    //TODO: I guess i should make so prpepare gets me just affected values, and then somehow join it to the main one (diffrences between min, avg etc)
+    Table.dataPrep.getRequestedData().then((resolver) => {
+      Table.dataPrep.prepareRequestedData(resolver, function(dataSet) {
+        Table.sourceData[Table.dataType][0].min = 0;
+        Table.$elem.rows().invalidate("data").draw(false);
       });
     });
   }

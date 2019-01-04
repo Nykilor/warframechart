@@ -37,6 +37,8 @@ class StatisticsMarketFactory implements FromApiFactoryInterface {
                     $avg[$platform] = intval(array_sum($prices) / count($prices));
                     $median[$platform] = self::calculateMedian($prices);
                     //MODE
+                    //[0,1,2,3,null] => [1,2,3]
+                    $prices = array_filter($prices);
                     $frequency_of_numbers = array_count_values($prices);
                     $mode[$platform] = array_search(max($frequency_of_numbers), $frequency_of_numbers);
                   } else {

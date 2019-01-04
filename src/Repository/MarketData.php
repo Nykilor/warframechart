@@ -110,7 +110,7 @@ class MarketData {
 
   public function getThisWeekSource() {
     $end = date("Y-m-d", strtotime('sunday this week'));
-    $start = date("Y-m-d", strtotime('2018-09-01'));
+    $start = date("Y-m-d", strtotime('monday this week'));
 
     $qb = $this->em->getRepository("WChart\Entity\MarketStatistic")->createQueryBuilder("stat");
     $qb->select("stat.source, stat.date");

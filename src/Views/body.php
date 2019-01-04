@@ -17,12 +17,12 @@
                       <p>You can search by names or relics like: "oberon|ash" or "axi c1|ash|axi c2"</p>
                       <p>Or by specific column:
                         <ul>
-                          <li>item</li>
-                          <li>min, max, avg, median, mode</li>
-                          <li>ducat valuer / ratio</li>
-                          <li>player name</li>
-                          <li>drop place</li>
-                          <li>type of item (primary, secondary etc.)</li>
+                          <li><b>item</b></li>
+                          <li><b>min</b>, <b>max</b>, <b>avg</b>, <b>median</b>, <b>mode</b></li>
+                          <li><b>ducat</b></li>
+                          <li><b>player</b> name</li>
+                          <li><b>drop</b> place</li>
+                          <li><b>type</b> of item (primary, secondary etc.)</li>
                         </ul>
                         Example: player=Nykilor|item=Akbolto<br />
                         Simply: COLUMN=VALUE|COLUMN=VALUE
@@ -237,7 +237,7 @@
     </dialog>
     <dialog class="ignored-list" id="ignored-list">
         <div class="container">
-          
+
         </div>
     </dialog>
   <div>

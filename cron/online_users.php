@@ -98,4 +98,4 @@ $em->clear();
 
 $time = microtime(true) - $_SERVER["REQUEST_TIME_FLOAT"];
 echo "Process Time: {$time} <br>";
-echo "Memory: ".(memory_get_peak_usage(true)/1024/1024)." MB";
+echo "Memory: ".(memory_get_peak_usage(true)/1024/1024)." MB, ".memory_get_peak_usage(true);
