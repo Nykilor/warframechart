@@ -238,7 +238,6 @@ let Table = {
     },
     //returns the plat:ducat ratio of signle items
     ratio(data, type, row) {
-      console.log(true);
       let ratio = 0;
 
       if (typeof(row.ducat) !== "undefined") {
@@ -671,13 +670,12 @@ let Table = {
         if (calcFrom !== Table.baseCalcFrom) {
           storage.set("ratioCalc", calcFrom);
           Table.baseCalcFrom = calcFrom;
-          Table.repopulate();
+          Table.invalidate();
         }
 
       });
     },
     statValue() {
-      console.log(storage.get("something"));
       if (Table.statValue) {
         $("#order-based input").attr("checked", true);
       }
@@ -690,7 +688,7 @@ let Table = {
 
         Table.statValue = value;
         storage.set("statValue", Table.statValue);
-        Table.repopulate();
+        Table.invalidate();
       });
     },
     platform() {
@@ -701,7 +699,7 @@ let Table = {
         if ($(this).val !== Table.platform) {
           Table.platform = $(this).val();
           storage.set("platform", Table.platform);
-          Table.repopulate();
+          Table.invalidate();
         }
       });
     },
@@ -713,6 +711,7 @@ let Table = {
         if ($(this).val() !== Table.dataType) {
           Table.dataType = $(this).val();
           storage.set("dataTypes", Table.dataType);
+          //Can't be invalidate because the invalidate merges the new values to old arrray, and here we don't have one
           Table.repopulate();
         }
       });
@@ -768,7 +767,8 @@ let Table = {
       $("#ChatData").change(function() {
         Table.compareWithChat = !Table.compareWithChat;
         storage.set("compareWithChat", Table.compareWithChat);
-        Table.repopulate();
+        //TODO
+        Table.invalidate();
       });
     },
     showChart() {
@@ -1279,7 +1279,20 @@ let Table = {
     //TODO: I guess i should make so prpepare gets me just affected values, and then somehow join it to the main one (diffrences between min, avg etc)
     Table.dataPrep.getRequestedData().then((resolver) => {
       Table.dataPrep.prepareRequestedData(resolver, function(dataSet) {
-        Table.sourceData[Table.dataType][0].min = 0;
+        //Join it without destroying the reference so when invalidate it will recalc all and don't close the opened lists
+        Object.keys(Table.sourceData[Table.dataType]).forEach(function(key) {
+           Table.sourceData[Table.dataType][key].min = dataSet[key].min;
+           Table.sourceData[Table.dataType][key].avg = dataSet[key].avg;
+           Table.sourceData[Table.dataType][key].median = dataSet[key].median;
+           Table.sourceData[Table.dataType][key].mode = dataSet[key].mode;
+
+           if (Table.compareWithChat) {
+             Table.sourceData[Table.dataType][key].chat_min = dataSet[key].chat_min;
+             Table.sourceData[Table.dataType][key].chat_avg = dataSet[key].chat_avg;
+             Table.sourceData[Table.dataType][key].chat_median = dataSet[key].chat_median;
+             Table.sourceData[Table.dataType][key].chat_mode = dataSet[key].chat_mode;
+           }
+         });
         Table.$elem.rows().invalidate("data").draw(false);
       });
     });
