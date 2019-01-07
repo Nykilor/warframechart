@@ -38,9 +38,7 @@
                     <h3 class="icon-download">LOADING</h3>
                     <div class="sub-text">
                       <h4 class="icon-chart-line">Values Graph</h4>
-                      <p>Load ChartJS library and now if you click items name you'll load a modal with a chart of values. Defaulty it is limited to 7 days and 6 nodes per day, you can change that by clicking the gear top left of it.</p>
-                      <h4 class="icon-table">Values Table</h4>
-                      <p>Will add a table to the modal with the values visible on the graph itself.</p>
+                      <p>Load ChartJS library and now if you click items name you'll load a modal with a chart of values. Defaulty it is limited to 7 days and 6 nodes per day, you can change that by clicking the gear top left of it.</p>>
                       <h4 class="icon-terminal">Chat Data</h4>
                       <p>Extends each row in table with the chat values.</p>
                     </div>
@@ -49,9 +47,9 @@
                     <h4 class="icon-table">Columns</h4>
                         <p>Show/Hide column.</p>
                         <h4 class="icon-globe">Stat. Values</h4>
-                        <p>Use GLOBAL or PLATFORM / PLAYERS based stat. values.</p>
+                        <p>Use GLOBAL or VARIABLES based stat. values.</p>
                         <p>GLOBAL - Dosn't matter from which platform.</p>
-                        <p>PLATFORM / PLAYERS - The value will be based depending on the platform chosen and ignored players, ignoring players will affect every aspect of the table.</p>
+                        <p>VARIABLES - The value will be based depending on the platform chosen and ignored players, ignoring players will affect every aspect of the table.</p>
                         <h4 class="icon-calculator">Calculate values based on</h4>
                         <p>Here you select from what values should the calculations of ratio, set-parts value and other to come be based on.</p>
                         <h4 class="icon-desktop">Platform</h4>
@@ -263,13 +261,7 @@
                             <div class="text icon-chart-line">Values Graph</div>
                         </label>
                     </div>
-                    <div class="row" data-step="14" data-intro="If this is checked you'll open a modal with a table of how the values for the item you clicked changed overtime.">
-                        <label>
-                            <input type="checkbox" name="Table" value="true" id="ValuesComparisment" hidden>
-                            <div class="text icon-table">Values Table</div>
-                        </label>
-                    </div>
-                    <div class="row" data-step="15" data-intro="If this is checked there will be an additional row of chat values for each item.">
+                    <div class="row" data-step="14" data-intro="If this is checked there will be an additional row of chat values for each item.">
                         <label>
                             <input type="checkbox" name="Table" value="true" id="ChatData" hidden>
                             <div class="text icon-terminal">Chat Data</div>
@@ -285,7 +277,7 @@
                 </div>
             </details>
           </li>
-          <li><a href="https://www.reddit.com/message/compose/?to=nykilor&subject=Add%20to%20chart" target="_blank" rel="noopener"><button type="button" name="request" class="menu-btn icon-plus" data-step="16" data-intro="Click this to send me PM on reddit about adding an item to the table.">ADD ITEM</button></a></li>
+          <li><a href="https://www.reddit.com/message/compose/?to=nykilor&subject=Add%20to%20chart" target="_blank" rel="noopener"><button type="button" name="request" class="menu-btn icon-plus" data-step="15" data-intro="Click this to send me PM on reddit about adding an item to the table.">ADD ITEM</button></a></li>
           <li><button type="button" name="help" id="faq-help-open" class="menu-btn icon-help">Help\FAQ</button></li>
           <li><button type="button" name="relic-run" id="build-relic-run" class="menu-btn icon-hammer" class="intro-wraper" data-step="17" data-intro="Use this if you do a relic run, here you can quickly check the value of items.">RELIC RUN</button></li>
           <li><button type="button" name="get-link" id="get-link" class="menu-btn icon-get-link" data-step="19" data-intro="Share your settings with friends in game so they can check for themselfs the values. (The url will force all your settings on them rewriting their own.)">SHARE</button><textarea class="share-copy-area"></textarea></li>
@@ -376,7 +368,7 @@
             </label>
             <label class="filter-label" id="order-based">
               <input type="radio" class="filter-input value-type" name="values" value="1" hidden>
-              <div title="Table will be based on values from players with the platform picked from below.">PLATFORM / PLAYERS</div>
+              <div title="Table will be based on values from orders depending on the platform of choice.">VARIABLES</div>
             </label>
           </div>
           <div class="intro-wraper" data-step="5" data-intro="Select the platform you're interested in, it will affect the STAT. VALUES and the number next to the <span class='icon-basket'></span>">

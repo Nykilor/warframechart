@@ -11,6 +11,7 @@
   <meta name="Keywords" content="warframe, warframe.market, nexus-stats, market, value, prices, compare, weapons, primed mods, warframe market, nexus stats, warframe auction house, warframe items list, listing">
   <meta name="author" content="Adam Migacz/Nykilor/Marmolada">
   <meta name="google" content="notranslate">
+  <meta name="description" content="War$frame is a site where you can check price of multiple items at once and check how it changes overtime. Futhermore it allows to check the relic drops">
   <meta name="HandheldFriendly" content="True">
   <!-- OpenGraph -->
   <meta property="og:title" content="Warframechart">

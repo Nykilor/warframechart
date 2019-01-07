@@ -197,6 +197,9 @@ dialog::backdrop {
 details[open] summary.table-summary  {
   background-color: lightblue;
 }
+table.td-separator td:not(:last-child) {
+  border-right: 1px solid #0000012b;
+}
 .table-summary {
   font-weight: bold;
   padding: 15px;
@@ -938,6 +941,9 @@ span.icon-star-filled:hover, span.icon-star-filled:active {
 }
 .almost-non-active {
   background-color: #e69090;
+}
+.text-uppercase {
+  text-transform: uppercase;
 }
 @media (min-width: 768px){
   .dataTables_wrapper {

@@ -7,7 +7,6 @@ import Table from "./Table.js";
 let App = {
   Table: true,
   CompChart: storage.get("CompChart") || false,
-  ValuesComparisment: storage.get("ValuesComparisment") || false,
   introJS: false,
   online: navigator.onLine,
   timezone: "GMT+0200",
@@ -188,14 +187,14 @@ let App = {
           platforms.forEach(function(value) {
             string += `<td><button type="button" class="icon-eye ignore-player-button" data-player="${player}" data-platform="${platforms}"></button></td>
                       <td><button type="button" class="search-for-button icon-search button-ignored-search" data-search="${player}"></button><a href="https://warframe.market/profile/${player}" target="_blank">${player}</a></td>
-                      <td>${value}</td>`;
+                      <td class="text-uppercase">${value}</td>`;
           });
           string += "</tr>";
           tbody += string;
         });
 
 
-        const table = `<table class="center-table">
+        const table = `<table class="center-table td-separator">
           <thead>
             <tr>
               <th width="50"></th>
@@ -392,9 +391,6 @@ let App = {
     if (App.CompChart) {
       $("#CompChart").attr("checked", true);
       CompChart.init();
-    }
-    if (App.ValuesComparisment) {
-      $("#ValuesComparisment").attr("checked", true);
       $(".values-comparisment").toggle();
     }
     if (Table.compareWithChat) {

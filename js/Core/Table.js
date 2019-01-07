@@ -372,9 +372,6 @@ let Table = {
       l.loadGraphData();
       l.dialogChart();
 
-      //ValuesComparisment
-      l.showValuesComparisment();
-
       if (jQuery.browser.mobile) {
         //mobile-version
       } else {
@@ -385,16 +382,13 @@ let Table = {
     },
     //ValuesComparisment and Graph because of reasons.
     loadGraphData() {
-
       $("#dataTable tbody").on("click", "tr[role='row'] td.name-col", function() {
         //Only if the user wants to fetch
         if (!App.CompChart) {
-          if (!App.ValuesComparisment) {
-              return;
-          }
+          return;
         }
 
-        //If is offline
+        //If is offline TODO if is offline but got something saved show it
         if (!App.connection.checkStatus()) {
           return;
         }
@@ -413,9 +407,7 @@ let Table = {
             //Set basic cache
             CompChart.loadedData.cache.set(item.id);
             //Engage the extensions
-            if (App.ValuesComparisment) {
-              ValuesComparisment.init(dataSet, item);
-            }
+            ValuesComparisment.init(dataSet, item);
               //Cache the set
               //If the set does not have the key empty.
               if (typeof(dataSet.empty) === "undefined") {
@@ -423,35 +415,25 @@ let Table = {
                 CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded = CompChart.chart.daysBack;
               }
 
-            if (App.CompChart) {
               CompChart.chart.init(CompChart.chart.getFilteredSet(dataSet), item);
-            }
           });
         } else {
           if (!CompChart.loadedData.cache[item.id][Table.dataType][platform].data) {
             CompChart.getChartData(item.id, platform, function(dataSet) {
-              if (App.ValuesComparisment) {
-                ValuesComparisment.init(dataSet, item);
-              }
+              ValuesComparisment.init(dataSet, item);
               //If the set does not have the key empty.
               if (typeof(dataSet.empty) === "undefined") {
                 CompChart.loadedData.cache[item.id][Table.dataType][platform].data = dataSet;
                 CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded = CompChart.chart.daysBack;
               }
-              if (App.CompChart) {
-                CompChart.chart.init(CompChart.chart.getFilteredSet(dataSet), item, true);
-              }
+              CompChart.chart.init(CompChart.chart.getFilteredSet(dataSet), item, true);
             });
           } else {
             if (CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded >= CompChart.chart.daysBack) {
               let dataSet = CompChart.loadedData.cache[item.id][Table.dataType][platform].data;
 
-              if (App.ValuesComparisment) {
-                ValuesComparisment.init(dataSet, item);
-              }
-              if (App.CompChart) {
-                CompChart.chart.init(CompChart.chart.getFilteredSet(dataSet), item);
-              }
+              ValuesComparisment.init(dataSet, item);
+              CompChart.chart.init(CompChart.chart.getFilteredSet(dataSet), item);
             } else {
               //This is the spot if there is any data in cache and the called amout of data lacks few days (i.e. 90 loaded 99 requested) (load 9 more, join it with the cache array and draw)
               const diffrence = CompChart.chart.daysBack - CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded;
@@ -477,9 +459,8 @@ let Table = {
                 dataSet = cachedData;
 
                 let filtered = CompChart.chart.getFilteredSet(dataSet);
-                if (App.ValuesComparisment) {
-                  ValuesComparisment.init(filtered, item);
-                }
+
+                ValuesComparisment.init(filtered, item);
                 CompChart.chart.init(filtered, item, true);
               }, start, end);
             }
@@ -506,7 +487,6 @@ let Table = {
             Table.ignoredPlayersCalcOnClose = false;
             //Table.repopulate();
             Table.invalidate();
-            console.log("Invalidating");
           }
         } else {
           // Open this row
@@ -600,7 +580,6 @@ let Table = {
         } else {
           searchIfColumnExists(val);
         }
-        console.log(val);
         Table.$elem.draw();
       };
       //last val
@@ -722,9 +701,7 @@ let Table = {
       $("#dataTable tbody").on("click", "tr[role='row'] td.name-col", function() {
         //Only if the user wants to fetch
         if (!App.CompChart) {
-          if (!App.ValuesComparisment) {
-            return;
-          }
+          return;
         }
 
         //If is offline
@@ -777,16 +754,8 @@ let Table = {
         storage.set("CompChart", App.CompChart);
         if (typeof(Chart) === "undefined") {
           CompChart.init();
-        } else {
-          $(".chart").toggle();
+          $(".values-comparisment").toggle();
         }
-      });
-    },
-    showValuesComparisment() {
-      $("#ValuesComparisment").change(function() {
-        App.ValuesComparisment = !App.ValuesComparisment;
-        storage.set("ValuesComparisment", App.ValuesComparisment);
-        $(".values-comparisment").toggle();
       });
     },
     pageChange() {
@@ -1260,9 +1229,6 @@ let Table = {
     Table.init();
   },
   repopulate() {
-    //TODO: All the dataprep stuff that changes the values before adding them to the table got ot be implemented inside the table callers so when i call Table.$elem.draw(false)
-    // The table will calculate it all by itself without the need to clear the whole thing and add it again, thus improving the experience (tried to complex changes, let it be for some time like this)
-    // WE CAN MAKE CHANGES TO Table.sourceData[Table.dataType] AND then use Table.row().invalidate().draw() to recalcuate it without clearing the whole table
     Table.$elem.clear();
     let page = Table.$elem.page.info().page;
     Table.dataPrep.getRequestedData().then((resolver) => {

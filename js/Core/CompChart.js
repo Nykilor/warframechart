@@ -250,7 +250,7 @@ let CompChart = {
         //Set basic
         $(".graph-options summary").prop("title", "Days: " + CompChart.chart.daysBack + ", Nodes: " + CompChart.chart.maxNodesPerDay);
         //Froce redraw of the chart
-          let redraw = function(inRange = false, diffrence = 0) {
+        let redraw = function(inRange = false, diffrence = 0) {
             let item = CompChart.loadedData.active;
             let platform = Table.platform;
             console.log(CompChart.loadedData[item.id]);
@@ -298,9 +298,8 @@ let CompChart = {
 
             if (dataSet) {
               let filtered = CompChart.chart.getFilteredSet(dataSet);
-              if (App.ValuesComparisment) {
-                ValuesComparisment.init(filtered, item);
-              }
+              ValuesComparisment.init(filtered, item);
+
               CompChart.chart.init(filtered, item, true);
             }
         };
