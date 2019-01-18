@@ -1,7 +1,8 @@
 <pre>
 <?php
+//TODO MAKE IT TAKE DAYS ONE BY ONE AND CLEAR IT SO IT DOSNT OVERFLOW THE WHOLE THING
 ini_set('max_execution_time', 0);
-ini_set('memory_limit', '512M');
+//ini_set('memory_limit', '512M');
 require("password.php");
 require_once "../src/bootstrap.php";
 
@@ -54,6 +55,7 @@ foreach ($sources as $key => $value) {
 
         $entity->setDate(new \DateTime());
       }
+      //$user_repo->clear();
       //Set array for checkinf if we already got a peroid of this day
       if(!array_key_exists($platform_player, $users)) {
         $users[$platform_player]["day"] = [];

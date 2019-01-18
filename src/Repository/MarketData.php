@@ -124,4 +124,15 @@ class MarketData {
     return $result;
   }
 
+  public function getDaySource(string $date) {
+    $qb = $this->em->getRepository("WChart\Entity\MarketStatistic")->createQueryBuilder("stat");
+    $qb->select("stat.source, stat.date");
+    $qb->where("stat.date = :date")
+       ->setParameter(":date", $date);
+
+    $result = $qb->getQuery()->getArrayResult();
+
+    return $result;
+  }
+
 }
