@@ -17,12 +17,10 @@ $days = ["2018-12-31", "2019-01-01", "2019-01-02", "2019-01-03", "2019-01-04", "
 foreach ($days as $day) {
   $day_of_week = $day; //$day_of_week = date("Y-m-d", strtotime("$day this week"));
   $source = $market_repo->getDaySource($day);
-
   foreach ($source as $key => $value) {
     $source = $value["source"];
     $source_period = intval($value["date"]->format("H"));
     $source_day = intval($value["date"]->format("j"));
-
     //If no source just continue
     if(!is_null($source)) {
       foreach ($source as $platform_player => $price) {
@@ -53,11 +51,11 @@ foreach ($days as $day) {
         if(!array_key_exists($platform_player, $users)) {
           $users[$platform_player]["day"] = [];
         }
-
+        //Check if the source day array exists, if not create it.
         if(!array_key_exists($source_day ,$users[$platform_player]["day"])) {
           $users[$platform_player]["day"][$source_day] = [];
         }
-
+        //Checks if a source period exists in the array
         if(!in_array($source_period, $users[$platform_player]["day"][$source_day])) {
           $users[$platform_player]["day"][$source_day][] = $source_period;
           $entity_source_days = $entity->getSource();
@@ -72,6 +70,7 @@ foreach ($days as $day) {
   }
 }
 //Iterate trough them and add to DB
+//I
 $batchSize = 20;
 $iter = 0;
 foreach($users as $key => $user) {

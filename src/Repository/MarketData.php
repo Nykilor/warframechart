@@ -123,15 +123,20 @@ class MarketData {
 
     return $result;
   }
-
+  /**
+   * [Will return hour range from 00:00:00 - 23:59:00]
+   * @param  string $date [Y-m-d date]
+   * @return [array]       [database query result]
+   */
   public function getDaySource(string $date) {
     $qb = $this->em->getRepository("WChart\Entity\MarketStatistic")->createQueryBuilder("stat");
     $qb->select("stat.source, stat.date");
-    $qb->where("stat.date = :date")
-       ->setParameter(":date", $date);
+    $qb->where("stat.date BETWEEN :date AND :end AND NOT stat.date = :end")
+       ->setParameter(":date", $date)
+       ->setParameter(":end", date("Y-m-d", strtotime("$date + 1day")));
 
     $result = $qb->getQuery()->getArrayResult();
-
+    var_dump(count($result));
     return $result;
   }
 
