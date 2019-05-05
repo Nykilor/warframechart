@@ -2,11 +2,10 @@ let ValuesComparisment = {
   "$elem": null,
   active: false,
   prepareData(data) {
-    const dataCopy = JSON.parse(JSON.stringify(data));
+    const dataCopy = data;
     let set = [];
 
     $.each(dataCopy.labels, function(key, value) {
-
       set.push({
         date: value,
         min: dataCopy.min[key],
@@ -20,11 +19,9 @@ let ValuesComparisment = {
   },
   renders: {
     date(data, type, row) {
-        const indexT = row.date.indexOf("T");
-        const year = row.date.substr(0, indexT);
-        const time = row.date.substr(indexT + 1, 8);
+        const time = data.toLocaleString();
 
-        return year + ", " + time;
+        return time;
     }
   },
   repopulate(dataSet) {

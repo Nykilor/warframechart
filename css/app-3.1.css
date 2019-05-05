@@ -574,6 +574,11 @@ input.highlight-vaulted:checked + div {
 .close-menu-container {
   text-align: right;
 }
+.menu-content-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
 .close-menu {
   background-color: transparent;
   border: none;
@@ -946,6 +951,11 @@ span.icon-star-filled:hover, span.icon-star-filled:active {
   text-transform: uppercase;
 }
 @media (min-width: 768px){
+  .menu-content-container {
+    position: relative;
+    width: 100%;
+    bottom: inherit;
+  }
   .dataTables_wrapper {
     margin-bottom: 150px;
   }

@@ -36,7 +36,7 @@ let App = {
           case "values":
             if (value === "global") {
               Table.statValue = false;
-            } else if (value === "platform") {
+            } else if (value === "variables") {
               Table.statValue = true;
             }
             break;
@@ -92,7 +92,7 @@ let App = {
       return App.online;
     },
     init() {
-      function updateOnlineStatus(event) {
+      function updateOnlineStatus() {
         if (navigator.onLine) {
           App.connection.handleOnline();
         } else {
@@ -135,9 +135,9 @@ let App = {
         options.cols = colsVisibility.join(",");
         //values
         if (Table.statValue) {
-          options.values = "global";
+          options.values = "variables";
         } else {
-          options.values = "platform";
+          options.values = "global";
         }
 
         let url = window.location.origin + window.location.pathname + "?";
@@ -209,7 +209,7 @@ let App = {
           $(elem).find(".container").html(table);
       };
 
-      let ignoredCloseCallback = function(that) {
+      let ignoredCloseCallback = function() {
         let openOrders = $("#dataTable tbody").find(".shown");
         const table = Table.$elem;
         $.each(openOrders, function(index, elem) {

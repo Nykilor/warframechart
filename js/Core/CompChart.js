@@ -47,7 +47,7 @@ let CompChart = {
       }
     },
     chart: {
-      maxNodesPerDay: storage.get("chartMaxNodesPerDay") || 8,
+      maxNodesPerDay: storage.get("chartMaxNodesPerDay") || 24,
       daysBack: storage.get("chartDaysBack") || 7,
       canvas: false,
       noAnimations: storage.get("chartNoAnimations") || false,

@@ -3,7 +3,7 @@
     "description": "Warframe wiki, market and chat data collector.",
     "type": "project",
     "require": {
-        "doctrine/orm": "v2.5.14"
+        "doctrine/orm": "2.6.3"
     },
     "autoload": {
         "psr-4": {

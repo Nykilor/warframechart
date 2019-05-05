@@ -1,5 +1,6 @@
 <pre>
 <?php
+//Fetches all entiteis sets their is_vaulted status by the wiki data.
 require("password.php");
 require_once "../src/bootstrap.php";
 $config = $em->getRepository("WChart\Entity\Item")->findAll();

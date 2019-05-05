@@ -6,10 +6,10 @@ namespace WChart\Controller;
  */
 trait HelperTrait {
   /**
-   * [Is beign called when the public method run over a problem]
+   * [Is beign called when the public methods run over a problem]
    * @param array $data [error info]
    * @param int $code [http_status_code]
-   * @return mixed [Whatever you like.]
+   * @return array [Whatever you like.]
    */
   abstract function errorMethod(array $data, int $code);
 

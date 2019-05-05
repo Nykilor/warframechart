@@ -1,4 +1,12 @@
-import { storage, capitalize, isValidRegex, jQueryMobile, createYMDDate, deleteZeros, findMode } from "./../utilities.js";
+import {
+  storage,
+  capitalize,
+  isValidRegex,
+  jQueryMobile,
+  createYMDDate,
+  deleteZeros,
+  findMode
+} from "./../utilities.js";
 import CompChart from "./CompChart.js";
 import ValuesComparisment from "./ValuesComparisment.js";
 import ChatData from "./ChatData.js";
@@ -67,47 +75,40 @@ let Table = {
       let object = {
         0: {
           string: "Sun",
-          periods: {
-          }
+          periods: {}
         },
         1: {
           string: "Mon",
-          periods: {
-          }
+          periods: {}
         },
         2: {
           string: "Tue",
-          periods: {
-          }
+          periods: {}
         },
         3: {
           string: "Wed",
-          periods: {
-          }
+          periods: {}
         },
         4: {
           string: "Thu",
-          periods: {
-          }
+          periods: {}
         },
         5: {
           string: "Fri",
-          periods: {
-          }
+          periods: {}
         },
         6: {
           string: "Sat",
-          periods: {
-          }
+          periods: {}
         }
       };
 
       $.each(data[0].source, function(key, sourceDay) {
-          const date = new Date(sourceDay.date + " " + App.timezone);
-          const dayOfWeek = date.getDay();
-          const period = date.getHours();
+        const date = new Date(sourceDay.date + " " + App.timezone);
+        const dayOfWeek = date.getDay();
+        const period = date.getHours();
 
-          object[dayOfWeek].periods[period] = 1;
+        object[dayOfWeek].periods[period] = 1;
       });
 
       let string = "";
@@ -257,7 +258,7 @@ let Table = {
 
       return data;
     },
-    drop(data, type, row) {
+    drop(data, type) {
       if (type === "display" && data !== "none") {
         const dataArray = data.split(",");
         let newString = "<div class='drop-location'>";
@@ -271,7 +272,7 @@ let Table = {
       }
       return data;
     },
-    partsSumColumn(data, type, row, meta) {
+    partsSumColumn(data, type, row) {
       let marketSum = "";
       let dataSet = Table.sourceData[Table.dataType];
       if (type === "display") {
@@ -374,6 +375,8 @@ let Table = {
 
       if (jQuery.browser.mobile) {
         //mobile-version
+        console.log(true);
+        l.pageChangeMobile();
       } else {
         //desktop-version
         l.pageChange();
@@ -408,14 +411,14 @@ let Table = {
             CompChart.loadedData.cache.set(item.id);
             //Engage the extensions
             ValuesComparisment.init(dataSet, item);
-              //Cache the set
-              //If the set does not have the key empty.
-              if (typeof(dataSet.empty) === "undefined") {
-                CompChart.loadedData.cache[item.id][Table.dataType][platform].data = dataSet;
-                CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded = CompChart.chart.daysBack;
-              }
+            //Cache the set
+            //If the set does not have the key empty.
+            if (typeof(dataSet.empty) === "undefined") {
+              CompChart.loadedData.cache[item.id][Table.dataType][platform].data = dataSet;
+              CompChart.loadedData.cache[item.id][Table.dataType][platform].daysLoaded = CompChart.chart.daysBack;
+            }
 
-              CompChart.chart.init(CompChart.chart.getFilteredSet(dataSet), item);
+            CompChart.chart.init(CompChart.chart.getFilteredSet(dataSet), item);
           });
         } else {
           if (!CompChart.loadedData.cache[item.id][Table.dataType][platform].data) {
@@ -556,14 +559,14 @@ let Table = {
         //The avaliable columns to search by, they must be in the same order as the initated columns in Tables Object
         const columnsSearchBy = ["item", "min", "avg", "median", "mode", "ducat", "ratio", "player", "drop", "type"];
         const searchIfColumnExists = function(string) {
-        const equalSignPlace = string.indexOf("=");
+          const equalSignPlace = string.indexOf("=");
           if (equalSignPlace !== -1) {
-              const column = string.substring(0, equalSignPlace).toLocaleLowerCase();
-              const searchFor = string.substr(equalSignPlace + 1);
-              const columnIndex = columnsSearchBy.indexOf(column);
-              if (columnIndex !== -1) {
-                Table.$elem.column(columnIndex).search(searchFor, false, false, true);
-              }
+            const column = string.substring(0, equalSignPlace).toLocaleLowerCase();
+            const searchFor = string.substr(equalSignPlace + 1);
+            const columnIndex = columnsSearchBy.indexOf(column);
+            if (columnIndex !== -1) {
+              Table.$elem.column(columnIndex).search(searchFor, false, false, true);
+            }
           }
         };
         if (val.indexOf("|") !== -1) {
@@ -616,7 +619,7 @@ let Table = {
         const value = Table.favourite.join("|");
         //If the search is for it stop
         if ($search.val() === value) {
-         return;
+          return;
         }
 
         $search.val(value);
@@ -768,6 +771,52 @@ let Table = {
           }
         }
       });
+    },
+    pageChangeMobile() {
+      let xDown = null;
+      let yDown = null;
+
+      function getTouches(evt) {
+        return evt.originalEvent.touches; // jQuery
+      }
+
+      function handleTouchStart(evt) {
+        const firstTouch = getTouches(evt)[0];
+        xDown = firstTouch.clientX;
+        yDown = firstTouch.clientY;
+      };
+
+      function handleTouchMove(evt) {
+        if (!xDown || !yDown) {
+          return;
+        }
+
+        let xUp = evt.touches[0].clientX;
+        let yUp = evt.touches[0].clientY;
+
+        let xDiff = xDown - xUp;
+        let yDiff = yDown - yUp;
+
+        if (Math.abs(xDiff) > Math.abs(yDiff)) { /*most significant*/
+          if (xDiff > 0) {
+            Table.$elem.page("next").draw("page");
+          } else {
+            Table.$elem.page("previous").draw("page");
+          }
+        } else {
+          if (yDiff > 0) {
+            /* up swipe */
+          } else {
+            /* down swipe */
+          }
+        }
+        /* reset values */
+        xDown = null;
+        yDown = null;
+      };
+      $(document).on("touchstart", handleTouchStart);
+
+      $(document).on("touchmove", handleTouchMove);
     },
     searchForButton() {
       $(document).on("click", ".search-for-button", function(e) {
@@ -930,7 +979,12 @@ let Table = {
         mode = 0;
       }
 
-      return { min, avg, median, mode };
+      return {
+        min,
+        avg,
+        median,
+        mode
+      };
     },
     //TODO: This should be done inside the Table Object so i can get rid of repopulate ( tried, to complex changes got to be made )
     marketValue(dataSet) {
@@ -1044,26 +1098,26 @@ let Table = {
       });
     },
     prepareRequestedData(resolver, callback = false) {
-        const chat = (typeof(resolver.chat) !== "undefined") ? resolver.chat : false;
-        let market = Table.dataPrep.marketValue(resolver.market);
-        //var passed to DataTable object
-        let dataSet;
-        //Set the variable
-        if (Table.compareWithChat) {
-          for (let i = 0; i < market.length; i++) {
-            if (chat) {
-              Table.dataPrep.chatValue(market, i, chat);
-            }
+      const chat = (typeof(resolver.chat) !== "undefined") ? resolver.chat : false;
+      let market = Table.dataPrep.marketValue(resolver.market);
+      //var passed to DataTable object
+      let dataSet;
+      //Set the variable
+      if (Table.compareWithChat) {
+        for (let i = 0; i < market.length; i++) {
+          if (chat) {
+            Table.dataPrep.chatValue(market, i, chat);
           }
         }
+      }
 
-        dataSet = market;
+      dataSet = market;
 
-        if (callback) {
-          callback(dataSet);
-        } else {
-          return dataSet;
-        }
+      if (callback) {
+        callback(dataSet);
+      } else {
+        return dataSet;
+      }
     }
   },
   //Callback is called at the end of this function
@@ -1081,13 +1135,12 @@ let Table = {
         ],
         fixedColumns: true,
         data: Table.sourceData[Table.dataType],
-        columns: [
-          {
+        columns: [{
             data: "name",
             class: "name-col sellers-col",
             render(data, type) {
               if (Table.compareWithChat && type === "display") {
-                 return data + "<span class='icon-desktop compare desktop'></span><br>" + "<span class='icon-terminal compare terminal'></span>";
+                return data + "<span class='icon-desktop compare desktop'></span><br>" + "<span class='icon-terminal compare terminal'></span>";
               } else {
                 return data;
               }
@@ -1097,7 +1150,7 @@ let Table = {
             data: "min",
             class: "min-col",
             defaultContent: 0,
-            render(data, type, row, meta) {
+            render(data, type, row) {
               return Table.renders.valuesDisplay(row, type, "min");
             }
           },
@@ -1105,7 +1158,7 @@ let Table = {
             data: "avg",
             class: "avg-col",
             defaultContent: 0,
-            render(data, type, row, meta) {
+            render(data, type, row) {
               return Table.renders.valuesDisplay(row, type, "avg");
             }
           },
@@ -1113,7 +1166,7 @@ let Table = {
             data: "median",
             class: "median-col",
             defaultContent: 0,
-            render(data, type, row, meta) {
+            render(data, type, row) {
               return Table.renders.valuesDisplay(row, type, "median");
             }
           },
@@ -1121,7 +1174,7 @@ let Table = {
             data: "mode",
             class: "mode-col",
             defaultContent: 0,
-            render(data, type, row, meta) {
+            render(data, type, row) {
               return Table.renders.valuesDisplay(row, type, "median");
             }
           },
@@ -1168,7 +1221,7 @@ let Table = {
             class: "save-plat",
             defaultContent: "UNKNOWN",
             render(data, type, row, meta) {
-              const retu =  Table.renders.partsSumColumn(data, type, row, meta);
+              const retu = Table.renders.partsSumColumn(data, type, row, meta);
               return retu;
             }
           },
@@ -1196,23 +1249,23 @@ let Table = {
         language: {
           searchPlaceholder: "What do you need Tenno?"
         },
-        createdRow: function(row, data, index) {
+        createdRow: function(row, data) {
           if (data.vaulted) {
             $(row).find(".name-col").addClass("icon-lock");
           }
-        },
-        preDrawCallback(settings) {
-          //Bug repairment with groups.
-          // if (settings.oLoadedState !== null) {
-          //   if (settings.oLoadedState.order.length > 0) {
-          //     if (settings.oLoadedState.order[0][0] > 0) {
-          //       settings.rowGroup.disable();
-          //     }
-          //   } else {
-          //     settings.rowGroup.disable();
-          //   }
-          // }
         }
+        // preDrawCallback(settings) {
+        //   //Bug repairment with groups.
+        //   // if (settings.oLoadedState !== null) {
+        //   //   if (settings.oLoadedState.order.length > 0) {
+        //   //     if (settings.oLoadedState.order[0][0] > 0) {
+        //   //       settings.rowGroup.disable();
+        //   //     }
+        //   //   } else {
+        //   //     settings.rowGroup.disable();
+        //   //   }
+        //   // }
+        // }
       };
 
 
@@ -1247,18 +1300,18 @@ let Table = {
       Table.dataPrep.prepareRequestedData(resolver, function(dataSet) {
         //Join it without destroying the reference so when invalidate it will recalc all and don't close the opened lists
         Object.keys(Table.sourceData[Table.dataType]).forEach(function(key) {
-           Table.sourceData[Table.dataType][key].min = dataSet[key].min;
-           Table.sourceData[Table.dataType][key].avg = dataSet[key].avg;
-           Table.sourceData[Table.dataType][key].median = dataSet[key].median;
-           Table.sourceData[Table.dataType][key].mode = dataSet[key].mode;
+          Table.sourceData[Table.dataType][key].min = dataSet[key].min;
+          Table.sourceData[Table.dataType][key].avg = dataSet[key].avg;
+          Table.sourceData[Table.dataType][key].median = dataSet[key].median;
+          Table.sourceData[Table.dataType][key].mode = dataSet[key].mode;
 
-           if (Table.compareWithChat) {
-             Table.sourceData[Table.dataType][key].chat_min = dataSet[key].chat_min;
-             Table.sourceData[Table.dataType][key].chat_avg = dataSet[key].chat_avg;
-             Table.sourceData[Table.dataType][key].chat_median = dataSet[key].chat_median;
-             Table.sourceData[Table.dataType][key].chat_mode = dataSet[key].chat_mode;
-           }
-         });
+          if (Table.compareWithChat) {
+            Table.sourceData[Table.dataType][key].chat_min = dataSet[key].chat_min;
+            Table.sourceData[Table.dataType][key].chat_avg = dataSet[key].chat_avg;
+            Table.sourceData[Table.dataType][key].chat_median = dataSet[key].chat_median;
+            Table.sourceData[Table.dataType][key].chat_mode = dataSet[key].chat_mode;
+          }
+        });
         Table.$elem.rows().invalidate("data").draw(false);
       });
     });
