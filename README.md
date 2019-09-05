@@ -1,4 +1,4 @@
-# Warframechart
+# Warframechart (Overall spagetti code, I'll remake it with (Symfony) Api-Platform for backend, and write the front from scrach)
 ----------------------------
 Live: https://warframchart.ct8.pl
 **Basic backend functionality**:
