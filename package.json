@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Nykilor/warframechart#readme",
   "devDependencies": {
     "webpack": "^4.22.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "datatables.net": "^1.10.19",
